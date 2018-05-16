@@ -2,14 +2,15 @@
 
 using namespace boost::intrusive;
 
-struct node : public segment_tree_base_hook<>
+struct node : public segment_tree_base_hook
 {
     int a;
 };
 int main()
 {
-    segment_tree<struct node> first(4);
-    
-
+//    segment_tree<struct node> first(4);
+  //  std::cout << first.ptr[0].position;
+  struct node first;
+  std::cout << first.position;
     return 0;
 }
