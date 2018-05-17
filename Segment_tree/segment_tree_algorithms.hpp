@@ -1,32 +1,38 @@
 #include<bits/stdc++.h>
-#include </home/hari/BoostGsoc18/boost_1_65_1/boost/GSOC18/Advanced-Intrusive/Segment_tree/segment_tree_node.hpp>
-#include</home/hari/BoostGsoc18/boost_1_65_1/boost/intrusive/detail/algo_type.hpp>
+#include <boost/GSOC18/Advanced-Intrusive/Segment_tree/segment_tree_node.hpp>
+#include<boost/intrusive/detail/algo_type.hpp>
+
 namespace boost {
     namespace intrusive {
 
 template<typename NodeTraits>
 class segment_tree_algorithms
 {
-public:
+   public:
    typedef typename NodeTraits::node            node;
    typedef typename NodeTraits::node_ptr        node_ptr;
    typedef typename NodeTraits::const_node_ptr  const_node_ptr;
    typedef NodeTraits                           node_traits;
-    node_ptr ptr;
-    public:
     BOOST_INTRUSIVE_FORCEINLINE static void init(const node_ptr &this_node)
     {
-      std::cout << "junnu\n";
+
     }
     BOOST_INTRUSIVE_FORCEINLINE static bool unique(const const_node_ptr &this_node)
     {
         return true;
     }
-
-    node_ptr inited(int n,node_ptr)
+    template<typename Pointer>
+    Pointer* inited(int n)
     {
-       ptr=(node_ptr)malloc(4*n*sizeof(node));
+       Pointer *ptr=(node*)malloc(4*n*sizeof(node));
+       std::cout << "hari\n";
+       std::cout << ptr[0].position;
        return ptr;     
+    }
+    template<typename pointer>
+    void pos_set(int n,pointer ptr)
+    {
+       //4 node_traits::set_position<pointer>(n,ptr);
     }
 
 };

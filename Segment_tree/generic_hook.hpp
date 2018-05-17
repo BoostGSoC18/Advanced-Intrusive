@@ -158,6 +158,7 @@ class generic_hook
    /// @endcond
 {
    /// @cond
+   public:
    typedef typename get_algo<Algo, NodeTraits>::type  node_algorithms;
    typedef typename node_algorithms::node             node;
    typedef typename node_algorithms::node_ptr         node_ptr;
@@ -180,7 +181,6 @@ class generic_hook
 
    generic_hook()
    {
-      std::cout << "jahnu\n";
       if(hooktags::safemode_or_autounlink){
          node_algorithms::init(this->this_ptr());
       }
