@@ -12,6 +12,11 @@ namespace boost {
 
       namespace intrusive {
 
+#if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED) || defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
+template<class ...Options>
+#else
+template<class O1 = void, class O2 = void, class O3 = void>
+#endif
 class make_segment_tree_base_hook
 {
   public:    
@@ -28,14 +33,63 @@ class make_segment_tree_base_hook
    /// @endcond
    typedef implementation_defined type;
 };
+
+#if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED) || defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
+template<class ...Options>
+#else
+template<class O1, class O2, class O3>
+#endif
 class segment_tree_base_hook
-   : public make_segment_tree_base_hook::type      
+   : public make_segment_tree_base_hook
+     #if !defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
+      <O1, O2, O3>
+      #else
+      <Options...>
+      #endif
+    ::type      
 {
    
 };
+#if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED) || defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
+template<class ...Options>
+#else
+template<class O1, class O2, class O3>
+#endif
 
-#include <boost/intrusive/detail/config_end.hpp>
+class make_segment_tree_member_hook
+{
+   public:
+   /// @cond
+   typedef typename pack_options
+      < hook_defaults>::type packed_options;
 
-            
-}
+   typedef generic_hook
+   < SegTreeAlgorithms
+   , segment_tree_node_traits<typename packed_options::void_pointer>
+   , member_tag
+   , packed_options::link_mode
+   , NoBaseHookId
+   > implementation_defined;
+   /// @endcond
+   typedef implementation_defined type;
+};
+#if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED) || defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
+template<class ...Options>
+#else
+template<class O1, class O2, class O3>
+#endif
+class segment_tree_member_hook
+   :  public make_segment_tree_member_hook
+      #if !defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
+      <O1, O2, O3>
+      #else
+      <Options...>
+      #endif
+      ::type
+{
+
+};
+#include <boost/intrusive/detail/config_end.hpp>            
+    
+    }
 }
