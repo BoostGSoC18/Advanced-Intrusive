@@ -15,13 +15,35 @@ class segment_tree_algorithms
    typedef NodeTraits                           node_traits;
     BOOST_INTRUSIVE_FORCEINLINE static void init(const node_ptr &this_node)
     {
-        //to be filled
+
     }
     BOOST_INTRUSIVE_FORCEINLINE static bool unique(const const_node_ptr &this_node)
     {
-        // to be filled
         return true;
+    }
+    BOOST_INTRUSIVE_FORCEINLINE static int left_index(node_ptr &node)
+    {
+        if(node->start!=node->end)
+        {
+            return 2*node->position+1;
+        }
+        return -1;
+    }
+    BOOST_INTRUSIVE_FORCEINLINE static int right_index(node_ptr &node)
+    {
+        if(node->start!=node->end)
+        {
+            return 2*node->position+2;
+        }
+        return -1;
+    }
+    BOOST_INTRUSIVE_FORCEINLINE static void set_all_values(node_ptr &node,int start,int end,int position)
+    {
+        node->start=start;
+        node->end=end;
+        node->position=position;          
     }    
+
 };
 
 template<class NodeTraits>
