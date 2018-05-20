@@ -82,6 +82,23 @@ class segment_tree_impl
         ptr[position].value=func(build_comp(input,start,mid,left_child,func),build_comp(input,mid+1,end,right_child,func));
         return ptr[position].value;
     }
+    public:
+    data_type update(data_type input[],int start,int end,int position,auto func,int index)
+    {
+        if(start==end && start==index)
+        {
+            ptr[position].value=input[start];
+            return ptr[position].value;
+        }
+        if(index>end || index<start)
+        {
+            return ptr[position].value;
+        }
+        int mid=(start+end)/2;
+        ptr[position].value=func(update(input,start,mid,2*position+1,func,index),update(input,mid+1,end,2*position+2,func,index));    
+        return ptr[position].value;
+    }
+
 };
 #if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED) || defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
 template<class T, class ...Options>
