@@ -88,6 +88,49 @@ class segment_tree_impl
    
    typedef detail::size_holder<constant_time_size, size_type>          size_traits;
    
+
+
+   node_ptr get_root_node()
+   { return data_.root_plus_size_.m_header.get_node(); }
+
+   const_node_ptr get_root_node() const
+   { return data_.root_plus_size_.m_header.get_node(); }
+
+   struct root_plus_size : public size_traits
+   {
+      header_holder_type m_header;
+   };
+
+   struct data_t : public ValueTraits
+   {
+      typedef typename segment_tree_impl::value_traits value_traits;
+      root_plus_size root_plus_size_;
+   } data_;
+
+   size_traits &priv_size_traits()
+   {  return data_.root_plus_size_;  }
+
+   const size_traits &priv_size_traits() const
+   {  return data_.root_plus_size_;  }
+
+   const value_traits &priv_value_traits() const
+   {
+     return data_;  
+   }
+
+   value_traits &priv_value_traits()
+   {
+      return data_;
+   }
+
+   typedef typename boost::intrusive::value_traits_pointers
+      <ValueTraits>::const_value_traits_ptr const_value_traits_ptr;
+
+   const_value_traits_ptr priv_value_traits_ptr() const
+   {  return pointer_traits<const_value_traits_ptr>::pointer_to(this->priv_value_traits());  }
+
+
+
    public:
    
     node_ptr root;
@@ -212,6 +255,13 @@ class segment_tree_impl
         query_computation(input,start,mid,func,query_start,query_end,required_values,p->left_child);
         query_computation(input,mid+1,end,func,query_start,query_end,required_values,p->right_child);
     }
+    public:
+    iterator get_root()
+    {
+        return iterator(root, this->priv_value_traits_ptr());
+    }
+
+
 
 };
 #if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED) || defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
