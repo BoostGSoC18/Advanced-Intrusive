@@ -177,6 +177,42 @@ class segment_tree_impl
         p->value=func(update_computation(input,start,mid,func,index,p->left_child),update_computation(input,mid+1,end,func,index,p->right_child));    
         return p->value;
     }
+    private:
+    int range_nodes=0;
+    public:
+    data_type query(data_type input[],int start,int end,auto func,int query_start,int query_end)
+    {
+        data_type *required_values;
+        required_values=(data_type*)malloc(4*total_nodes*sizeof(data_type));
+        query_computation(input,start,end,func,query_start,query_end,required_values,root);
+        data_type final_value;
+        final_value=required_values[0];
+        for(int each=1;each<range_nodes;each++)
+        {
+            final_value=func(final_value,required_values[each]);
+        }
+        return final_value;
+    }
+    private:
+    void query_computation(data_type input[],int start,int end,auto func,int query_start,int query_end,data_type *required_values,node_ptr &curr_node)
+    {
+        pointer p=value_traits::to_value_ptr(curr_node);
+        
+        if(query_start<=start && end<=query_end)
+        {
+            required_values[range_nodes]=p->value;
+            range_nodes++;
+            return ;
+        }
+        if(query_start>end || start>query_end)
+        {
+            return ;
+        }
+        int mid=(start+end)/2;
+        query_computation(input,start,mid,func,query_start,query_end,required_values,p->left_child);
+        query_computation(input,mid+1,end,func,query_start,query_end,required_values,p->right_child);
+    }
+
 };
 #if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED) || defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
 template<class T, class ...Options>
