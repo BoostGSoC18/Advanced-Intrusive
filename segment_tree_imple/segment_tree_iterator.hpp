@@ -36,10 +36,21 @@ class segtree_iterator
    {   
        return members_.nodeptr_; 
    }
+   public:
 
     BOOST_INTRUSIVE_FORCEINLINE pointer operator->() const
    {   return this->operator_arrow(detail::bool_<stateful_value_traits>()); }
 
+    BOOST_INTRUSIVE_FORCEINLINE segtree_iterator get_left_child()
+   {
+      members_.nodeptr_=members_.nodeptr_->left_child;
+   }
+    BOOST_INTRUSIVE_FORCEINLINE segtree_iterator get_right_child()
+   {
+      members_.nodeptr_=members_.nodeptr_->right_child;
+   }
+
+    private:
     BOOST_INTRUSIVE_FORCEINLINE pointer operator_arrow(detail::false_) const
    { return ValueTraits::to_value_ptr(members_.nodeptr_); }
 
