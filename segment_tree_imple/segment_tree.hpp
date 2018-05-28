@@ -1,13 +1,14 @@
 #include <boost/GSOC18/Advanced-Intrusive/New_segment_tree/segment_tree_algorithms.hpp>
 #include <boost/GSOC18/Advanced-Intrusive/Segment_tree/segment_tree_hook.hpp>
-#include <boost/intrusive/detail/get_value_traits.hpp>
-#include "boost/intrusive/options.hpp"
 #include "boost/GSOC18/Advanced-Intrusive/Segment_tree/merging_function.hpp"
 #include <boost/GSOC18/Advanced-Intrusive/Segment_tree/segment_tree_iterator.hpp>
+
+#include<boost/intrusive/any_hook.hpp>
+#include <boost/intrusive/detail/get_value_traits.hpp>
+#include "boost/intrusive/options.hpp"
 #include <boost/intrusive/detail/is_stateful_value_traits.hpp>
 #include <boost/intrusive/detail/default_header_holder.hpp>
 #include "boost/intrusive/detail/size_holder.hpp"
-
 #include<iostream>
 #include <boost/intrusive/detail/config_begin.hpp>
 #include <boost/intrusive/intrusive_fwd.hpp>
@@ -30,7 +31,6 @@
 #include <boost/intrusive/detail/minimal_less_equal_header.hpp>//std::less
 #include <cstddef>   //std::size_t, etc.
 
-#include<queue>
 namespace boost {
     namespace intrusive {
 
@@ -137,23 +137,18 @@ class segment_tree_impl
     int n;
     int total_nodes=0;
     value_type *ptr;
-    struct node_queue
-    {
-        int start;
-        int end;
-    };
     public:
-    segment_tree_impl(int ss,int se,int n)
+    segment_tree_impl(int start,int end,int n)
     {
-        nodes_count(ss,se);
+        nodes_count(start,end);
         ptr=(value_type*)malloc(total_nodes*sizeof(value_type));
-        initialisation(ss,se,n,0);
+        initialisation(start,end,0);
         root=value_traits::to_node_ptr(ptr[0]);
     }
     private:
-    void initialisation(int ss,int se,int n,int pos)
+    void initialisation(int start,int end,int pos)
     {
-        if(ss==se)
+        if(start==end)
         {
             return ;
         }
@@ -162,22 +157,22 @@ class segment_tree_impl
         node_ptr right_child=value_traits::to_node_ptr(ptr[2*pos+2]);
         node_traits::set_left_child(parent,left_child);
         node_traits::set_right_child(parent,right_child);
-        int mid=(ss+se)/2;
-        initialisation(ss,mid,n,2*pos+1);
-        initialisation(mid+1,se,n,2*pos+2);
+        int mid=(start+end)/2;
+        initialisation(start,mid,2*pos+1);
+        initialisation(mid+1,end,2*pos+2);
     }
     private:
-    void nodes_count(int ss,int se)
+    void nodes_count(int start,int end)
     {
-       if(ss==se)
+       if(start==end)
        {
            total_nodes++;
            return ;
        }
        total_nodes++;
-       int mid=(ss+se)/2;
-       nodes_count(ss,mid);
-       nodes_count(mid+1,se); 
+       int mid=(start+end)/2;
+       nodes_count(start,mid);
+       nodes_count(mid+1,end); 
     }
     public:
     void build(data_type input[],int start,int end,auto func)
@@ -217,7 +212,9 @@ class segment_tree_impl
             return p->value;
         }
         int mid=(start+end)/2;
-        p->value=func(update_computation(input,start,mid,func,index,p->left_child),update_computation(input,mid+1,end,func,index,p->right_child));    
+        node_ptr left_ptr=node_traits::get_left_child(curr_node);
+        node_ptr right_ptr=node_traits::get_right_child(curr_node);
+        p->value=func(update_computation(input,start,mid,func,index,left_ptr),update_computation(input,mid+1,end,func,index,right_ptr));    
         return p->value;
     }
     private:
@@ -252,8 +249,10 @@ class segment_tree_impl
             return ;
         }
         int mid=(start+end)/2;
-        query_computation(input,start,mid,func,query_start,query_end,required_values,p->left_child);
-        query_computation(input,mid+1,end,func,query_start,query_end,required_values,p->right_child);
+        node_ptr left_ptr=node_traits::get_left_child(curr_node);
+        node_ptr right_ptr=node_traits::get_right_child(curr_node);
+        query_computation(input,start,mid,func,query_start,query_end,required_values,left_ptr);
+        query_computation(input,mid+1,end,func,query_start,query_end,required_values,right_ptr);
     }
     public:
     iterator get_root()
