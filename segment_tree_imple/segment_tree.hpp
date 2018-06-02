@@ -129,63 +129,67 @@ class segment_tree_impl
    const_value_traits_ptr priv_value_traits_ptr() const
    {  return pointer_traits<const_value_traits_ptr>::pointer_to(this->priv_value_traits());  }
 
-
-
    public:
-   
     node_ptr root;
     int n;
-    int total_nodes=0;
+    int total_nodes=0,internal_nodes=0;
     value_type *ptr;
+    private:
+    int nodecnt_run=1;
     public:
     segment_tree_impl(int start,int end,int n)
     {
         nodes_count(start,end);
-        ptr=(value_type*)malloc(total_nodes*sizeof(value_type));
+        ptr=(value_type*)malloc((total_nodes)*sizeof(value_type));
         initialisation(start,end,0);
         root=value_traits::to_node_ptr(ptr[0]);
     }
     private:
-    void initialisation(int start,int end,int pos)
+    void initialisation(int start,int end,int parent_pos)
     {
-        if(start==end)
-        {
-            return ;
-        }
-        node_ptr parent=value_traits::to_node_ptr(ptr[pos]);
-        node_ptr left_child=value_traits::to_node_ptr(ptr[2*pos+1]);
-        node_ptr right_child=value_traits::to_node_ptr(ptr[2*pos+2]);
-        node_traits::set_left_child(parent,left_child);
-        node_traits::set_right_child(parent,right_child);
-        int mid=(start+end)/2;
-        initialisation(start,mid,2*pos+1);
-        initialisation(mid+1,end,2*pos+2);
+       if(start==end)
+       {
+           return ;
+       }
+       int left,right;
+       node_ptr parent=value_traits::to_node_ptr(ptr[parent_pos]);
+       node_ptr left_child=value_traits::to_node_ptr(ptr[nodecnt_run]);
+       left=nodecnt_run;
+       nodecnt_run++;
+       node_ptr right_child=value_traits::to_node_ptr(ptr[nodecnt_run]);
+       right=nodecnt_run;
+       nodecnt_run++;
+       parent->left_child=left_child;
+       parent->right_child=right_child;
+       int mid=(start+end)/2;
+       initialisation(start,mid,left);
+       initialisation(mid+1,end,right); 
     }
     private:
     void nodes_count(int start,int end)
     {
+       total_nodes++;
        if(start==end)
        {
-           total_nodes++;
            return ;
        }
-       total_nodes++;
+       internal_nodes++;
        int mid=(start+end)/2;
        nodes_count(start,mid);
        nodes_count(mid+1,end); 
     }
     public:
-    void build(data_type input[],int start,int end,auto func)
+    void build(data_type *input,int start,int end,auto func)
     {
-        build_computation(input,start,end,func,root);
+       build_computation(input,start,end,func,root);
     }
-    data_type build_computation(data_type input[],int start,int end,auto func,node_ptr &curr_node)
+    data_type build_computation(data_type  *input,int start,int end,auto func,node_ptr &curr_node)
     {
         value_type* p=value_traits::to_value_ptr(curr_node);
         if(start==end)
         {
-           p->value=input[start];
-           return p->value;
+            p->value=input[start];
+            return p->value;
         }
         int mid=(start+end)/2;
         node_ptr left_ptr=node_traits::get_left_child(curr_node);
