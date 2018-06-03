@@ -53,12 +53,17 @@ template <typename SegtreeType, typename ValueContainer >
 void test_segment_tree<SegtreeType , ValueContainer>::test_all(ValueContainer *input)
 {
     test_build(input);
-    
+    test_update(input);
 }
 template <typename SegtreeType, typename ValueContainer >
 void test_segment_tree<SegtreeType , ValueContainer>::test_build(ValueContainer *input)
 {
     test_build_double_sum<SegtreeType,ValueContainer>(input);
+}
+template <typename SegtreeType, typename ValueContainer >
+void test_segment_tree<SegtreeType , ValueContainer>::test_update(ValueContainer *input)
+{
+    test_update_double_sum<SegtreeType,ValueContainer>(input);
 }
 
 template < typename ValueTraits, bool ConstantTimeSize, bool Default_Holder, typename ValueContainer >
