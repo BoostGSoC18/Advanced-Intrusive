@@ -45,8 +45,8 @@ struct test_segment_tree
 
    static void test_all(ValueContainer*input);
    static void test_build(ValueContainer* input);
-   static void test_query(ValueContainer* input);
    static void test_update(ValueContainer* input);
+   static void test_query(ValueContainer* input);
 };
 
 template <typename SegtreeType, typename ValueContainer >
@@ -54,6 +54,7 @@ void test_segment_tree<SegtreeType , ValueContainer>::test_all(ValueContainer *i
 {
     test_build(input);
     test_update(input);
+    test_query(input);
 }
 template <typename SegtreeType, typename ValueContainer >
 void test_segment_tree<SegtreeType , ValueContainer>::test_build(ValueContainer *input)
@@ -64,6 +65,12 @@ template <typename SegtreeType, typename ValueContainer >
 void test_segment_tree<SegtreeType , ValueContainer>::test_update(ValueContainer *input)
 {
     test_update_double_sum<SegtreeType,ValueContainer>(input);
+}
+
+template <typename SegtreeType, typename ValueContainer >
+void test_segment_tree<SegtreeType , ValueContainer>::test_query(ValueContainer *input)
+{
+    test_query_double_sum<SegtreeType,ValueContainer>(input);
 }
 
 template < typename ValueTraits, bool ConstantTimeSize, bool Default_Holder, typename ValueContainer >

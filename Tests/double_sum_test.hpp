@@ -4,6 +4,10 @@ void test_build_double_sum(ValueContainer *input);
 template <typename SegtreeType, typename ValueContainer >
 void test_update_double_sum(ValueContainer *input);
 
+template <typename SegtreeType, typename ValueContainer >
+void test_query_double_sum(ValueContainer *input);
+
+
 template<typename iterator>
 struct itr_range{
     public:
@@ -111,4 +115,29 @@ void test_update_double_sum(ValueContainer *input)
         }
         range_iterator.pop();
     }    
+}
+template <typename SegtreeType, typename ValueContainer >
+void test_query_double_sum(ValueContainer *input)
+{
+    SegtreeType segtree(0,99,100);
+    segtree.build(input,0,99,double_sum);
+    for(int i=0;i<=99;i++)
+    {
+        for(int m=i;m<=99;m++)
+        {
+            type_used temp=segtree.query(input,0,99,double_sum,i,m);
+            int sum=0;
+            for(int k=i;k<=m;k++)
+            {
+                sum+=input[k].a;
+            }
+            BOOST_CHECK_EQUAL(sum,temp.a);
+            sum=0;
+            for(int k=i;k<=m;k++)
+            {
+                sum+=input[k].b;
+            }
+            BOOST_CHECK_EQUAL(sum,temp.b);
+        }
+    }
 }
