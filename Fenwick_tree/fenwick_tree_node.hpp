@@ -27,7 +27,7 @@ class fenwick_tree_node_traits
     {
         target->n=n;
     }
-    BOOST_INTRUSIVE_FORCEINLINE static void get_child_count(node_ptr &target)
+    BOOST_INTRUSIVE_FORCEINLINE static node_ptr get_child_count(node_ptr &target)
     {
         return target->n;
     }
@@ -35,7 +35,7 @@ class fenwick_tree_node_traits
     {
         target->child[n]=child;
     }
-    BOOST_INTRUSIVE_FORCEINLINE static void get_child(node_ptr &target,int n)
+    BOOST_INTRUSIVE_FORCEINLINE static node_ptr get_child(node_ptr &target,int n)
     {
         return target->child[n];
     }
