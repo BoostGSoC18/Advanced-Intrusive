@@ -55,7 +55,9 @@ struct segtree_defaults
    typedef void header_holder_type;
 };
 
-
+/**
+ * This class is main class where all the functions are defined.
+*/
 template<typename ValueTraits, class SizeType, bool ConstantTimeSize, typename HeaderHolder>
 class segment_tree_impl
 {
@@ -74,53 +76,29 @@ class segment_tree_impl
     typedef typename node_traits::const_node_ptr                      const_node_ptr;
     typedef SizeType                                                  size_type;
    
-    typedef typename detail::get_header_holder_type
-      < value_traits, HeaderHolder >::type                           header_holder_type;
 
    static const bool constant_time_size = ConstantTimeSize;
    static const bool stateful_value_traits = detail::is_stateful_value_traits<value_traits>::value;
-   static const bool has_container_from_iterator =
-        detail::is_same< header_holder_type, detail::default_header_holder< node_traits > >::value;
 
    /// @cond
-
-   private:
-   
-   typedef detail::size_holder<constant_time_size, size_type>          size_traits;
-   
-
-
-   node_ptr get_root_node()
-   { return data_.root_plus_size_.m_header.get_node(); }
-
-   const_node_ptr get_root_node() const
-   { return data_.root_plus_size_.m_header.get_node(); }
-
-   struct root_plus_size : public size_traits
-   {
-      header_holder_type m_header;
-   };
-
    struct data_t : public ValueTraits
    {
       typedef typename segment_tree_impl::value_traits value_traits;
-      root_plus_size root_plus_size_;
+      explicit data_t(const value_traits &val_traits)
+         :  value_traits(val_traits)
+      {}
+      size_type total_nodes=0,internal_nodes=0,nodecnt_run=1;  
+      node_ptr root;
+      value_type *ptr;  
    } data_;
-
-   size_traits &priv_size_traits()
-   {  return data_.root_plus_size_;  }
-
-   const size_traits &priv_size_traits() const
-   {  return data_.root_plus_size_;  }
 
    const value_traits &priv_value_traits() const
    {
      return data_;  
    }
-
    value_traits &priv_value_traits()
    {
-      return data_;
+      return data_; 
    }
 
    typedef typename boost::intrusive::value_traits_pointers
@@ -130,65 +108,78 @@ class segment_tree_impl
    {  return pointer_traits<const_value_traits_ptr>::pointer_to(this->priv_value_traits());  }
 
    public:
-    node_ptr root;
-    int n;
-    int total_nodes=0,internal_nodes=0;
-    value_type *ptr;
-    private:
-    int nodecnt_run=1;
-    public:
-    segment_tree_impl(int start,int end,int n)
+   value_type *input;
+   int start,end;
+   public:
+    segment_tree_impl(value_type input[],int start,int end)
+    :data_(value_traits())
     {
+        this->input=input;
+        this->start=start;
+        this->end=end;
         nodes_count(start,end);
-        ptr=(value_type*)malloc((total_nodes)*sizeof(value_type));
-        initialisation(start,end,0);
-        root=value_traits::to_node_ptr(ptr[0]);
+        data_.ptr=(value_type*)malloc((data_.internal_nodes)*sizeof(value_type));
+        initialisation(input,start,end,0);
+        data_.root=value_traits::to_node_ptr(data_.ptr[0]);
     }
     private:
-    void initialisation(int start,int end,int parent_pos)
+    void initialisation(value_type input[],int start,int end,int parent_pos)
     {
-       if(start==end)
-       {
-           return ;
+        if(start!=end)
+        {
+            int mid=(start+end)/2,left,right;
+            node_ptr parent=value_traits::to_node_ptr(data_.ptr[parent_pos]),left_child,right_child;
+            if(start==mid)
+            {
+                left_child=value_traits::to_node_ptr(input[start]);
+            }
+            else
+            {
+                left_child=value_traits::to_node_ptr(data_.ptr[data_.nodecnt_run]);
+                left=data_.nodecnt_run;
+                data_.nodecnt_run++;
+            }
+            if(mid+1==end)
+            {
+                right_child=value_traits::to_node_ptr(input[end]);
+            }
+            else
+            {
+                right_child=value_traits::to_node_ptr(data_.ptr[data_.nodecnt_run]);
+                right=data_.nodecnt_run;
+                data_.nodecnt_run++;
+            }
+            parent->left_child=left_child;
+            parent->right_child=right_child;
+            if(start!=mid)
+                initialisation(input,start,mid,left);
+            if(mid+1!=end)
+                initialisation(input,mid+1,end,right); 
        }
-       int left,right;
-       node_ptr parent=value_traits::to_node_ptr(ptr[parent_pos]);
-       node_ptr left_child=value_traits::to_node_ptr(ptr[nodecnt_run]);
-       left=nodecnt_run;
-       nodecnt_run++;
-       node_ptr right_child=value_traits::to_node_ptr(ptr[nodecnt_run]);
-       right=nodecnt_run;
-       nodecnt_run++;
-       parent->left_child=left_child;
-       parent->right_child=right_child;
-       int mid=(start+end)/2;
-       initialisation(start,mid,left);
-       initialisation(mid+1,end,right); 
     }
     private:
     void nodes_count(int start,int end)
     {
-       total_nodes++;
+       data_.total_nodes++;
        if(start==end)
        {
            return ;
        }
-       internal_nodes++;
+       data_.internal_nodes++;
        int mid=(start+end)/2;
        nodes_count(start,mid);
        nodes_count(mid+1,end); 
     }
     public:
-    void build(data_type *input,int start,int end,auto func)
+    void build(auto func)
     {
-       build_computation(input,start,end,func,root);
+       build_computation(input,start,end,func,data_.root);
     }
-    data_type build_computation(data_type  *input,int start,int end,auto func,node_ptr &curr_node)
+    data_type build_computation(value_type  *input,int start,int end,auto func,node_ptr &curr_node)
     {
         value_type* p=value_traits::to_value_ptr(curr_node);
         if(start==end)
         {
-            p->value=input[start];
             return p->value;
         }
         int mid=(start+end)/2;
@@ -199,16 +190,15 @@ class segment_tree_impl
         p->value=func(left_value,right_value);
         return p->value;
     }
-    data_type update(data_type input[],int start,int end,auto func,int index)
+    void update(auto func,int index)
     {
-        update_computation(input,start,end,func,index,root);
+        update_computation(input,start,end,func,index,data_.root);
     }
-    data_type update_computation(data_type input[],int start,int end,auto func,int index,node_ptr &curr_node)
+    data_type update_computation(value_type input[],int start,int end,auto func,int index,node_ptr &curr_node)
     {
         pointer p=value_traits::to_value_ptr(curr_node);
         if(start==end && start==index)
         {
-            p->value=input[start];
             return p->value;
         }
         if(index>end || index<start)
@@ -224,24 +214,24 @@ class segment_tree_impl
     private:
     int range_nodes=0;
     public:
-    data_type query(data_type input[],int start,int end,auto func,int query_start,int query_end)
+    data_type query(auto func,int query_start,int query_end)
     {
         data_type *required_values;
-        required_values=(data_type*)malloc(4*total_nodes*sizeof(data_type));
-        query_computation(input,start,end,func,query_start,query_end,required_values,root);
+        required_values=(data_type*)malloc(data_.total_nodes*sizeof(data_type));
+        query_computation(input,start,end,func,query_start,query_end,required_values,data_.root);
         data_type final_value;
         final_value=required_values[0];
         for(int each=1;each<range_nodes;each++)
         {
             final_value=func(final_value,required_values[each]);
         }
+        range_nodes=0;
         return final_value;
     }
     private:
-    void query_computation(data_type input[],int start,int end,auto func,int query_start,int query_end,data_type *required_values,node_ptr &curr_node)
+    void query_computation(value_type input[],int start,int end,auto func,int query_start,int query_end,data_type *required_values,node_ptr &curr_node)
     {
         pointer p=value_traits::to_value_ptr(curr_node);
-        
         if(query_start<=start && end<=query_end)
         {
             required_values[range_nodes]=p->value;
@@ -261,7 +251,11 @@ class segment_tree_impl
     public:
     iterator get_root()
     {
-        return iterator(root, this->priv_value_traits_ptr());
+        return iterator(data_.root, this->priv_value_traits_ptr());
+    }
+    const_iterator const_get_root() const
+    {
+        return const_iterator(data_.root, this->priv_value_traits_ptr());
     }
 
 
@@ -327,13 +321,17 @@ class segment_tree
    typedef typename Base::iterator              iterator;
    
     public:
-    segment_tree(int ss,int se,int n)
-        : Base(ss,se,n)
+    segment_tree(T input[],int start,int end)
+        : Base(input,start,end)
     {
 
     };
+//        explicit list(int start,int end,int n,const value_traits &v_traits)
+//       :  Base(start,end,n,v_traits)
+//    {}
+
 };
 
 }
 }
-#endif 
+#endif  
