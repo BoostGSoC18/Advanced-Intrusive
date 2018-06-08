@@ -104,11 +104,11 @@ class test_main_template
    {
       typedef typename hooks<VoidPointer>::base_hook_type base_hook_type;
       typedef MyClass<base_hook_type,hooks<VoidPointer>> value_type;
-      type_used input[105];
-      for(int i=0;i<100;i++)
+      value_type input[205];
+      for(int i=0;i<200;i++)
       {
-          input[i].a=1;
-          input[i].b=1;
+          input[i].value.a=1;
+          input[i].value.b=1;
       }
       make_and_test_segment_tree < typename detail::get_base_value_traits <
                               value_type,
@@ -116,14 +116,14 @@ class test_main_template
                            >::type,
                            ConstantTimeSize,
                            Default_Holder,
-                           type_used
+                           value_type
                          >::test_all(input);
       make_and_test_segment_tree < typename detail::get_member_value_traits <
                               member_hook< value_type, typename hooks<VoidPointer>::member_hook_type, &value_type::node_>
                            >::type,
                            ConstantTimeSize,
                            Default_Holder,
-                            type_used
+                            value_type
                         >::test_all(input);
       make_and_test_segment_tree< nonhook_node_member_value_traits <
                              value_type,
@@ -133,7 +133,7 @@ class test_main_template
                           >,
                           ConstantTimeSize,
                           Default_Holder,
-                            type_used
+                            value_type
                         >::test_all(input);
 
       return 0;
@@ -148,11 +148,11 @@ class test_main_template< VoidPointer, false, Default_Holder >
    {
      typedef typename hooks<VoidPointer>::auto_base_hook_type auto_base_hook_type;
      typedef MyClass<auto_base_hook_type,hooks<VoidPointer>> value_type;
-      type_used input[105];
-      for(int i=0;i<100;i++)
+      value_type input[205];
+      for(int i=0;i<200;i++)
       {
-          input[i].a=1;
-          input[i].b=1;
+          input[i].value.a=1;
+          input[i].value.b=1;
       }
       make_and_test_segment_tree < typename detail::get_base_value_traits <
                               value_type,
@@ -160,14 +160,14 @@ class test_main_template< VoidPointer, false, Default_Holder >
                            >::type,
                            false,
                            Default_Holder,
-                           type_used 
+                           value_type
                          >::test_all(input);
       make_and_test_segment_tree < typename detail::get_member_value_traits <
                               member_hook< value_type, typename hooks<VoidPointer>::auto_member_hook_type, &value_type::auto_node_>
                             >::type,
                             false,
                          Default_Holder,
-                         type_used
+                         value_type
                        >::test_all(input);
 
       return 0;
