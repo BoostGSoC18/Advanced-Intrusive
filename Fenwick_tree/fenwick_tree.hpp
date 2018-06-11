@@ -1,6 +1,5 @@
 #include <boost/GSOC18/Advanced-Intrusive/Fenwick_tree/fenwick_tree_algorithms.hpp>
 #include <boost/GSOC18/Advanced-Intrusive/Fenwick_tree/fenwick_tree_hook.hpp>
-//#include "boost/GSOC18/Advanced-Intrusive/Fenwick_tree/merging_function.hpp"
 #include <boost/GSOC18/Advanced-Intrusive/Fenwick_tree/fenwick_tree_iterator.hpp>
 
 
@@ -72,6 +71,8 @@ class fenwick_tree_impl
     typedef fenwick_tree_algorithms<node_traits> algo;
     typedef typename node_traits::const_node_ptr                      const_node_ptr;
     typedef SizeType                                                  size_type;
+    typedef fenwick_tree_iterator<value_traits, false>                        iterator;
+    typedef fenwick_tree_iterator<value_traits, true>                         const_iterator;
     typedef typename value_type::data_type data_type;
     typedef typename detail::get_header_holder_type
       < value_traits, HeaderHolder >::type                           header_holder_type;
@@ -85,7 +86,51 @@ class fenwick_tree_impl
 
    private:
     typedef detail::size_holder<constant_time_size, size_type>          size_traits;
+   
+   node_ptr get_root_node()
+   { return data_.root_plus_size_.m_header.get_node(); }
+
+   const_node_ptr get_root_node() const
+   { return data_.root_plus_size_.m_header.get_node(); }
+
+   struct root_plus_size : public size_traits
+   {
+      header_holder_type m_header;
+   };
+
+   struct data_t : public ValueTraits
+   {
+      typedef typename fenwick_tree_impl::value_traits value_traits;
+    //   explicit data_t(const value_traits &val_traits)
+    //      :  value_traits(val_traits)
+    //   {}
+      root_plus_size root_plus_size_;
+   } data_;
     
+
+   size_traits &priv_size_traits()
+   {  return data_.root_plus_size_;  }
+
+   const size_traits &priv_size_traits() const
+   {  return data_.root_plus_size_;  }
+
+   const value_traits &priv_value_traits() const
+   {
+     return data_;  
+   }
+
+   value_traits &priv_value_traits()
+   {
+      return data_;
+   }
+
+   typedef typename boost::intrusive::value_traits_pointers
+      <ValueTraits>::const_value_traits_ptr const_value_traits_ptr;
+
+   const_value_traits_ptr priv_value_traits_ptr() const
+   {  return pointer_traits<const_value_traits_ptr>::pointer_to(this->priv_value_traits());  }
+
+
     private:
     
     value_type *ptr;
@@ -242,6 +287,51 @@ class fenwick_tree_impl
             }
             curr_node=curr_node->children[child];
         }
+    }
+    public:
+    data_type curr_value;
+    data_type query(auto func,int index)
+    {
+        std::stack<int> bit_pos;
+        int temp=1,cnt=0;
+        while(temp<=index+1)
+        {
+            int a=temp&(index+1);
+            if(a==temp)
+            {
+                bit_pos.push(cnt);
+            }    
+            cnt++;
+            temp*=2;
+        }
+        query_computation(root,func,bit_pos);
+        return curr_value;
+    }
+    private:
+    void query_computation(node_ptr curr_node,auto func,std::stack<int> &bit_pos)
+    {
+        int flag=1;
+        while(!bit_pos.empty())
+        {
+            int child=bit_pos.top();
+            bit_pos.pop();
+            pointer p=value_traits::to_value_ptr(curr_node->children[child]);
+            if(flag)
+            {
+                curr_value=p->value;
+                flag=0;
+            }
+            else
+            {
+                curr_value=func(curr_value,p->value);
+            }
+            curr_node=curr_node->children[child];
+        }
+    }    
+    public:
+    iterator get_root()
+    {
+        return iterator(root,this->priv_value_traits_ptr());
     }
 };
 
