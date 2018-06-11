@@ -4,6 +4,9 @@ void test_build_sum(ValueContainer *input);
 template <typename FenwicktreeType, typename ValueContainer >
 void test_update_sum(ValueContainer *input);
 
+template <typename FenwicktreeType, typename ValueContainer >
+void test_query_sum(ValueContainer *input);
+
 template<typename iterator>
 struct itr_range{
     public:
@@ -97,4 +100,22 @@ void test_update_sum(ValueContainer *input)
         }
         nodes_all.pop();
     } 
+}
+
+
+template <typename FenwicktreeType, typename ValueContainer >
+void test_query_sum(ValueContainer *input)
+{
+    FenwicktreeType fenwicktree(input,0,199);
+    fenwicktree.build(sum);
+    for(int i=0;i<=199;i++)
+    {
+        type_used temp=fenwicktree.query(sum,i);
+        int sum=0;
+        for(int k=0;k<=i;k++)
+        {
+            sum+=input[k].value.a;
+        }
+        BOOST_CHECK_EQUAL(sum,temp.a);    
+    }
 }

@@ -48,6 +48,7 @@ struct test_fenwick_tree
    static void test_all(ValueContainer*input);
    static void test_build(ValueContainer* input);
    static void test_update(ValueContainer* input);
+   static void test_query(ValueContainer* input);
 };
 
 template <typename FenwicktreeType, typename ValueContainer >
@@ -55,6 +56,7 @@ void test_fenwick_tree<FenwicktreeType , ValueContainer>::test_all(ValueContaine
 {
     test_build(input);
     test_update(input);
+    test_query(input);
 }
 template <typename FenwicktreeType, typename ValueContainer >
 void test_fenwick_tree<FenwicktreeType , ValueContainer>::test_build(ValueContainer *input)
@@ -65,6 +67,12 @@ template <typename FenwicktreeType, typename ValueContainer >
 void test_fenwick_tree<FenwicktreeType , ValueContainer>::test_update(ValueContainer *input)
 {
     test_update_sum<FenwicktreeType,ValueContainer>(input);
+}
+
+template <typename FenwicktreeType, typename ValueContainer >
+void test_fenwick_tree<FenwicktreeType , ValueContainer>::test_query(ValueContainer *input)
+{
+    test_query_sum<FenwicktreeType,ValueContainer>(input);
 }
 
 template < typename ValueTraits, bool ConstantTimeSize, bool Default_Holder, typename ValueContainer >
