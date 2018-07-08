@@ -13,9 +13,10 @@ class suffix_tree_node
     public:
         typedef typename boost::intrusive::pointer_rebind<VoidPointer, suffix_tree_node>::type  node_ptr;
     public:
-        node_ptr children[26];
+        node_ptr children[256];
         node_ptr suffix_link;
-        int start,end;
+        int start;
+        int *end;
         int suffix_index;
 };
 template<class VoidPointer>
@@ -61,7 +62,7 @@ class suffix_tree_node_traits
     {
         target->suffix_index=suffix_index;
     }
-    BOOST_INTRUSIVE_FORCEINLINE static int get_start(node_ptr &target)
+    BOOST_INTRUSIVE_FORCEINLINE static int get_suffix_index(node_ptr &target)
     {
         return target->suffix_index;
     }
