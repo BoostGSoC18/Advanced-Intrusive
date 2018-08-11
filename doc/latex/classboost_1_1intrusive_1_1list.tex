@@ -1,0 +1,148 @@
+\hypertarget{classboost_1_1intrusive_1_1list}{}\section{boost\+:\+:intrusive\+:\+:list$<$ T, O1, O2, O3, O4 $>$ Class Template Reference}
+\label{classboost_1_1intrusive_1_1list}\index{boost\+::intrusive\+::list$<$ T, O1, O2, O3, O4 $>$@{boost\+::intrusive\+::list$<$ T, O1, O2, O3, O4 $>$}}
+
+
+{\ttfamily \#include $<$list.\+hpp$>$}
+
+
+
+Inheritance diagram for boost\+:\+:intrusive\+:\+:list$<$ T, O1, O2, O3, O4 $>$\+:
+% FIG 0
+
+
+Collaboration diagram for boost\+:\+:intrusive\+:\+:list$<$ T, O1, O2, O3, O4 $>$\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1list_aed9db2882c7567d4600fce5dda67c0ab}{value\+\_\+traits}
+\item 
+typedef Base\+::iterator \hyperlink{classboost_1_1intrusive_1_1list_a3b53513ff4e214951fc767223097fb6e}{iterator}
+\item 
+typedef Base\+::const\+\_\+iterator \hyperlink{classboost_1_1intrusive_1_1list_a4a837c7b342e3461c2a8ed48df5dd9a3}{const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list_acf7cd5a0ce708aa2a2e43a677383ce3d}{list} ()
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list_a1fdd256ce8cea0dda5b0a3166f6a30e2}{list} (const \hyperlink{classboost_1_1intrusive_1_1list_aed9db2882c7567d4600fce5dda67c0ab}{value\+\_\+traits} \&v\+\_\+traits)
+\item 
+{\footnotesize template$<$class Iterator $>$ }\\\hyperlink{classboost_1_1intrusive_1_1list_a0465fd895d60bb9b4e7a4cc57aeae020}{list} (Iterator b, Iterator e, const \hyperlink{classboost_1_1intrusive_1_1list_aed9db2882c7567d4600fce5dda67c0ab}{value\+\_\+traits} \&v\+\_\+traits=\hyperlink{classboost_1_1intrusive_1_1list_aed9db2882c7567d4600fce5dda67c0ab}{value\+\_\+traits}())
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list_a92f4f5f8207fccb75d232beee75ec74f}{list} (B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list}{list}) x)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list}{list} \& \hyperlink{classboost_1_1intrusive_1_1list_a8f26181bcd829be5c6c8588b75745a2d}{operator=} (B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list}{list}) x)
+\item 
+{\footnotesize template$<$class Cloner , class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list_abd5a0ff454d12980a7854763f7787925}{clone\+\_\+from} (const \hyperlink{classboost_1_1intrusive_1_1list}{list} \&src, Cloner cloner, Disposer disposer)
+\item 
+{\footnotesize template$<$class Cloner , class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list_a385d08ac3e61f67a63671ec827f39a39}{clone\+\_\+from} (B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list}{list}) src, Cloner cloner, Disposer disposer)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classboost_1_1intrusive_1_1list}{list} \& \hyperlink{classboost_1_1intrusive_1_1list_a2ae036a74c66652d8552e1d76abdad31}{container\+\_\+from\+\_\+end\+\_\+iterator} (\hyperlink{classboost_1_1intrusive_1_1list_a3b53513ff4e214951fc767223097fb6e}{iterator} end\+\_\+iterator)
+\item 
+static const \hyperlink{classboost_1_1intrusive_1_1list}{list} \& \hyperlink{classboost_1_1intrusive_1_1list_a411026709c541314c1cf8abf500722ab}{container\+\_\+from\+\_\+end\+\_\+iterator} (\hyperlink{classboost_1_1intrusive_1_1list_a4a837c7b342e3461c2a8ed48df5dd9a3}{const\+\_\+iterator} end\+\_\+iterator)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_a4a837c7b342e3461c2a8ed48df5dd9a3}\label{classboost_1_1intrusive_1_1list_a4a837c7b342e3461c2a8ed48df5dd9a3}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{const\+\_\+iterator}{const\_iterator}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+typedef Base\+::const\+\_\+iterator \hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1list_a4a837c7b342e3461c2a8ed48df5dd9a3}{const\+\_\+iterator}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_a3b53513ff4e214951fc767223097fb6e}\label{classboost_1_1intrusive_1_1list_a3b53513ff4e214951fc767223097fb6e}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!iterator@{iterator}}
+\index{iterator@{iterator}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+typedef Base\+::iterator \hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1list_a3b53513ff4e214951fc767223097fb6e}{iterator}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_aed9db2882c7567d4600fce5dda67c0ab}\label{classboost_1_1intrusive_1_1list_aed9db2882c7567d4600fce5dda67c0ab}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!value\+\_\+traits@{value\+\_\+traits}}
+\index{value\+\_\+traits@{value\+\_\+traits}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{value\+\_\+traits}{value\_traits}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1list_aed9db2882c7567d4600fce5dda67c0ab}{value\+\_\+traits}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_acf7cd5a0ce708aa2a2e43a677383ce3d}\label{classboost_1_1intrusive_1_1list_acf7cd5a0ce708aa2a2e43a677383ce3d}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!list@{list}}
+\index{list@{list}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1list}{list} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_a1fdd256ce8cea0dda5b0a3166f6a30e2}\label{classboost_1_1intrusive_1_1list_a1fdd256ce8cea0dda5b0a3166f6a30e2}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!list@{list}}
+\index{list@{list}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1list}{list} (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1list_aed9db2882c7567d4600fce5dda67c0ab}{value\+\_\+traits} \&}]{v\+\_\+traits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_a0465fd895d60bb9b4e7a4cc57aeae020}\label{classboost_1_1intrusive_1_1list_a0465fd895d60bb9b4e7a4cc57aeae020}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!list@{list}}
+\index{list@{list}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+template$<$class Iterator $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1list}{list} (\begin{DoxyParamCaption}\item[{Iterator}]{b,  }\item[{Iterator}]{e,  }\item[{const \hyperlink{classboost_1_1intrusive_1_1list_aed9db2882c7567d4600fce5dda67c0ab}{value\+\_\+traits} \&}]{v\+\_\+traits = {\ttfamily \hyperlink{classboost_1_1intrusive_1_1list_aed9db2882c7567d4600fce5dda67c0ab}{value\+\_\+traits}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_a92f4f5f8207fccb75d232beee75ec74f}\label{classboost_1_1intrusive_1_1list_a92f4f5f8207fccb75d232beee75ec74f}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!list@{list}}
+\index{list@{list}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1list}{list} (\begin{DoxyParamCaption}\item[{B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list}{list}$<$ T, O1, O2, O3, O4 $>$)}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_abd5a0ff454d12980a7854763f7787925}\label{classboost_1_1intrusive_1_1list_abd5a0ff454d12980a7854763f7787925}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!clone\+\_\+from@{clone\+\_\+from}}
+\index{clone\+\_\+from@{clone\+\_\+from}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{clone\+\_\+from()}{clone\_from()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+template$<$class Cloner , class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::clone\+\_\+from (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1list}{list}$<$ T, O1, O2, O3, O4 $>$ \&}]{src,  }\item[{Cloner}]{cloner,  }\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_a385d08ac3e61f67a63671ec827f39a39}\label{classboost_1_1intrusive_1_1list_a385d08ac3e61f67a63671ec827f39a39}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!clone\+\_\+from@{clone\+\_\+from}}
+\index{clone\+\_\+from@{clone\+\_\+from}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{clone\+\_\+from()}{clone\_from()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+template$<$class Cloner , class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::clone\+\_\+from (\begin{DoxyParamCaption}\item[{B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list}{list}$<$ T, O1, O2, O3, O4 $>$)}]{src,  }\item[{Cloner}]{cloner,  }\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_a2ae036a74c66652d8552e1d76abdad31}\label{classboost_1_1intrusive_1_1list_a2ae036a74c66652d8552e1d76abdad31}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!container\+\_\+from\+\_\+end\+\_\+iterator@{container\+\_\+from\+\_\+end\+\_\+iterator}}
+\index{container\+\_\+from\+\_\+end\+\_\+iterator@{container\+\_\+from\+\_\+end\+\_\+iterator}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{container\+\_\+from\+\_\+end\+\_\+iterator()}{container\_from\_end\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+static \hyperlink{classboost_1_1intrusive_1_1list}{list}\& \hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::container\+\_\+from\+\_\+end\+\_\+iterator (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list_a3b53513ff4e214951fc767223097fb6e}{iterator}}]{end\+\_\+iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_a411026709c541314c1cf8abf500722ab}\label{classboost_1_1intrusive_1_1list_a411026709c541314c1cf8abf500722ab}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!container\+\_\+from\+\_\+end\+\_\+iterator@{container\+\_\+from\+\_\+end\+\_\+iterator}}
+\index{container\+\_\+from\+\_\+end\+\_\+iterator@{container\+\_\+from\+\_\+end\+\_\+iterator}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{container\+\_\+from\+\_\+end\+\_\+iterator()}{container\_from\_end\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+static const \hyperlink{classboost_1_1intrusive_1_1list}{list}\& \hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::container\+\_\+from\+\_\+end\+\_\+iterator (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list_a4a837c7b342e3461c2a8ed48df5dd9a3}{const\+\_\+iterator}}]{end\+\_\+iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list_a8f26181bcd829be5c6c8588b75745a2d}\label{classboost_1_1intrusive_1_1list_a8f26181bcd829be5c6c8588b75745a2d}} 
+\index{boost\+::intrusive\+::list@{boost\+::intrusive\+::list}!operator=@{operator=}}
+\index{operator=@{operator=}!boost\+::intrusive\+::list@{boost\+::intrusive\+::list}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list}{list}\& \hyperlink{classboost_1_1intrusive_1_1list}{boost\+::intrusive\+::list}$<$ T, O1, O2, O3, O4 $>$\+::operator= (\begin{DoxyParamCaption}\item[{B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list}{list}$<$ T, O1, O2, O3, O4 $>$)}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/hari/\+G\+S\+O\+C/boost\+\_\+1\+\_\+67\+\_\+0/boost/\+Advanced-\/\+Intrusive-\/master/\hyperlink{list_8hpp}{list.\+hpp}\end{DoxyCompactItemize}

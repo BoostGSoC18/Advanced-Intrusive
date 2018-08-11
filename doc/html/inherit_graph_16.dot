@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="boost::intrusive::make\l_suffix_tree_member_hook\l\< O1, O2, O3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classboost_1_1intrusive_1_1make__suffix__tree__member__hook.html"];
+}

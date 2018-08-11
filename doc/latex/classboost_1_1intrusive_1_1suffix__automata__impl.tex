@@ -1,0 +1,150 @@
+\hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl}{}\section{boost\+:\+:intrusive\+:\+:suffix\+\_\+automata\+\_\+impl$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ Class Template Reference}
+\label{classboost_1_1intrusive_1_1suffix__automata__impl}\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$}}
+
+
+{\ttfamily \#include $<$suffix\+\_\+automata.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Value\+Traits \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_abbf3dee8caf18613db903931801c6076}{value\+\_\+traits}
+\item 
+typedef value\+\_\+traits\+::node\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_a3bf4d50a1aa7e13e6d6ded62d04a0296}{node\+\_\+traits}
+\item 
+typedef node\+::node\+\_\+ptr \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_ab2d4128c7fc9c5ba87fa9eb5d50c318a}{node\+\_\+ptr}
+\item 
+typedef value\+\_\+traits\+::pointer \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_aa30039fa797b95a84660985ab506f6ef}{pointer}
+\item 
+typedef pointer\+\_\+traits$<$ \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_aa30039fa797b95a84660985ab506f6ef}{pointer} $>$\+::element\+\_\+type \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_afc35e3e13adbae16ac9bfb049d719cd2}{value\+\_\+type}
+\item 
+typedef pointer\+\_\+traits$<$ \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_aa30039fa797b95a84660985ab506f6ef}{pointer} $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_a65352a440751b963521c55774953f0e4}{reference} \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_a65352a440751b963521c55774953f0e4}{reference}
+\item 
+typedef suffix\+\_\+automata\+\_\+algorithms$<$ \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_a3bf4d50a1aa7e13e6d6ded62d04a0296}{node\+\_\+traits} $>$ \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_afa6f98d48851586ded5a3141789336d7}{algo}
+\item 
+typedef node\+\_\+traits\+::const\+\_\+node\+\_\+ptr \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_acf5340d09b102d7fa183bcb304e96d0b}{const\+\_\+node\+\_\+ptr}
+\item 
+typedef Size\+Type \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_ad2fe9bd542f914c94c7d0e42cce5613c}{size\+\_\+type}
+\item 
+typedef detail\+::get\+\_\+header\+\_\+holder\+\_\+type$<$ \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_abbf3dee8caf18613db903931801c6076}{value\+\_\+traits}, Header\+Holder $>$\+::type \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_a0b9a7a78415c25b6b3f377e1269f539a}{header\+\_\+holder\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_af726049e346e9b927b3ef5b4b4cf1ca4}{suffix\+\_\+automata\+\_\+impl} (char $\ast$text)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Value\+Traits, class Size\+Type, bool Constant\+Time\+Size, typename Header\+Holder$>$\newline
+class boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$}
+
+
+\begin{DoxyItemize}
+\item This class contains all the basic methods supported by suffix automata.  
+\item This class is derived in the \char`\"{}suffix\+\_\+automata\char`\"{} class  
+\end{DoxyItemize}
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_afa6f98d48851586ded5a3141789336d7}\label{classboost_1_1intrusive_1_1suffix__automata__impl_afa6f98d48851586ded5a3141789336d7}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!algo@{algo}}
+\index{algo@{algo}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{algo}{algo}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef suffix\+\_\+automata\+\_\+algorithms$<$\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_a3bf4d50a1aa7e13e6d6ded62d04a0296}{node\+\_\+traits}$>$ \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_afa6f98d48851586ded5a3141789336d7}{algo}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_acf5340d09b102d7fa183bcb304e96d0b}\label{classboost_1_1intrusive_1_1suffix__automata__impl_acf5340d09b102d7fa183bcb304e96d0b}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!const\+\_\+node\+\_\+ptr@{const\+\_\+node\+\_\+ptr}}
+\index{const\+\_\+node\+\_\+ptr@{const\+\_\+node\+\_\+ptr}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{const\+\_\+node\+\_\+ptr}{const\_node\_ptr}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef node\+\_\+traits\+::const\+\_\+node\+\_\+ptr \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_acf5340d09b102d7fa183bcb304e96d0b}{const\+\_\+node\+\_\+ptr}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_a0b9a7a78415c25b6b3f377e1269f539a}\label{classboost_1_1intrusive_1_1suffix__automata__impl_a0b9a7a78415c25b6b3f377e1269f539a}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!header\+\_\+holder\+\_\+type@{header\+\_\+holder\+\_\+type}}
+\index{header\+\_\+holder\+\_\+type@{header\+\_\+holder\+\_\+type}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{header\+\_\+holder\+\_\+type}{header\_holder\_type}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef detail\+::get\+\_\+header\+\_\+holder\+\_\+type$<$ \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_abbf3dee8caf18613db903931801c6076}{value\+\_\+traits}, Header\+Holder $>$\+::type \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_a0b9a7a78415c25b6b3f377e1269f539a}{header\+\_\+holder\+\_\+type}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_ab2d4128c7fc9c5ba87fa9eb5d50c318a}\label{classboost_1_1intrusive_1_1suffix__automata__impl_ab2d4128c7fc9c5ba87fa9eb5d50c318a}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!node\+\_\+ptr@{node\+\_\+ptr}}
+\index{node\+\_\+ptr@{node\+\_\+ptr}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{node\+\_\+ptr}{node\_ptr}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef node\+::node\+\_\+ptr \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_ab2d4128c7fc9c5ba87fa9eb5d50c318a}{node\+\_\+ptr}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_a3bf4d50a1aa7e13e6d6ded62d04a0296}\label{classboost_1_1intrusive_1_1suffix__automata__impl_a3bf4d50a1aa7e13e6d6ded62d04a0296}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!node\+\_\+traits@{node\+\_\+traits}}
+\index{node\+\_\+traits@{node\+\_\+traits}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{node\+\_\+traits}{node\_traits}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef value\+\_\+traits\+::node\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_a3bf4d50a1aa7e13e6d6ded62d04a0296}{node\+\_\+traits}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_aa30039fa797b95a84660985ab506f6ef}\label{classboost_1_1intrusive_1_1suffix__automata__impl_aa30039fa797b95a84660985ab506f6ef}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!pointer@{pointer}}
+\index{pointer@{pointer}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef value\+\_\+traits\+::pointer \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_aa30039fa797b95a84660985ab506f6ef}{pointer}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_a65352a440751b963521c55774953f0e4}\label{classboost_1_1intrusive_1_1suffix__automata__impl_a65352a440751b963521c55774953f0e4}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!reference@{reference}}
+\index{reference@{reference}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef pointer\+\_\+traits$<$\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_aa30039fa797b95a84660985ab506f6ef}{pointer}$>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_a65352a440751b963521c55774953f0e4}{reference} \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_a65352a440751b963521c55774953f0e4}{reference}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_ad2fe9bd542f914c94c7d0e42cce5613c}\label{classboost_1_1intrusive_1_1suffix__automata__impl_ad2fe9bd542f914c94c7d0e42cce5613c}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{size\+\_\+type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef Size\+Type \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_ad2fe9bd542f914c94c7d0e42cce5613c}{size\+\_\+type}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_abbf3dee8caf18613db903931801c6076}\label{classboost_1_1intrusive_1_1suffix__automata__impl_abbf3dee8caf18613db903931801c6076}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!value\+\_\+traits@{value\+\_\+traits}}
+\index{value\+\_\+traits@{value\+\_\+traits}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{value\+\_\+traits}{value\_traits}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef Value\+Traits \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_abbf3dee8caf18613db903931801c6076}{value\+\_\+traits}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_afc35e3e13adbae16ac9bfb049d719cd2}\label{classboost_1_1intrusive_1_1suffix__automata__impl_afc35e3e13adbae16ac9bfb049d719cd2}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{value\+\_\+type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef pointer\+\_\+traits$<$\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_aa30039fa797b95a84660985ab506f6ef}{pointer}$>$\+::element\+\_\+type \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_afc35e3e13adbae16ac9bfb049d719cd2}{value\+\_\+type}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1suffix__automata__impl_af726049e346e9b927b3ef5b4b4cf1ca4}\label{classboost_1_1intrusive_1_1suffix__automata__impl_af726049e346e9b927b3ef5b4b4cf1ca4}} 
+\index{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}!suffix\+\_\+automata\+\_\+impl@{suffix\+\_\+automata\+\_\+impl}}
+\index{suffix\+\_\+automata\+\_\+impl@{suffix\+\_\+automata\+\_\+impl}!boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl@{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}}
+\subsubsection{\texorpdfstring{suffix\+\_\+automata\+\_\+impl()}{suffix\_automata\_impl()}}
+{\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{boost\+::intrusive\+::suffix\+\_\+automata\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{suffix\+\_\+automata\+\_\+impl} (\begin{DoxyParamCaption}\item[{char $\ast$}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyItemize}
+\item This function declares all the variables required by suffix automata and initialises them  
+\item This function also builds the suffix automata for the given inputs.  
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em text} & base string on which suffix automata needs to be built \\
+\hline
+{\em start} & starting index of base string to be considered \\
+\hline
+{\em end} & ending index of base string to be considered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+{\bfseries  Complexity\+: } O(\+N) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/hari/\+G\+S\+O\+C/boost\+\_\+1\+\_\+67\+\_\+0/boost/\+Advanced-\/\+Intrusive-\/master/\+Suffix\+\_\+automata/\hyperlink{suffix__automata_8hpp}{suffix\+\_\+automata.\+hpp}\end{DoxyCompactItemize}

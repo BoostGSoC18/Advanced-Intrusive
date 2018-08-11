@@ -1,0 +1,90 @@
+\hypertarget{classboost_1_1intrusive_1_1HLD}{}\section{boost\+:\+:intrusive\+:\+:H\+LD$<$ Graph $>$ Class Template Reference}
+\label{classboost_1_1intrusive_1_1HLD}\index{boost\+::intrusive\+::\+H\+L\+D$<$ Graph $>$@{boost\+::intrusive\+::\+H\+L\+D$<$ Graph $>$}}
+
+
+{\ttfamily \#include $<$hld\+\_\+ds.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classboost_1_1intrusive_1_1HLD_a57f95a8d4653ba18178223b24a8b1fcd}{H\+LD} (int root, int num\+\_\+nodes, Graph \&graph)
+\item 
+int \hyperlink{classboost_1_1intrusive_1_1HLD_af7431ec20f7c788119f1136916e7c4a8}{get\+\_\+chain\+\_\+head} (int node)
+\item 
+int \hyperlink{classboost_1_1intrusive_1_1HLD_a52a0f91efab2e5fcee4e715dffb114cf}{get\+\_\+chain\+\_\+size} (int node)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1HLD_a57f95a8d4653ba18178223b24a8b1fcd}\label{classboost_1_1intrusive_1_1HLD_a57f95a8d4653ba18178223b24a8b1fcd}} 
+\index{boost\+::intrusive\+::\+H\+LD@{boost\+::intrusive\+::\+H\+LD}!H\+LD@{H\+LD}}
+\index{H\+LD@{H\+LD}!boost\+::intrusive\+::\+H\+LD@{boost\+::intrusive\+::\+H\+LD}}
+\subsubsection{\texorpdfstring{H\+L\+D()}{HLD()}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1HLD}{boost\+::intrusive\+::\+H\+LD}$<$ Graph $>$\+::\hyperlink{classboost_1_1intrusive_1_1HLD}{H\+LD} (\begin{DoxyParamCaption}\item[{int}]{root,  }\item[{int}]{num\+\_\+nodes,  }\item[{Graph \&}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyItemize}
+\item This function decomposes the input tree into chains by selecting heavy child.  
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em root} & root of input graph \\
+\hline
+{\em num\+\_\+nodes} & total number of vertices in input graph \\
+\hline
+{\em graph} & input graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+{\bfseries  Complexity\+: } O(\+N) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1HLD_af7431ec20f7c788119f1136916e7c4a8}\label{classboost_1_1intrusive_1_1HLD_af7431ec20f7c788119f1136916e7c4a8}} 
+\index{boost\+::intrusive\+::\+H\+LD@{boost\+::intrusive\+::\+H\+LD}!get\+\_\+chain\+\_\+head@{get\+\_\+chain\+\_\+head}}
+\index{get\+\_\+chain\+\_\+head@{get\+\_\+chain\+\_\+head}!boost\+::intrusive\+::\+H\+LD@{boost\+::intrusive\+::\+H\+LD}}
+\subsubsection{\texorpdfstring{get\+\_\+chain\+\_\+head()}{get\_chain\_head()}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+int \hyperlink{classboost_1_1intrusive_1_1HLD}{boost\+::intrusive\+::\+H\+LD}$<$ Graph $>$\+::get\+\_\+chain\+\_\+head (\begin{DoxyParamCaption}\item[{int}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyItemize}
+\item This function gives the head node of the chain to which input node belongs to.  
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em node} & a vertex from input graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+head vertex of chain to which input node belongs to. 
+\end{DoxyReturn}
+
+
+{\bfseries  Complexity\+: } O(1) -\/ constant time \mbox{\Hypertarget{classboost_1_1intrusive_1_1HLD_a52a0f91efab2e5fcee4e715dffb114cf}\label{classboost_1_1intrusive_1_1HLD_a52a0f91efab2e5fcee4e715dffb114cf}} 
+\index{boost\+::intrusive\+::\+H\+LD@{boost\+::intrusive\+::\+H\+LD}!get\+\_\+chain\+\_\+size@{get\+\_\+chain\+\_\+size}}
+\index{get\+\_\+chain\+\_\+size@{get\+\_\+chain\+\_\+size}!boost\+::intrusive\+::\+H\+LD@{boost\+::intrusive\+::\+H\+LD}}
+\subsubsection{\texorpdfstring{get\+\_\+chain\+\_\+size()}{get\_chain\_size()}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+int \hyperlink{classboost_1_1intrusive_1_1HLD}{boost\+::intrusive\+::\+H\+LD}$<$ Graph $>$\+::get\+\_\+chain\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyItemize}
+\item This function gives the size of the chain to which input node belongs to.  
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em node} & a vertex from input graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size of chain to which input node belongs to. 
+\end{DoxyReturn}
+
+
+{\bfseries  Complexity\+: } O(1) -\/ constant time 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/hari/\+G\+S\+O\+C/boost\+\_\+1\+\_\+67\+\_\+0/boost/\+Advanced-\/\+Intrusive-\/master/\+H\+L\+D/\hyperlink{hld__ds_8hpp}{hld\+\_\+ds.\+hpp}\end{DoxyCompactItemize}

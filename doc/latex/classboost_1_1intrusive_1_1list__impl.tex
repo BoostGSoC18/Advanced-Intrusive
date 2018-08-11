@@ -1,0 +1,1409 @@
+\hypertarget{classboost_1_1intrusive_1_1list__impl}{}\section{boost\+:\+:intrusive\+:\+:list\+\_\+impl$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ Class Template Reference}
+\label{classboost_1_1intrusive_1_1list__impl}\index{boost\+::intrusive\+::list\+\_\+impl$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$@{boost\+::intrusive\+::list\+\_\+impl$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$}}
+
+
+{\ttfamily \#include $<$list.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Value\+Traits \hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}
+\item 
+typedef value\+\_\+traits\+::pointer \hyperlink{classboost_1_1intrusive_1_1list__impl_a671027d235426ed75ab9e4b2e090afe5}{pointer}
+\item 
+typedef value\+\_\+traits\+::const\+\_\+pointer \hyperlink{classboost_1_1intrusive_1_1list__impl_abc0f6e1c4c5f44b9edd5b96e798a618c}{const\+\_\+pointer}
+\item 
+typedef pointer\+\_\+traits$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_a671027d235426ed75ab9e4b2e090afe5}{pointer} $>$\+::element\+\_\+type \hyperlink{classboost_1_1intrusive_1_1list__impl_a011b08f2310cd73b4691870fc22e2cec}{value\+\_\+type}
+\item 
+typedef pointer\+\_\+traits$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_a671027d235426ed75ab9e4b2e090afe5}{pointer} $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} \hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference}
+\item 
+typedef pointer\+\_\+traits$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_abc0f6e1c4c5f44b9edd5b96e798a618c}{const\+\_\+pointer} $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} \hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference}
+\item 
+typedef pointer\+\_\+traits$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_a671027d235426ed75ab9e4b2e090afe5}{pointer} $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a7053eac84f0c15a33c8192687d0840e3}{difference\+\_\+type} \hyperlink{classboost_1_1intrusive_1_1list__impl_a7053eac84f0c15a33c8192687d0840e3}{difference\+\_\+type}
+\item 
+typedef Size\+Type \hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type}
+\item 
+typedef list\+\_\+iterator$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}, false $>$ \hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator}
+\item 
+typedef list\+\_\+iterator$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}, true $>$ \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}
+\item 
+typedef boost\+::intrusive\+::reverse\+\_\+iterator$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} $>$ \hyperlink{classboost_1_1intrusive_1_1list__impl_aed95b235a2056faa7d2f8cbd58dcfeb7}{reverse\+\_\+iterator}
+\item 
+typedef boost\+::intrusive\+::reverse\+\_\+iterator$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} $>$ \hyperlink{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}{const\+\_\+reverse\+\_\+iterator}
+\item 
+typedef value\+\_\+traits\+::node\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1list__impl_ae96503e0398292d5763e84a6baf677ba}{node\+\_\+traits}
+\item 
+typedef node\+\_\+traits\+::node \hyperlink{classboost_1_1intrusive_1_1list__impl_aaaa96a7e3013b33e4da86a3725352844}{node}
+\item 
+typedef node\+\_\+traits\+::node\+\_\+ptr \hyperlink{classboost_1_1intrusive_1_1list__impl_a1b1b1d87a4edc6bfee4e43622184e689}{node\+\_\+ptr}
+\item 
+typedef node\+\_\+traits\+::const\+\_\+node\+\_\+ptr \hyperlink{classboost_1_1intrusive_1_1list__impl_a1bdb914613818a3acb6866cdba10ff09}{const\+\_\+node\+\_\+ptr}
+\item 
+typedef circular\+\_\+list\+\_\+algorithms$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_ae96503e0398292d5763e84a6baf677ba}{node\+\_\+traits} $>$ \hyperlink{classboost_1_1intrusive_1_1list__impl_ad71774881b8a43de5d41e39af79afcaf}{node\+\_\+algorithms}
+\item 
+typedef detail\+::get\+\_\+header\+\_\+holder\+\_\+type$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}, Header\+Holder $>$\+::type \hyperlink{classboost_1_1intrusive_1_1list__impl_abd98fa5c33715ec93ec42f3b5755b87b}{header\+\_\+holder\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a4700da87f6258203c4450d637eef77b3}{list\+\_\+impl} ()
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_aec7438abf9f510b1bea085bf3ab562e9}{list\+\_\+impl} (const \hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits} \&v\+\_\+traits)
+\item 
+{\footnotesize template$<$class Iterator $>$ }\\\hyperlink{classboost_1_1intrusive_1_1list__impl_a7d841d7401e3bdac5353785ceb4e8faf}{list\+\_\+impl} (Iterator b, Iterator e, const \hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits} \&v\+\_\+traits=\hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}())
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af87baafc7d3c1ada9da405928dd7d59a}{list\+\_\+impl} (B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}) x)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \& \hyperlink{classboost_1_1intrusive_1_1list__impl_a8999914d675056b42a4e1d5a40fceb1b}{operator=} (B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}) x)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a142512d008d927a564d1785ac39ebb6a}{$\sim$list\+\_\+impl} ()
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a486bb7078d16bbe0e569dbd8a16ef104}{push\+\_\+back} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} value)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_ae11db4262630360dd6080aebdbd01ce8}{push\+\_\+front} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} value)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a02b94ea6055095b6ed262820cc28b739}{pop\+\_\+back} ()
+\item 
+{\footnotesize template$<$class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_ad2f45b6fd9f4d189e9f5c6fc126334b8}{pop\+\_\+back\+\_\+and\+\_\+dispose} (Disposer disposer)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_aa0a3b2545ff925b8f3185ab5f4027d4e}{pop\+\_\+front} ()
+\item 
+{\footnotesize template$<$class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_ab1d06a67a6e0f958b0f3afd61d2af8d5}{pop\+\_\+front\+\_\+and\+\_\+dispose} (Disposer disposer)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} \hyperlink{classboost_1_1intrusive_1_1list__impl_adfff2fc56d86000cced59427fecf0e90}{front} ()
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference} \hyperlink{classboost_1_1intrusive_1_1list__impl_a51eb323fe6d3cc6c590886a7514dbb27}{front} () const
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} \hyperlink{classboost_1_1intrusive_1_1list__impl_a257758f8527be08329dbc14ca5527fd8}{back} ()
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference} \hyperlink{classboost_1_1intrusive_1_1list__impl_a92fa54fafbdf353a6b51c145c775d215}{back} () const
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_acc6da960285b2ff0f37e1f373a767e19}{begin} ()
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a049277a05485ff97f95ff4d778c5551d}{begin} () const
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_adc17ab4f4ca5c3817adf62960dec3d40}{cbegin} () const
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_af2a454471fced6d4b2fb899c50bbee67}{end} ()
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a797bd19e3f14f42d556bb85de2fc1ac3}{end} () const
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_ab683bf5010edc6008b3c6e0adbc33b70}{cend} () const
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_aed95b235a2056faa7d2f8cbd58dcfeb7}{reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a0073263f314407b1e94f63084e05b77e}{rbegin} ()
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a7a6e55dedd23bd303a71d764395420a8}{rbegin} () const
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_aaec6d64d661acea3e7b92be73332618a}{crbegin} () const
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_aed95b235a2056faa7d2f8cbd58dcfeb7}{reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a4e8cb800394865d8a46cf83510b2dfbd}{rend} ()
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a0be73e24a3891a9ca9391c9762e5cc72}{rend} () const
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a9b1515c25e9402cb27796dfeb8236baf}{crend} () const
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type} \hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size} () const
+\item 
+bool \hyperlink{classboost_1_1intrusive_1_1list__impl_afe2d286a6230f944fe3aa5a231d01e0a}{empty} () const
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a08187766526ac474bc92fe5103fb8f7b}{swap} (\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&other)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a7b0d4d3142d0243ea881a0be968bdb14}{shift\+\_\+backwards} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type} n=1)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_ad8e0920e742cf90e983e0cc552b8489e}{shift\+\_\+forward} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type} n=1)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a5b8579de073832e53c545fe5cca65057}{erase} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} i)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a267b1e44859c98eb3dbd9ad865910f61}{erase} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} b, \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} e)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a8811c0530715a891ecd912674b54eb6c}{erase} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} b, \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} e, \hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type} n)
+\item 
+{\footnotesize template$<$class Disposer $>$ }\\\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a53330d72d48a69f95f337752b609f060}{erase\+\_\+and\+\_\+dispose} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} i, Disposer disposer)
+\item 
+{\footnotesize template$<$class Disposer $>$ }\\\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a3947df03a2116c6de2eb06148793164f}{erase\+\_\+and\+\_\+dispose} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} i, Disposer disposer)
+\item 
+{\footnotesize template$<$class Disposer $>$ }\\\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a9c68fe0a61da85e83ebe11bc02283bef}{erase\+\_\+and\+\_\+dispose} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} b, \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} e, Disposer disposer)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a5666d7343a0e7bad0ad0f1869c90e1b2}{clear} ()
+\item 
+{\footnotesize template$<$class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_a0b07cfbe98383d57a8c27a8e389c13fc}{clear\+\_\+and\+\_\+dispose} (Disposer disposer)
+\item 
+{\footnotesize template$<$class Cloner , class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_afd28996ec25e7c810d7c867e66e1fa3e}{clone\+\_\+from} (const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&src, Cloner cloner, Disposer disposer)
+\item 
+{\footnotesize template$<$class Cloner , class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_af384af26bd41d2eeecdd6fd718435888}{clone\+\_\+from} (B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}) src, Cloner cloner, Disposer disposer)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a51f571f4048e3f3e7bcb944d6f82bca0}{insert} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} p, \hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} value)
+\item 
+{\footnotesize template$<$class Iterator $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_afabe1de903e672ab93e55782fb5f0006}{insert} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} p, Iterator b, Iterator e)
+\item 
+{\footnotesize template$<$class Iterator $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_a9d29df1112a14488065cf678e4c1484a}{assign} (Iterator b, Iterator e)
+\item 
+{\footnotesize template$<$class Iterator , class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_a00ddf26d859cd22fdb3b2355e8af1cd8}{dispose\+\_\+and\+\_\+assign} (Disposer disposer, Iterator b, Iterator e)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a458f433ae6990732b006544cb26f3cf2}{splice} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} p, \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a7d78b95611893de6779df06307a7ccb0}{splice} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} p, \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} new\+\_\+ele)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_aca408f75788b574272d29392aebef9a5}{splice} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} p, \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} f, \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} e)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a561eb714c3b33ed907e4a0aaed234592}{splice} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} p, \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} f, \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} e, \hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type} n)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_abc510cb71270fe4ee9e5f8c7ba8e3aa0}{sort} ()
+\item 
+{\footnotesize template$<$class Predicate $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_a76891ada0d200ee89011b08ce5d548c0}{sort} (Predicate p)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_abb9a2b93c0b84ec5dbf23df2c3ff3dcf}{merge} (\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x)
+\item 
+{\footnotesize template$<$class Predicate $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_acae4748c2c7891009cafd2b2a1adc057}{merge} (\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, Predicate p)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a09ad4e2d3e2561d0cfe1be3ab7601b9c}{reverse} ()
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a67b3e202dc68b3de5643c2abf40847f7}{remove} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference} value)
+\item 
+{\footnotesize template$<$class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_ab52f7ab80a51b6364f950a3e7521018b}{remove\+\_\+and\+\_\+dispose} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference} value, Disposer disposer)
+\item 
+{\footnotesize template$<$class Pred $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_ab74f15b0c56ff811322551eb7090be2d}{remove\+\_\+if} (Pred pred)
+\item 
+{\footnotesize template$<$class Pred , class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_afb94638a081eb6fed0bf005b04cf9f88}{remove\+\_\+and\+\_\+dispose\+\_\+if} (Pred pred, Disposer disposer)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a9c7d8dd6a59be1e0c73eb19d1a6d0a50}{unique} ()
+\item 
+{\footnotesize template$<$class Binary\+Predicate $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_a2d237761bc8d589a706731a9e1b2da2f}{unique} (Binary\+Predicate pred)
+\item 
+{\footnotesize template$<$class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_a782aa8957c448e81553e803349b5f159}{unique\+\_\+and\+\_\+dispose} (Disposer disposer)
+\item 
+{\footnotesize template$<$class Binary\+Predicate , class Disposer $>$ }\\void \hyperlink{classboost_1_1intrusive_1_1list__impl_ad3b3e0225cd52b5563fe2f2a2b49e3b2}{unique\+\_\+and\+\_\+dispose} (Binary\+Predicate pred, Disposer disposer)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a51dd273b7b1163b87030157a59189a9e}{iterator\+\_\+to} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} value)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a67a906c22bb2ca0a9ddfc60224f5d8ba}{iterator\+\_\+to} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference} value) const
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_a7ae0ab138848f3a6fbe7da6f44617a75}{check} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \& \hyperlink{classboost_1_1intrusive_1_1list__impl_a1432b9781e8f4525d61d0a529f37d03c}{container\+\_\+from\+\_\+end\+\_\+iterator} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} end\+\_\+iterator)
+\item 
+static const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \& \hyperlink{classboost_1_1intrusive_1_1list__impl_a1dabad9119bf0e3ab256f08944e14521}{container\+\_\+from\+\_\+end\+\_\+iterator} (\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} end\+\_\+iterator)
+\item 
+static \hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_aa6f586f577be78dc3acf107cd4b92d29}{s\+\_\+iterator\+\_\+to} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} value)
+\item 
+static \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl_a649d0e05d1597b0b8054006cb3d217c3}{s\+\_\+iterator\+\_\+to} (\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference} value)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \hyperlink{classboost_1_1intrusive_1_1list__impl_a874f994ae317f397c2d085b4bd046026}{constant\+\_\+time\+\_\+size} = Constant\+Time\+Size
+\item 
+static const bool \hyperlink{classboost_1_1intrusive_1_1list__impl_ab2af39c13da3c2bd169d47f39d501a26}{stateful\+\_\+value\+\_\+traits} = detail\+::is\+\_\+stateful\+\_\+value\+\_\+traits$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}$>$\+::value
+\item 
+static const bool \hyperlink{classboost_1_1intrusive_1_1list__impl_acfc0b15fa95c54830808600dd25a7472}{has\+\_\+container\+\_\+from\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classboost_1_1intrusive_1_1list__impl_adfa112438fc1b811ec128a07af699c94}{operator==} (const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&y)
+\item 
+bool \hyperlink{classboost_1_1intrusive_1_1list__impl_ad1f3207f2a89bfb5ee38f1cd6114bf94}{operator!=} (const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&y)
+\item 
+bool \hyperlink{classboost_1_1intrusive_1_1list__impl_aca2da5db0e59cc4aa259b748d571516a}{operator$<$} (const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&y)
+\item 
+bool \hyperlink{classboost_1_1intrusive_1_1list__impl_aa53995779f3115d3d6283176ae2e5879}{operator$>$} (const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&y)
+\item 
+bool \hyperlink{classboost_1_1intrusive_1_1list__impl_a7efc3d66080937cc7b391259f3a755df}{operator$<$=} (const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&y)
+\item 
+bool \hyperlink{classboost_1_1intrusive_1_1list__impl_a377468145b0d37be0290b44223a82d14}{operator$>$=} (const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&y)
+\item 
+void \hyperlink{classboost_1_1intrusive_1_1list__impl_ab912cfb4f0b466441be2a187fbe40c04}{swap} (\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&x, \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} \&y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Value\+Traits, class Size\+Type, bool Constant\+Time\+Size, typename Header\+Holder$>$\newline
+class boost\+::intrusive\+::list\+\_\+impl$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$}
+
+The class template list is an intrusive container that mimics most of the interface of std\+::list as described in the C++ standard.
+
+The template parameter {\ttfamily T} is the type to be managed by the container. The user can specify additional options and if no options are provided default options are used.
+
+The container supports the following options\+: {\ttfamily base\+\_\+hook$<$$>$/member\+\_\+hook$<$$>$/value\+\_\+traits$<$$>$}, {\ttfamily constant\+\_\+time\+\_\+size$<$$>$} and {\ttfamily size\+\_\+type$<$$>$}. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}\label{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{const\+\_\+iterator}{const\_iterator}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef list\+\_\+iterator$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}, true$>$ \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a1bdb914613818a3acb6866cdba10ff09}\label{classboost_1_1intrusive_1_1list__impl_a1bdb914613818a3acb6866cdba10ff09}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!const\+\_\+node\+\_\+ptr@{const\+\_\+node\+\_\+ptr}}
+\index{const\+\_\+node\+\_\+ptr@{const\+\_\+node\+\_\+ptr}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{const\+\_\+node\+\_\+ptr}{const\_node\_ptr}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef node\+\_\+traits\+::const\+\_\+node\+\_\+ptr \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a1bdb914613818a3acb6866cdba10ff09}{const\+\_\+node\+\_\+ptr}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_abc0f6e1c4c5f44b9edd5b96e798a618c}\label{classboost_1_1intrusive_1_1list__impl_abc0f6e1c4c5f44b9edd5b96e798a618c}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!const\+\_\+pointer@{const\+\_\+pointer}}
+\index{const\+\_\+pointer@{const\+\_\+pointer}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{const\+\_\+pointer}{const\_pointer}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef value\+\_\+traits\+::const\+\_\+pointer \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_abc0f6e1c4c5f44b9edd5b96e798a618c}{const\+\_\+pointer}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}\label{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!const\+\_\+reference@{const\+\_\+reference}}
+\index{const\+\_\+reference@{const\+\_\+reference}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{const\+\_\+reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef pointer\+\_\+traits$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_abc0f6e1c4c5f44b9edd5b96e798a618c}{const\+\_\+pointer}$>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}\label{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}}
+\index{const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{const\+\_\+reverse\+\_\+iterator}{const\_reverse\_iterator}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef boost\+::intrusive\+::reverse\+\_\+iterator$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}$>$ \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}{const\+\_\+reverse\+\_\+iterator}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a7053eac84f0c15a33c8192687d0840e3}\label{classboost_1_1intrusive_1_1list__impl_a7053eac84f0c15a33c8192687d0840e3}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!difference\+\_\+type@{difference\+\_\+type}}
+\index{difference\+\_\+type@{difference\+\_\+type}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{difference\+\_\+type}{difference\_type}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef pointer\+\_\+traits$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_a671027d235426ed75ab9e4b2e090afe5}{pointer}$>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a7053eac84f0c15a33c8192687d0840e3}{difference\+\_\+type} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a7053eac84f0c15a33c8192687d0840e3}{difference\+\_\+type}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_abd98fa5c33715ec93ec42f3b5755b87b}\label{classboost_1_1intrusive_1_1list__impl_abd98fa5c33715ec93ec42f3b5755b87b}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!header\+\_\+holder\+\_\+type@{header\+\_\+holder\+\_\+type}}
+\index{header\+\_\+holder\+\_\+type@{header\+\_\+holder\+\_\+type}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{header\+\_\+holder\+\_\+type}{header\_holder\_type}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef detail\+::get\+\_\+header\+\_\+holder\+\_\+type$<$ \hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}, Header\+Holder $>$\+::type \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_abd98fa5c33715ec93ec42f3b5755b87b}{header\+\_\+holder\+\_\+type}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}\label{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!iterator@{iterator}}
+\index{iterator@{iterator}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef list\+\_\+iterator$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}, false$>$ \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_aaaa96a7e3013b33e4da86a3725352844}\label{classboost_1_1intrusive_1_1list__impl_aaaa96a7e3013b33e4da86a3725352844}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!node@{node}}
+\index{node@{node}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{node}{node}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef node\+\_\+traits\+::node \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_aaaa96a7e3013b33e4da86a3725352844}{node}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ad71774881b8a43de5d41e39af79afcaf}\label{classboost_1_1intrusive_1_1list__impl_ad71774881b8a43de5d41e39af79afcaf}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!node\+\_\+algorithms@{node\+\_\+algorithms}}
+\index{node\+\_\+algorithms@{node\+\_\+algorithms}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{node\+\_\+algorithms}{node\_algorithms}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef circular\+\_\+list\+\_\+algorithms$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_ae96503e0398292d5763e84a6baf677ba}{node\+\_\+traits}$>$ \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_ad71774881b8a43de5d41e39af79afcaf}{node\+\_\+algorithms}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a1b1b1d87a4edc6bfee4e43622184e689}\label{classboost_1_1intrusive_1_1list__impl_a1b1b1d87a4edc6bfee4e43622184e689}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!node\+\_\+ptr@{node\+\_\+ptr}}
+\index{node\+\_\+ptr@{node\+\_\+ptr}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{node\+\_\+ptr}{node\_ptr}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef node\+\_\+traits\+::node\+\_\+ptr \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a1b1b1d87a4edc6bfee4e43622184e689}{node\+\_\+ptr}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ae96503e0398292d5763e84a6baf677ba}\label{classboost_1_1intrusive_1_1list__impl_ae96503e0398292d5763e84a6baf677ba}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!node\+\_\+traits@{node\+\_\+traits}}
+\index{node\+\_\+traits@{node\+\_\+traits}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{node\+\_\+traits}{node\_traits}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef value\+\_\+traits\+::node\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_ae96503e0398292d5763e84a6baf677ba}{node\+\_\+traits}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a671027d235426ed75ab9e4b2e090afe5}\label{classboost_1_1intrusive_1_1list__impl_a671027d235426ed75ab9e4b2e090afe5}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!pointer@{pointer}}
+\index{pointer@{pointer}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef value\+\_\+traits\+::pointer \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a671027d235426ed75ab9e4b2e090afe5}{pointer}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}\label{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!reference@{reference}}
+\index{reference@{reference}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef pointer\+\_\+traits$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_a671027d235426ed75ab9e4b2e090afe5}{pointer}$>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_aed95b235a2056faa7d2f8cbd58dcfeb7}\label{classboost_1_1intrusive_1_1list__impl_aed95b235a2056faa7d2f8cbd58dcfeb7}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!reverse\+\_\+iterator@{reverse\+\_\+iterator}}
+\index{reverse\+\_\+iterator@{reverse\+\_\+iterator}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{reverse\+\_\+iterator}{reverse\_iterator}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef boost\+::intrusive\+::reverse\+\_\+iterator$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator}$>$ \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_aed95b235a2056faa7d2f8cbd58dcfeb7}{reverse\+\_\+iterator}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}\label{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{size\+\_\+type}{size\_type}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef Size\+Type \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}\label{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!value\+\_\+traits@{value\+\_\+traits}}
+\index{value\+\_\+traits@{value\+\_\+traits}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{value\+\_\+traits}{value\_traits}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef Value\+Traits \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a011b08f2310cd73b4691870fc22e2cec}\label{classboost_1_1intrusive_1_1list__impl_a011b08f2310cd73b4691870fc22e2cec}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{value\+\_\+type}{value\_type}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+typedef pointer\+\_\+traits$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_a671027d235426ed75ab9e4b2e090afe5}{pointer}$>$\+::element\+\_\+type \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl_a011b08f2310cd73b4691870fc22e2cec}{value\+\_\+type}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a4700da87f6258203c4450d637eef77b3}\label{classboost_1_1intrusive_1_1list__impl_a4700da87f6258203c4450d637eef77b3}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!list\+\_\+impl@{list\+\_\+impl}}
+\index{list\+\_\+impl@{list\+\_\+impl}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{list\+\_\+impl()}{list\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: constructs an empty list.
+
+{\bfseries Complexity}\+: Constant
+
+{\bfseries Throws}\+: If value\+\_\+traits\+::node\+\_\+traits\+::node constructor throws (this does not happen with predefined Boost.\+Intrusive hooks). \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_aec7438abf9f510b1bea085bf3ab562e9}\label{classboost_1_1intrusive_1_1list__impl_aec7438abf9f510b1bea085bf3ab562e9}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!list\+\_\+impl@{list\+\_\+impl}}
+\index{list\+\_\+impl@{list\+\_\+impl}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{list\+\_\+impl()}{list\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits} \&}]{v\+\_\+traits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+{\bfseries Effects}\+: constructs an empty list.
+
+{\bfseries Complexity}\+: Constant
+
+{\bfseries Throws}\+: If value\+\_\+traits\+::node\+\_\+traits\+::node constructor throws (this does not happen with predefined Boost.\+Intrusive hooks). \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a7d841d7401e3bdac5353785ceb4e8faf}\label{classboost_1_1intrusive_1_1list__impl_a7d841d7401e3bdac5353785ceb4e8faf}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!list\+\_\+impl@{list\+\_\+impl}}
+\index{list\+\_\+impl@{list\+\_\+impl}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{list\+\_\+impl()}{list\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Iterator $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} (\begin{DoxyParamCaption}\item[{Iterator}]{b,  }\item[{Iterator}]{e,  }\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits} \&}]{v\+\_\+traits = {\ttfamily \hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Dereferencing iterator must yield an lvalue of type value\+\_\+type.
+
+{\bfseries Effects}\+: Constructs a list equal to the range \mbox{[}first,last).
+
+{\bfseries Complexity}\+: Linear in distance(b, e). No copy constructors are called.
+
+{\bfseries Throws}\+: If value\+\_\+traits\+::node\+\_\+traits\+::node constructor throws (this does not happen with predefined Boost.\+Intrusive hooks). \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_af87baafc7d3c1ada9da405928dd7d59a}\label{classboost_1_1intrusive_1_1list__impl_af87baafc7d3c1ada9da405928dd7d59a}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!list\+\_\+impl@{list\+\_\+impl}}
+\index{list\+\_\+impl@{list\+\_\+impl}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{list\+\_\+impl()}{list\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} (\begin{DoxyParamCaption}\item[{B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$)}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Constructs a container moving resources from another container. Internal value traits are move constructed and nodes belonging to x (except the node representing the \char`\"{}end\char`\"{}) are linked to $\ast$this.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Throws}\+: If value\+\_\+traits\+::node\+\_\+traits\+::node\textquotesingle{}s move constructor throws (this does not happen with predefined Boost.\+Intrusive hooks) or the move constructor of value traits throws. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a142512d008d927a564d1785ac39ebb6a}\label{classboost_1_1intrusive_1_1list__impl_a142512d008d927a564d1785ac39ebb6a}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!````~list\+\_\+impl@{$\sim$list\+\_\+impl}}
+\index{````~list\+\_\+impl@{$\sim$list\+\_\+impl}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{$\sim$list\+\_\+impl()}{~list\_impl()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::$\sim$\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: If it\textquotesingle{}s not a safe-\/mode or an auto-\/unlink value\+\_\+type the destructor does nothing (ie. no code is generated). Otherwise it detaches all elements from this. In this case the objects in the list are not deleted (i.\+e. no destructors are called), but the hooks according to the Value\+Traits template parameter are set to their default value.
+
+{\bfseries Complexity}\+: Linear to the number of elements in the list, if it\textquotesingle{}s a safe-\/mode or auto-\/unlink value . Otherwise constant. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a9d29df1112a14488065cf678e4c1484a}\label{classboost_1_1intrusive_1_1list__impl_a9d29df1112a14488065cf678e4c1484a}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!assign@{assign}}
+\index{assign@{assign}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{assign()}{assign()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Iterator $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::assign (\begin{DoxyParamCaption}\item[{Iterator}]{b,  }\item[{Iterator}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Dereferencing iterator must yield an lvalue of type value\+\_\+type.
+
+{\bfseries Effects}\+: Clears the list and inserts the range pointed by b and e. No destructors or copy constructors are called.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of elements inserted plus linear to the elements contained in the list if it\textquotesingle{}s a safe-\/mode or auto-\/unlink value. Linear to the number of elements inserted in the list otherwise.
+
+{\bfseries Note}\+: Invalidates the iterators (but not the references) to the erased elements. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a257758f8527be08329dbc14ca5527fd8}\label{classboost_1_1intrusive_1_1list__impl_a257758f8527be08329dbc14ca5527fd8}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!back@{back}}
+\index{back@{back}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a reference to the last element of the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a92fa54fafbdf353a6b51c145c775d215}\label{classboost_1_1intrusive_1_1list__impl_a92fa54fafbdf353a6b51c145c775d215}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!back@{back}}
+\index{back@{back}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a const\+\_\+reference to the last element of the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_acc6da960285b2ff0f37e1f373a767e19}\label{classboost_1_1intrusive_1_1list__impl_acc6da960285b2ff0f37e1f373a767e19}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!begin@{begin}}
+\index{begin@{begin}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns an iterator to the first element contained in the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a049277a05485ff97f95ff4d778c5551d}\label{classboost_1_1intrusive_1_1list__impl_a049277a05485ff97f95ff4d778c5551d}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!begin@{begin}}
+\index{begin@{begin}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a const\+\_\+iterator to the first element contained in the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_adc17ab4f4ca5c3817adf62960dec3d40}\label{classboost_1_1intrusive_1_1list__impl_adc17ab4f4ca5c3817adf62960dec3d40}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a const\+\_\+iterator to the first element contained in the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ab683bf5010edc6008b3c6e0adbc33b70}\label{classboost_1_1intrusive_1_1list__impl_ab683bf5010edc6008b3c6e0adbc33b70}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!cend@{cend}}
+\index{cend@{cend}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a constant iterator to the end of the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a7ae0ab138848f3a6fbe7da6f44617a75}\label{classboost_1_1intrusive_1_1list__impl_a7ae0ab138848f3a6fbe7da6f44617a75}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!check@{check}}
+\index{check@{check}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Asserts the integrity of the container.
+
+{\bfseries Complexity}\+: Linear time.
+
+{\bfseries Note}\+: The method has no effect when asserts are turned off (e.\+g., with N\+D\+E\+B\+UG). Experimental function, interface might change in future versions. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a5666d7343a0e7bad0ad0f1869c90e1b2}\label{classboost_1_1intrusive_1_1list__impl_a5666d7343a0e7bad0ad0f1869c90e1b2}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!clear@{clear}}
+\index{clear@{clear}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Erases all the elements of the container. No destructors are called.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of elements of the list. if it\textquotesingle{}s a safe-\/mode or auto-\/unlink value\+\_\+type. Constant time otherwise.
+
+{\bfseries Note}\+: Invalidates the iterators (but not the references) to the erased elements. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a0b07cfbe98383d57a8c27a8e389c13fc}\label{classboost_1_1intrusive_1_1list__impl_a0b07cfbe98383d57a8c27a8e389c13fc}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!clear\+\_\+and\+\_\+dispose@{clear\+\_\+and\+\_\+dispose}}
+\index{clear\+\_\+and\+\_\+dispose@{clear\+\_\+and\+\_\+dispose}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{clear\+\_\+and\+\_\+dispose()}{clear\_and\_dispose()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::clear\+\_\+and\+\_\+dispose (\begin{DoxyParamCaption}\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw.
+
+{\bfseries Effects}\+: Erases all the elements of the container. No destructors are called. Disposer\+::operator()(pointer) is called for the removed elements.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of elements of the list.
+
+{\bfseries Note}\+: Invalidates the iterators to the erased elements. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_afd28996ec25e7c810d7c867e66e1fa3e}\label{classboost_1_1intrusive_1_1list__impl_afd28996ec25e7c810d7c867e66e1fa3e}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!clone\+\_\+from@{clone\+\_\+from}}
+\index{clone\+\_\+from@{clone\+\_\+from}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{clone\+\_\+from()}{clone\_from()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Cloner , class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::clone\+\_\+from (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{src,  }\item[{Cloner}]{cloner,  }\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw. Cloner should yield to nodes equivalent to the original nodes.
+
+{\bfseries Effects}\+: Erases all the elements from $\ast$this calling Disposer\+::operator()(pointer), clones all the elements from src calling Cloner\+::operator()(const\+\_\+reference ) and inserts them on $\ast$this.
+
+If cloner throws, all cloned elements are unlinked and disposed calling Disposer\+::operator()(pointer).
+
+{\bfseries Complexity}\+: Linear to erased plus inserted elements.
+
+{\bfseries Throws}\+: If cloner throws. Basic guarantee. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_af384af26bd41d2eeecdd6fd718435888}\label{classboost_1_1intrusive_1_1list__impl_af384af26bd41d2eeecdd6fd718435888}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!clone\+\_\+from@{clone\+\_\+from}}
+\index{clone\+\_\+from@{clone\+\_\+from}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{clone\+\_\+from()}{clone\_from()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Cloner , class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::clone\+\_\+from (\begin{DoxyParamCaption}\item[{B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$)}]{src,  }\item[{Cloner}]{cloner,  }\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw. Cloner should yield to nodes equivalent to the original nodes.
+
+{\bfseries Effects}\+: Erases all the elements from $\ast$this calling Disposer\+::operator()(pointer), clones all the elements from src calling Cloner\+::operator()(reference) and inserts them on $\ast$this.
+
+If cloner throws, all cloned elements are unlinked and disposed calling Disposer\+::operator()(pointer).
+
+{\bfseries Complexity}\+: Linear to erased plus inserted elements.
+
+{\bfseries Throws}\+: If cloner throws. Basic guarantee. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a1432b9781e8f4525d61d0a529f37d03c}\label{classboost_1_1intrusive_1_1list__impl_a1432b9781e8f4525d61d0a529f37d03c}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!container\+\_\+from\+\_\+end\+\_\+iterator@{container\+\_\+from\+\_\+end\+\_\+iterator}}
+\index{container\+\_\+from\+\_\+end\+\_\+iterator@{container\+\_\+from\+\_\+end\+\_\+iterator}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{container\+\_\+from\+\_\+end\+\_\+iterator()}{container\_from\_end\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+static \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}\& \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::container\+\_\+from\+\_\+end\+\_\+iterator (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator}}]{end\+\_\+iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Precondition}\+: end\+\_\+iterator must be a valid end iterator of list.
+
+{\bfseries Effects}\+: Returns a const reference to the list associated to the end iterator
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a1dabad9119bf0e3ab256f08944e14521}\label{classboost_1_1intrusive_1_1list__impl_a1dabad9119bf0e3ab256f08944e14521}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!container\+\_\+from\+\_\+end\+\_\+iterator@{container\+\_\+from\+\_\+end\+\_\+iterator}}
+\index{container\+\_\+from\+\_\+end\+\_\+iterator@{container\+\_\+from\+\_\+end\+\_\+iterator}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{container\+\_\+from\+\_\+end\+\_\+iterator()}{container\_from\_end\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+static const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}\& \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::container\+\_\+from\+\_\+end\+\_\+iterator (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{end\+\_\+iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Precondition}\+: end\+\_\+iterator must be a valid end const\+\_\+iterator of list.
+
+{\bfseries Effects}\+: Returns a const reference to the list associated to the end iterator
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_aaec6d64d661acea3e7b92be73332618a}\label{classboost_1_1intrusive_1_1list__impl_aaec6d64d661acea3e7b92be73332618a}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{crbegin()}{crbegin()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::crbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a const\+\_\+reverse\+\_\+iterator pointing to the beginning of the reversed list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a9b1515c25e9402cb27796dfeb8236baf}\label{classboost_1_1intrusive_1_1list__impl_a9b1515c25e9402cb27796dfeb8236baf}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!crend@{crend}}
+\index{crend@{crend}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{crend()}{crend()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::crend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a const\+\_\+reverse\+\_\+iterator pointing to the end of the reversed list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a00ddf26d859cd22fdb3b2355e8af1cd8}\label{classboost_1_1intrusive_1_1list__impl_a00ddf26d859cd22fdb3b2355e8af1cd8}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!dispose\+\_\+and\+\_\+assign@{dispose\+\_\+and\+\_\+assign}}
+\index{dispose\+\_\+and\+\_\+assign@{dispose\+\_\+and\+\_\+assign}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{dispose\+\_\+and\+\_\+assign()}{dispose\_and\_assign()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Iterator , class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::dispose\+\_\+and\+\_\+assign (\begin{DoxyParamCaption}\item[{Disposer}]{disposer,  }\item[{Iterator}]{b,  }\item[{Iterator}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw.
+
+{\bfseries Requires}\+: Dereferencing iterator must yield an lvalue of type value\+\_\+type.
+
+{\bfseries Effects}\+: Clears the list and inserts the range pointed by b and e. No destructors or copy constructors are called. Disposer\+::operator()(pointer) is called for the removed elements.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of elements inserted plus linear to the elements contained in the list.
+
+{\bfseries Note}\+: Invalidates the iterators (but not the references) to the erased elements. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_afe2d286a6230f944fe3aa5a231d01e0a}\label{classboost_1_1intrusive_1_1list__impl_afe2d286a6230f944fe3aa5a231d01e0a}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!empty@{empty}}
+\index{empty@{empty}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+bool \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns true if the list contains no elements.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Does not affect the validity of iterators and references. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_af2a454471fced6d4b2fb899c50bbee67}\label{classboost_1_1intrusive_1_1list__impl_af2a454471fced6d4b2fb899c50bbee67}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!end@{end}}
+\index{end@{end}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns an iterator to the end of the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a797bd19e3f14f42d556bb85de2fc1ac3}\label{classboost_1_1intrusive_1_1list__impl_a797bd19e3f14f42d556bb85de2fc1ac3}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!end@{end}}
+\index{end@{end}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a const\+\_\+iterator to the end of the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a5b8579de073832e53c545fe5cca65057}\label{classboost_1_1intrusive_1_1list__impl_a5b8579de073832e53c545fe5cca65057}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!erase@{erase}}
+\index{erase@{erase}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::erase (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Erases the element pointed by i of the list. No destructors are called.
+
+{\bfseries Returns}\+: the first element remaining beyond the removed element, or \hyperlink{classboost_1_1intrusive_1_1list__impl_af2a454471fced6d4b2fb899c50bbee67}{end()} if no such element exists.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Invalidates the iterators (but not the references) to the erased element. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a267b1e44859c98eb3dbd9ad865910f61}\label{classboost_1_1intrusive_1_1list__impl_a267b1e44859c98eb3dbd9ad865910f61}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!erase@{erase}}
+\index{erase@{erase}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::erase (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{b,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: b and e must be valid iterators to elements in $\ast$this.
+
+{\bfseries Effects}\+: Erases the element range pointed by b and e No destructors are called.
+
+{\bfseries Returns}\+: the first element remaining beyond the removed elements, or \hyperlink{classboost_1_1intrusive_1_1list__impl_af2a454471fced6d4b2fb899c50bbee67}{end()} if no such element exists.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of erased elements if it\textquotesingle{}s a safe-\/mode or auto-\/unlink value, or constant-\/time size is enabled. Constant-\/time otherwise.
+
+{\bfseries Note}\+: Invalidates the iterators (but not the references) to the erased elements. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a8811c0530715a891ecd912674b54eb6c}\label{classboost_1_1intrusive_1_1list__impl_a8811c0530715a891ecd912674b54eb6c}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!erase@{erase}}
+\index{erase@{erase}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::erase (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{b,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{e,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: b and e must be valid iterators to elements in $\ast$this. n must be distance(b, e).
+
+{\bfseries Effects}\+: Erases the element range pointed by b and e No destructors are called.
+
+{\bfseries Returns}\+: the first element remaining beyond the removed elements, or \hyperlink{classboost_1_1intrusive_1_1list__impl_af2a454471fced6d4b2fb899c50bbee67}{end()} if no such element exists.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of erased elements if it\textquotesingle{}s a safe-\/mode or auto-\/unlink value is enabled. Constant-\/time otherwise.
+
+{\bfseries Note}\+: Invalidates the iterators (but not the references) to the erased elements. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a53330d72d48a69f95f337752b609f060}\label{classboost_1_1intrusive_1_1list__impl_a53330d72d48a69f95f337752b609f060}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!erase\+\_\+and\+\_\+dispose@{erase\+\_\+and\+\_\+dispose}}
+\index{erase\+\_\+and\+\_\+dispose@{erase\+\_\+and\+\_\+dispose}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{erase\+\_\+and\+\_\+dispose()}{erase\_and\_dispose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Disposer $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::erase\+\_\+and\+\_\+dispose (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{i,  }\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw.
+
+{\bfseries Effects}\+: Erases the element pointed by i of the list. No destructors are called. Disposer\+::operator()(pointer) is called for the removed element.
+
+{\bfseries Returns}\+: the first element remaining beyond the removed element, or \hyperlink{classboost_1_1intrusive_1_1list__impl_af2a454471fced6d4b2fb899c50bbee67}{end()} if no such element exists.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Invalidates the iterators to the erased element. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a3947df03a2116c6de2eb06148793164f}\label{classboost_1_1intrusive_1_1list__impl_a3947df03a2116c6de2eb06148793164f}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!erase\+\_\+and\+\_\+dispose@{erase\+\_\+and\+\_\+dispose}}
+\index{erase\+\_\+and\+\_\+dispose@{erase\+\_\+and\+\_\+dispose}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{erase\+\_\+and\+\_\+dispose()}{erase\_and\_dispose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Disposer $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::erase\+\_\+and\+\_\+dispose (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator}}]{i,  }\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a9c68fe0a61da85e83ebe11bc02283bef}\label{classboost_1_1intrusive_1_1list__impl_a9c68fe0a61da85e83ebe11bc02283bef}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!erase\+\_\+and\+\_\+dispose@{erase\+\_\+and\+\_\+dispose}}
+\index{erase\+\_\+and\+\_\+dispose@{erase\+\_\+and\+\_\+dispose}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{erase\+\_\+and\+\_\+dispose()}{erase\_and\_dispose()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Disposer $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::erase\+\_\+and\+\_\+dispose (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{b,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{e,  }\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw.
+
+{\bfseries Effects}\+: Erases the element range pointed by b and e No destructors are called. Disposer\+::operator()(pointer) is called for the removed elements.
+
+{\bfseries Returns}\+: the first element remaining beyond the removed elements, or \hyperlink{classboost_1_1intrusive_1_1list__impl_af2a454471fced6d4b2fb899c50bbee67}{end()} if no such element exists.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of elements erased.
+
+{\bfseries Note}\+: Invalidates the iterators to the erased elements. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_adfff2fc56d86000cced59427fecf0e90}\label{classboost_1_1intrusive_1_1list__impl_adfff2fc56d86000cced59427fecf0e90}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!front@{front}}
+\index{front@{front}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a reference to the first element of the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a51eb323fe6d3cc6c590886a7514dbb27}\label{classboost_1_1intrusive_1_1list__impl_a51eb323fe6d3cc6c590886a7514dbb27}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!front@{front}}
+\index{front@{front}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a const\+\_\+reference to the first element of the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a51f571f4048e3f3e7bcb944d6f82bca0}\label{classboost_1_1intrusive_1_1list__impl_a51f571f4048e3f3e7bcb944d6f82bca0}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!insert@{insert}}
+\index{insert@{insert}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::insert (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{p,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: value must be an lvalue and p must be a valid iterator of $\ast$this.
+
+{\bfseries Effects}\+: Inserts the value before the position pointed by p.
+
+{\bfseries Returns}\+: An iterator to the inserted element.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant time. No copy constructors are called.
+
+{\bfseries Note}\+: Does not affect the validity of iterators and references. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_afabe1de903e672ab93e55782fb5f0006}\label{classboost_1_1intrusive_1_1list__impl_afabe1de903e672ab93e55782fb5f0006}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!insert@{insert}}
+\index{insert@{insert}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Iterator $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::insert (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{p,  }\item[{Iterator}]{b,  }\item[{Iterator}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Dereferencing iterator must yield an lvalue of type value\+\_\+type and p must be a valid iterator of $\ast$this.
+
+{\bfseries Effects}\+: Inserts the range pointed by b and e before the position p. No copy constructors are called.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of elements inserted.
+
+{\bfseries Note}\+: Does not affect the validity of iterators and references. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a51dd273b7b1163b87030157a59189a9e}\label{classboost_1_1intrusive_1_1list__impl_a51dd273b7b1163b87030157a59189a9e}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!iterator\+\_\+to@{iterator\+\_\+to}}
+\index{iterator\+\_\+to@{iterator\+\_\+to}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{iterator\+\_\+to()}{iterator\_to()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::iterator\+\_\+to (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: value must be a reference to a value inserted in a list.
+
+{\bfseries Effects}\+: This function returns a const\+\_\+iterator pointing to the element
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant time.
+
+{\bfseries Note}\+: Iterators and references are not invalidated. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a67a906c22bb2ca0a9ddfc60224f5d8ba}\label{classboost_1_1intrusive_1_1list__impl_a67a906c22bb2ca0a9ddfc60224f5d8ba}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!iterator\+\_\+to@{iterator\+\_\+to}}
+\index{iterator\+\_\+to@{iterator\+\_\+to}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{iterator\+\_\+to()}{iterator\_to()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::iterator\+\_\+to (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference}}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: value must be a const reference to a value inserted in a list.
+
+{\bfseries Effects}\+: This function returns an iterator pointing to the element.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant time.
+
+{\bfseries Note}\+: Iterators and references are not invalidated. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_abb9a2b93c0b84ec5dbf23df2c3ff3dcf}\label{classboost_1_1intrusive_1_1list__impl_abb9a2b93c0b84ec5dbf23df2c3ff3dcf}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!merge@{merge}}
+\index{merge@{merge}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{merge()}{merge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::merge (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: This function removes all of x\textquotesingle{}s elements and inserts them in order into $\ast$this according to std\+::less$<$value\+\_\+type$>$. The merge is stable; that is, if an element from $\ast$this is equivalent to one from x, then the element from $\ast$this will precede the one from x.
+
+{\bfseries Throws}\+: If std\+::less$<$value\+\_\+type$>$ throws. Basic guarantee.
+
+{\bfseries Complexity}\+: This function is linear time\+: it performs at most \hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size()} + x.\+size() -\/ 1 comparisons.
+
+{\bfseries Note}\+: Iterators and references are not invalidated \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_acae4748c2c7891009cafd2b2a1adc057}\label{classboost_1_1intrusive_1_1list__impl_acae4748c2c7891009cafd2b2a1adc057}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!merge@{merge}}
+\index{merge@{merge}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{merge()}{merge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Predicate $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::merge (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{Predicate}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: p must be a comparison function that induces a strict weak ordering and both $\ast$this and x must be sorted according to that ordering The lists x and $\ast$this must be distinct.
+
+{\bfseries Effects}\+: This function removes all of x\textquotesingle{}s elements and inserts them in order into $\ast$this. The merge is stable; that is, if an element from $\ast$this is equivalent to one from x, then the element from $\ast$this will precede the one from x.
+
+{\bfseries Throws}\+: If the predicate throws. Basic guarantee.
+
+{\bfseries Complexity}\+: This function is linear time\+: it performs at most \hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size()} + x.\+size() -\/ 1 comparisons.
+
+{\bfseries Note}\+: Iterators and references are not invalidated. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a8999914d675056b42a4e1d5a40fceb1b}\label{classboost_1_1intrusive_1_1list__impl_a8999914d675056b42a4e1d5a40fceb1b}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!operator=@{operator=}}
+\index{operator=@{operator=}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}\& \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::operator= (\begin{DoxyParamCaption}\item[{B\+O\+O\+S\+T\+\_\+\+R\+V\+\_\+\+R\+EF(\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$)}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Equivalent to swap \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a02b94ea6055095b6ed262820cc28b739}\label{classboost_1_1intrusive_1_1list__impl_a02b94ea6055095b6ed262820cc28b739}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!pop\+\_\+back@{pop\+\_\+back}}
+\index{pop\+\_\+back@{pop\+\_\+back}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{pop\+\_\+back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Erases the last element of the list. No destructors are called.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Invalidates the iterators (but not the references) to the erased element. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ad2f45b6fd9f4d189e9f5c6fc126334b8}\label{classboost_1_1intrusive_1_1list__impl_ad2f45b6fd9f4d189e9f5c6fc126334b8}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!pop\+\_\+back\+\_\+and\+\_\+dispose@{pop\+\_\+back\+\_\+and\+\_\+dispose}}
+\index{pop\+\_\+back\+\_\+and\+\_\+dispose@{pop\+\_\+back\+\_\+and\+\_\+dispose}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{pop\+\_\+back\+\_\+and\+\_\+dispose()}{pop\_back\_and\_dispose()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::pop\+\_\+back\+\_\+and\+\_\+dispose (\begin{DoxyParamCaption}\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw.
+
+{\bfseries Effects}\+: Erases the last element of the list. No destructors are called. Disposer\+::operator()(pointer) is called for the removed element.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Invalidates the iterators to the erased element. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_aa0a3b2545ff925b8f3185ab5f4027d4e}\label{classboost_1_1intrusive_1_1list__impl_aa0a3b2545ff925b8f3185ab5f4027d4e}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!pop\+\_\+front@{pop\+\_\+front}}
+\index{pop\+\_\+front@{pop\+\_\+front}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{pop\+\_\+front()}{pop\_front()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::pop\+\_\+front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Erases the first element of the list. No destructors are called.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Invalidates the iterators (but not the references) to the erased element. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ab1d06a67a6e0f958b0f3afd61d2af8d5}\label{classboost_1_1intrusive_1_1list__impl_ab1d06a67a6e0f958b0f3afd61d2af8d5}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!pop\+\_\+front\+\_\+and\+\_\+dispose@{pop\+\_\+front\+\_\+and\+\_\+dispose}}
+\index{pop\+\_\+front\+\_\+and\+\_\+dispose@{pop\+\_\+front\+\_\+and\+\_\+dispose}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{pop\+\_\+front\+\_\+and\+\_\+dispose()}{pop\_front\_and\_dispose()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::pop\+\_\+front\+\_\+and\+\_\+dispose (\begin{DoxyParamCaption}\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw.
+
+{\bfseries Effects}\+: Erases the first element of the list. No destructors are called. Disposer\+::operator()(pointer) is called for the removed element.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Invalidates the iterators to the erased element. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a486bb7078d16bbe0e569dbd8a16ef104}\label{classboost_1_1intrusive_1_1list__impl_a486bb7078d16bbe0e569dbd8a16ef104}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: value must be an lvalue.
+
+{\bfseries Effects}\+: Inserts the value in the back of the list. No copy constructors are called.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Does not affect the validity of iterators and references. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ae11db4262630360dd6080aebdbd01ce8}\label{classboost_1_1intrusive_1_1list__impl_ae11db4262630360dd6080aebdbd01ce8}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!push\+\_\+front@{push\+\_\+front}}
+\index{push\+\_\+front@{push\+\_\+front}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{push\+\_\+front()}{push\_front()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::push\+\_\+front (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: value must be an lvalue.
+
+{\bfseries Effects}\+: Inserts the value in the front of the list. No copy constructors are called.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Does not affect the validity of iterators and references. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a0073263f314407b1e94f63084e05b77e}\label{classboost_1_1intrusive_1_1list__impl_a0073263f314407b1e94f63084e05b77e}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{rbegin()}{rbegin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_aed95b235a2056faa7d2f8cbd58dcfeb7}{reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a reverse\+\_\+iterator pointing to the beginning of the reversed list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a7a6e55dedd23bd303a71d764395420a8}\label{classboost_1_1intrusive_1_1list__impl_a7a6e55dedd23bd303a71d764395420a8}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{rbegin()}{rbegin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a const\+\_\+reverse\+\_\+iterator pointing to the beginning of the reversed list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a67b3e202dc68b3de5643c2abf40847f7}\label{classboost_1_1intrusive_1_1list__impl_a67b3e202dc68b3de5643c2abf40847f7}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!remove@{remove}}
+\index{remove@{remove}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::remove (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Removes all the elements that compare equal to value. No destructors are called.
+
+{\bfseries Throws}\+: If std\+::equal\+\_\+to$<$value\+\_\+type$>$ throws. Basic guarantee.
+
+{\bfseries Complexity}\+: Linear time. It performs exactly \hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size()} comparisons for equality.
+
+{\bfseries Note}\+: The relative order of elements that are not removed is unchanged, and iterators to elements that are not removed remain valid. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ab52f7ab80a51b6364f950a3e7521018b}\label{classboost_1_1intrusive_1_1list__impl_ab52f7ab80a51b6364f950a3e7521018b}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!remove\+\_\+and\+\_\+dispose@{remove\+\_\+and\+\_\+dispose}}
+\index{remove\+\_\+and\+\_\+dispose@{remove\+\_\+and\+\_\+dispose}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{remove\+\_\+and\+\_\+dispose()}{remove\_and\_dispose()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::remove\+\_\+and\+\_\+dispose (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference}}]{value,  }\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw.
+
+{\bfseries Effects}\+: Removes all the elements that compare equal to value. Disposer\+::operator()(pointer) is called for every removed element.
+
+{\bfseries Throws}\+: If std\+::equal\+\_\+to$<$value\+\_\+type$>$ throws. Basic guarantee.
+
+{\bfseries Complexity}\+: Linear time. It performs exactly \hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size()} comparisons for equality.
+
+{\bfseries Note}\+: The relative order of elements that are not removed is unchanged, and iterators to elements that are not removed remain valid. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_afb94638a081eb6fed0bf005b04cf9f88}\label{classboost_1_1intrusive_1_1list__impl_afb94638a081eb6fed0bf005b04cf9f88}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!remove\+\_\+and\+\_\+dispose\+\_\+if@{remove\+\_\+and\+\_\+dispose\+\_\+if}}
+\index{remove\+\_\+and\+\_\+dispose\+\_\+if@{remove\+\_\+and\+\_\+dispose\+\_\+if}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{remove\+\_\+and\+\_\+dispose\+\_\+if()}{remove\_and\_dispose\_if()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Pred , class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::remove\+\_\+and\+\_\+dispose\+\_\+if (\begin{DoxyParamCaption}\item[{Pred}]{pred,  }\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw.
+
+{\bfseries Effects}\+: Removes all the elements for which a specified predicate is satisfied. Disposer\+::operator()(pointer) is called for every removed element.
+
+{\bfseries Throws}\+: If pred throws. Basic guarantee.
+
+{\bfseries Complexity}\+: Linear time. It performs exactly \hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size()} comparisons for equality.
+
+{\bfseries Note}\+: The relative order of elements that are not removed is unchanged, and iterators to elements that are not removed remain valid. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ab74f15b0c56ff811322551eb7090be2d}\label{classboost_1_1intrusive_1_1list__impl_ab74f15b0c56ff811322551eb7090be2d}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!remove\+\_\+if@{remove\+\_\+if}}
+\index{remove\+\_\+if@{remove\+\_\+if}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{remove\+\_\+if()}{remove\_if()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Pred $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::remove\+\_\+if (\begin{DoxyParamCaption}\item[{Pred}]{pred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Removes all the elements for which a specified predicate is satisfied. No destructors are called.
+
+{\bfseries Throws}\+: If pred throws. Basic guarantee.
+
+{\bfseries Complexity}\+: Linear time. It performs exactly \hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size()} calls to the predicate.
+
+{\bfseries Note}\+: The relative order of elements that are not removed is unchanged, and iterators to elements that are not removed remain valid. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a4e8cb800394865d8a46cf83510b2dfbd}\label{classboost_1_1intrusive_1_1list__impl_a4e8cb800394865d8a46cf83510b2dfbd}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!rend@{rend}}
+\index{rend@{rend}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{rend()}{rend()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_aed95b235a2056faa7d2f8cbd58dcfeb7}{reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a reverse\+\_\+iterator pointing to the end of the reversed list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a0be73e24a3891a9ca9391c9762e5cc72}\label{classboost_1_1intrusive_1_1list__impl_a0be73e24a3891a9ca9391c9762e5cc72}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!rend@{rend}}
+\index{rend@{rend}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{rend()}{rend()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a00a0933ca1d92836a220a604e521d9c4}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns a const\+\_\+reverse\+\_\+iterator pointing to the end of the reversed list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a09ad4e2d3e2561d0cfe1be3ab7601b9c}\label{classboost_1_1intrusive_1_1list__impl_a09ad4e2d3e2561d0cfe1be3ab7601b9c}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!reverse@{reverse}}
+\index{reverse@{reverse}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{reverse()}{reverse()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::reverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Reverses the order of elements in the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: This function is linear time.
+
+{\bfseries Note}\+: Iterators and references are not invalidated \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_aa6f586f577be78dc3acf107cd4b92d29}\label{classboost_1_1intrusive_1_1list__impl_aa6f586f577be78dc3acf107cd4b92d29}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!s\+\_\+iterator\+\_\+to@{s\+\_\+iterator\+\_\+to}}
+\index{s\+\_\+iterator\+\_\+to@{s\+\_\+iterator\+\_\+to}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{s\+\_\+iterator\+\_\+to()}{s\_iterator\_to()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+static \hyperlink{classboost_1_1intrusive_1_1list__impl_a15c0189bf62eb9fb98bc07ef10b8cb23}{iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::s\+\_\+iterator\+\_\+to (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a881763b587dbe7c0237a552a9e89755a}{reference}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Requires}\+: value must be a reference to a value inserted in a list.
+
+{\bfseries Effects}\+: This function returns a const\+\_\+iterator pointing to the element
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant time.
+
+{\bfseries Note}\+: Iterators and references are not invalidated. This static function is available only if the {\itshape value traits} is stateless. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a649d0e05d1597b0b8054006cb3d217c3}\label{classboost_1_1intrusive_1_1list__impl_a649d0e05d1597b0b8054006cb3d217c3}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!s\+\_\+iterator\+\_\+to@{s\+\_\+iterator\+\_\+to}}
+\index{s\+\_\+iterator\+\_\+to@{s\+\_\+iterator\+\_\+to}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{s\+\_\+iterator\+\_\+to()}{s\_iterator\_to()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+static \hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::s\+\_\+iterator\+\_\+to (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a3d37629151c76fb8389ac3ba3b359201}{const\+\_\+reference}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Requires}\+: value must be a const reference to a value inserted in a list.
+
+{\bfseries Effects}\+: This function returns an iterator pointing to the element.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant time.
+
+{\bfseries Note}\+: Iterators and references are not invalidated. This static function is available only if the {\itshape value traits} is stateless. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a7b0d4d3142d0243ea881a0be968bdb14}\label{classboost_1_1intrusive_1_1list__impl_a7b0d4d3142d0243ea881a0be968bdb14}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!shift\+\_\+backwards@{shift\+\_\+backwards}}
+\index{shift\+\_\+backwards@{shift\+\_\+backwards}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{shift\+\_\+backwards()}{shift\_backwards()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::shift\+\_\+backwards (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type}}]{n = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Moves backwards all the elements, so that the first element becomes the second, the second becomes the third... the last element becomes the first one.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of shifts.
+
+{\bfseries Note}\+: Does not affect the validity of iterators and references. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ad8e0920e742cf90e983e0cc552b8489e}\label{classboost_1_1intrusive_1_1list__impl_ad8e0920e742cf90e983e0cc552b8489e}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!shift\+\_\+forward@{shift\+\_\+forward}}
+\index{shift\+\_\+forward@{shift\+\_\+forward}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{shift\+\_\+forward()}{shift\_forward()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::shift\+\_\+forward (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type}}]{n = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Moves forward all the elements, so that the second element becomes the first, the third becomes the second... the first element becomes the last one.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of shifts.
+
+{\bfseries Note}\+: Does not affect the validity of iterators and references. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}\label{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!size@{size}}
+\index{size@{size}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type} \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Returns the number of the elements contained in the list.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of elements contained in the list. if constant-\/time size option is disabled. Constant time otherwise.
+
+{\bfseries Note}\+: Does not affect the validity of iterators and references. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_abc510cb71270fe4ee9e5f8c7ba8e3aa0}\label{classboost_1_1intrusive_1_1list__impl_abc510cb71270fe4ee9e5f8c7ba8e3aa0}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!sort@{sort}}
+\index{sort@{sort}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: This function sorts the list $\ast$this according to std\+::less$<$value\+\_\+type$>$. The sort is stable, that is, the relative order of equivalent elements is preserved.
+
+{\bfseries Throws}\+: If value\+\_\+traits\+::node\+\_\+traits\+::node constructor throws (this does not happen with predefined Boost.\+Intrusive hooks) or std\+::less$<$value\+\_\+type$>$ throws. Basic guarantee.
+
+{\bfseries Notes}\+: Iterators and references are not invalidated.
+
+{\bfseries Complexity}\+: The number of comparisons is approximately N log N, where N is the list\textquotesingle{}s size. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a76891ada0d200ee89011b08ce5d548c0}\label{classboost_1_1intrusive_1_1list__impl_a76891ada0d200ee89011b08ce5d548c0}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!sort@{sort}}
+\index{sort@{sort}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Predicate $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::sort (\begin{DoxyParamCaption}\item[{Predicate}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: p must be a comparison function that induces a strict weak ordering
+
+{\bfseries Effects}\+: This function sorts the list $\ast$this according to p. The sort is stable, that is, the relative order of equivalent elements is preserved.
+
+{\bfseries Throws}\+: If value\+\_\+traits\+::node\+\_\+traits\+::node constructor throws (this does not happen with predefined Boost.\+Intrusive hooks) or the predicate throws. Basic guarantee.
+
+{\bfseries Notes}\+: This won\textquotesingle{}t throw if list\+\_\+base\+\_\+hook$<$$>$ or list\+\_\+member\+\_\+hook are used. Iterators and references are not invalidated.
+
+{\bfseries Complexity}\+: The number of comparisons is approximately N log N, where N is the list\textquotesingle{}s size. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a458f433ae6990732b006544cb26f3cf2}\label{classboost_1_1intrusive_1_1list__impl_a458f433ae6990732b006544cb26f3cf2}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!splice@{splice}}
+\index{splice@{splice}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{splice()}{splice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::splice (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{p,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: p must be a valid iterator of $\ast$this.
+
+{\bfseries Effects}\+: Transfers all the elements of list x to this list, before the the element pointed by p. No destructors or copy constructors are called.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Iterators of values obtained from list x now point to elements of this list. Iterators of this list and all the references are not invalidated. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a7d78b95611893de6779df06307a7ccb0}\label{classboost_1_1intrusive_1_1list__impl_a7d78b95611893de6779df06307a7ccb0}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!splice@{splice}}
+\index{splice@{splice}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{splice()}{splice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::splice (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{p,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{new\+\_\+ele }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: p must be a valid iterator of $\ast$this. new\+\_\+ele must point to an element contained in list x.
+
+{\bfseries Effects}\+: Transfers the value pointed by new\+\_\+ele, from list x to this list, before the element pointed by p. No destructors or copy constructors are called. If p == new\+\_\+ele or p == ++new\+\_\+ele, this function is a null operation.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Iterators of values obtained from list x now point to elements of this list. Iterators of this list and all the references are not invalidated. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_aca408f75788b574272d29392aebef9a5}\label{classboost_1_1intrusive_1_1list__impl_aca408f75788b574272d29392aebef9a5}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!splice@{splice}}
+\index{splice@{splice}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{splice()}{splice()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::splice (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{p,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{f,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: p must be a valid iterator of $\ast$this. f and e must point to elements contained in list x.
+
+{\bfseries Effects}\+: Transfers the range pointed by f and e from list x to this list, before the element pointed by p. No destructors or copy constructors are called.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Linear to the number of elements transferred if constant-\/time size option is enabled. Constant-\/time otherwise.
+
+{\bfseries Note}\+: Iterators of values obtained from list x now point to elements of this list. Iterators of this list and all the references are not invalidated. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a561eb714c3b33ed907e4a0aaed234592}\label{classboost_1_1intrusive_1_1list__impl_a561eb714c3b33ed907e4a0aaed234592}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!splice@{splice}}
+\index{splice@{splice}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{splice()}{splice()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::splice (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{p,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{f,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_af4ced710fe02662c5650d161af83d8cd}{const\+\_\+iterator}}]{e,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl_a3e340b93081e392fba09de7145fb5733}{size\+\_\+type}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: p must be a valid iterator of $\ast$this. f and e must point to elements contained in list x. n == distance(f, e)
+
+{\bfseries Effects}\+: Transfers the range pointed by f and e from list x to this list, before the element pointed by p. No destructors or copy constructors are called.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Iterators of values obtained from list x now point to elements of this list. Iterators of this list and all the references are not invalidated. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a08187766526ac474bc92fe5103fb8f7b}\label{classboost_1_1intrusive_1_1list__impl_a08187766526ac474bc92fe5103fb8f7b}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!swap@{swap}}
+\index{swap@{swap}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::swap (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Swaps the elements of x and $\ast$this.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Complexity}\+: Constant.
+
+{\bfseries Note}\+: Does not affect the validity of iterators and references. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a9c7d8dd6a59be1e0c73eb19d1a6d0a50}\label{classboost_1_1intrusive_1_1list__impl_a9c7d8dd6a59be1e0c73eb19d1a6d0a50}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!unique@{unique}}
+\index{unique@{unique}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{unique()}{unique()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::unique (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Removes adjacent duplicate elements or adjacent elements that are equal from the list. No destructors are called.
+
+{\bfseries Throws}\+: If std\+::equal\+\_\+to$<$value\+\_\+type throws. Basic guarantee.
+
+{\bfseries Complexity}\+: Linear time (\hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size()}-\/1 comparisons calls to pred()).
+
+{\bfseries Note}\+: The relative order of elements that are not removed is unchanged, and iterators to elements that are not removed remain valid. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a2d237761bc8d589a706731a9e1b2da2f}\label{classboost_1_1intrusive_1_1list__impl_a2d237761bc8d589a706731a9e1b2da2f}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!unique@{unique}}
+\index{unique@{unique}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{unique()}{unique()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Binary\+Predicate $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::unique (\begin{DoxyParamCaption}\item[{Binary\+Predicate}]{pred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Effects}\+: Removes adjacent duplicate elements or adjacent elements that satisfy some binary predicate from the list. No destructors are called.
+
+{\bfseries Throws}\+: If pred throws. Basic guarantee.
+
+{\bfseries Complexity}\+: Linear time (\hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size()}-\/1 comparisons equality comparisons).
+
+{\bfseries Note}\+: The relative order of elements that are not removed is unchanged, and iterators to elements that are not removed remain valid. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a782aa8957c448e81553e803349b5f159}\label{classboost_1_1intrusive_1_1list__impl_a782aa8957c448e81553e803349b5f159}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!unique\+\_\+and\+\_\+dispose@{unique\+\_\+and\+\_\+dispose}}
+\index{unique\+\_\+and\+\_\+dispose@{unique\+\_\+and\+\_\+dispose}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{unique\+\_\+and\+\_\+dispose()}{unique\_and\_dispose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::unique\+\_\+and\+\_\+dispose (\begin{DoxyParamCaption}\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw.
+
+{\bfseries Effects}\+: Removes adjacent duplicate elements or adjacent elements that are equal from the list. Disposer\+::operator()(pointer) is called for every removed element.
+
+{\bfseries Throws}\+: If std\+::equal\+\_\+to$<$value\+\_\+type throws. Basic guarantee.
+
+{\bfseries Complexity}\+: Linear time (\hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size()}-\/1) comparisons equality comparisons.
+
+{\bfseries Note}\+: The relative order of elements that are not removed is unchanged, and iterators to elements that are not removed remain valid. \mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ad3b3e0225cd52b5563fe2f2a2b49e3b2}\label{classboost_1_1intrusive_1_1list__impl_ad3b3e0225cd52b5563fe2f2a2b49e3b2}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!unique\+\_\+and\+\_\+dispose@{unique\+\_\+and\+\_\+dispose}}
+\index{unique\+\_\+and\+\_\+dispose@{unique\+\_\+and\+\_\+dispose}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{unique\+\_\+and\+\_\+dispose()}{unique\_and\_dispose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+template$<$class Binary\+Predicate , class Disposer $>$ \\
+void \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::unique\+\_\+and\+\_\+dispose (\begin{DoxyParamCaption}\item[{Binary\+Predicate}]{pred,  }\item[{Disposer}]{disposer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Requires}\+: Disposer\+::operator()(pointer) shouldn\textquotesingle{}t throw.
+
+{\bfseries Effects}\+: Removes adjacent duplicate elements or adjacent elements that satisfy some binary predicate from the list. Disposer\+::operator()(pointer) is called for every removed element.
+
+{\bfseries Throws}\+: If pred throws. Basic guarantee.
+
+{\bfseries Complexity}\+: Linear time (\hyperlink{classboost_1_1intrusive_1_1list__impl_a9da0074a31566f3a7dbc3cd1a2d752c1}{size()}-\/1) comparisons equality comparisons.
+
+{\bfseries Note}\+: The relative order of elements that are not removed is unchanged, and iterators to elements that are not removed remain valid. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ad1f3207f2a89bfb5ee38f1cd6114bf94}\label{classboost_1_1intrusive_1_1list__impl_ad1f3207f2a89bfb5ee38f1cd6114bf94}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+bool operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_aca2da5db0e59cc4aa259b748d571516a}\label{classboost_1_1intrusive_1_1list__impl_aca2da5db0e59cc4aa259b748d571516a}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+bool operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a7efc3d66080937cc7b391259f3a755df}\label{classboost_1_1intrusive_1_1list__impl_a7efc3d66080937cc7b391259f3a755df}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{operator$<$=}{operator<=}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+bool operator$<$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_adfa112438fc1b811ec128a07af699c94}\label{classboost_1_1intrusive_1_1list__impl_adfa112438fc1b811ec128a07af699c94}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!operator==@{operator==}}
+\index{operator==@{operator==}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_aa53995779f3115d3d6283176ae2e5879}\label{classboost_1_1intrusive_1_1list__impl_aa53995779f3115d3d6283176ae2e5879}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+bool operator$>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a377468145b0d37be0290b44223a82d14}\label{classboost_1_1intrusive_1_1list__impl_a377468145b0d37be0290b44223a82d14}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{operator$>$=}{operator>=}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+bool operator$>$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{const \hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ab912cfb4f0b466441be2a187fbe40c04}\label{classboost_1_1intrusive_1_1list__impl_ab912cfb4f0b466441be2a187fbe40c04}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!swap@{swap}}
+\index{swap@{swap}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{swap}{swap}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+void swap (\begin{DoxyParamCaption}\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{x,  }\item[{\hyperlink{classboost_1_1intrusive_1_1list__impl}{list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$ \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_a874f994ae317f397c2d085b4bd046026}\label{classboost_1_1intrusive_1_1list__impl_a874f994ae317f397c2d085b4bd046026}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!constant\+\_\+time\+\_\+size@{constant\+\_\+time\+\_\+size}}
+\index{constant\+\_\+time\+\_\+size@{constant\+\_\+time\+\_\+size}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{constant\+\_\+time\+\_\+size}{constant\_time\_size}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+const bool \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::constant\+\_\+time\+\_\+size = Constant\+Time\+Size\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_acfc0b15fa95c54830808600dd25a7472}\label{classboost_1_1intrusive_1_1list__impl_acfc0b15fa95c54830808600dd25a7472}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!has\+\_\+container\+\_\+from\+\_\+iterator@{has\+\_\+container\+\_\+from\+\_\+iterator}}
+\index{has\+\_\+container\+\_\+from\+\_\+iterator@{has\+\_\+container\+\_\+from\+\_\+iterator}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{has\+\_\+container\+\_\+from\+\_\+iterator}{has\_container\_from\_iterator}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+const bool \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::has\+\_\+container\+\_\+from\+\_\+iterator\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+        detail::is\_same< header\_holder\_type, detail::default\_header\_holder< node\_traits > >::value
+\end{DoxyCode}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1list__impl_ab2af39c13da3c2bd169d47f39d501a26}\label{classboost_1_1intrusive_1_1list__impl_ab2af39c13da3c2bd169d47f39d501a26}} 
+\index{boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}!stateful\+\_\+value\+\_\+traits@{stateful\+\_\+value\+\_\+traits}}
+\index{stateful\+\_\+value\+\_\+traits@{stateful\+\_\+value\+\_\+traits}!boost\+::intrusive\+::list\+\_\+impl@{boost\+::intrusive\+::list\+\_\+impl}}
+\subsubsection{\texorpdfstring{stateful\+\_\+value\+\_\+traits}{stateful\_value\_traits}}
+{\footnotesize\ttfamily template$<$class Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
+const bool \hyperlink{classboost_1_1intrusive_1_1list__impl}{boost\+::intrusive\+::list\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::stateful\+\_\+value\+\_\+traits = detail\+::is\+\_\+stateful\+\_\+value\+\_\+traits$<$\hyperlink{classboost_1_1intrusive_1_1list__impl_a5cd55672f6df367749d91ef708834126}{value\+\_\+traits}$>$\+::value\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/hari/\+G\+S\+O\+C/boost\+\_\+1\+\_\+67\+\_\+0/boost/\+Advanced-\/\+Intrusive-\/master/\hyperlink{list_8hpp}{list.\+hpp}\end{DoxyCompactItemize}
