@@ -1,6 +1,6 @@
-#include <boost/Advanced-Intrusive-master/Suffix_tree/suffix_tree_algorithms.hpp>
-#include <boost/Advanced-Intrusive-master/Suffix_tree/suffix_tree_hook.hpp>
-#include <boost/Advanced-Intrusive-master/Suffix_tree/suffix_tree_iterator.hpp>
+#include <boost/intrusive/Suffix_tree/suffix_tree_algorithms.hpp>
+#include <boost/intrusive/Suffix_tree/suffix_tree_hook.hpp>
+#include <boost/intrusive/Suffix_tree/suffix_tree_iterator.hpp>
 
 
 #include<boost/intrusive/any_hook.hpp>
@@ -56,7 +56,15 @@ struct suffix_tree_defaults
    typedef std::size_t size_type;
    typedef void header_holder_type;
 };
-
+/*!
+<ul>
+<li>
+In this class contains all the methods supported by suffix tree are defined.
+</li>
+<li>
+This is derived in the "suffix tree" class.
+</li>
+*/
 template<typename ValueTraits, class SizeType, bool ConstantTimeSize, typename HeaderHolder>
 class suffix_tree_impl
 {
@@ -75,13 +83,13 @@ class suffix_tree_impl
     typedef suffix_tree_iterator<value_traits, true>                         const_iterator;
     typedef typename detail::get_header_holder_type
       < value_traits, HeaderHolder >::type                           header_holder_type;
-    
+    ///@cond
    static const bool constant_time_size = ConstantTimeSize;
    static const bool stateful_value_traits = detail::is_stateful_value_traits<value_traits>::value;
    static const bool has_container_from_iterator =
         detail::is_same< header_holder_type, detail::default_header_holder< node_traits > >::value;
 
-   /// @cond
+   /// @endcond
 
    private:
     typedef detail::size_holder<constant_time_size, size_type>          size_traits;
@@ -230,6 +238,22 @@ void extendSuffixTree(char *text,int pos,int start)
     }
 }
 public:
+/*!
+<ul>
+<li>
+This function declares all the variables required by suffix tree and initialises them
+</li>
+<li>
+This function builds the suffix tree for the given inputs.
+</li>
+</ul>
+\param text base string on which suffix tree needs to be built
+\param start starting index of base string to be considered
+\param end ending index of base string to be considered
+\return Nothing
+<p> </p>
+<b> Complexity: </b> O(N)
+*/
 suffix_tree_impl(char *text,int start,int end)
 {
     data_.size = strlen(text);
@@ -242,6 +266,9 @@ suffix_tree_impl(char *text,int start,int end)
         extendSuffixTree(text,i-start,start);
     int labelHeight = 0;
 }
+/*!
+This returns an iterator to the root node of suffix tree.
+*/
 iterator get_root()
 {
     node_ptr root_node=value_traits::to_node_ptr(*data_.root);
@@ -259,7 +286,7 @@ template<class T, class O1 = void, class O2 = void, class O3 = void, class O4 = 
 #endif
 struct make_suffix_tree
 {
-   /// @cond
+    public:
    typedef typename pack_options
       < suffix_tree_defaults,
       #if !defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
@@ -269,8 +296,13 @@ struct make_suffix_tree
          #endif
          >::type packed_options;
 
-   typedef typename detail::get_value_traits
-      <T, typename packed_options::proto_value_traits>::type value_traits;
+   typedef typename detail::get_value_traits<T, typename packed_options::proto_value_traits>::type value_traits;
+   /*!
+   <ul>
+    <li>This is the main class which contains all the methods supported by suffix tree.</li>
+    <li>This class is derived into "suffix_tree" class by giving appropriate inputs.</li>
+   </ul>
+   */
    typedef suffix_tree_impl
       <value_traits,
         typename packed_options::size_type,
@@ -311,6 +343,12 @@ class suffix_tree
    typedef typename Base::value_traits          value_traits;
    
     public:
+        /*!
+        <ul>
+        <li> This is the first and main function used while working with any data structure.</li>
+        <li>This calls the "suffix_tree_impl" function which does initialisation and declaration of variables.</li>
+        </ul>
+    */
     suffix_tree(char *text,int start,int end)
         : Base(text,start,end)
     {

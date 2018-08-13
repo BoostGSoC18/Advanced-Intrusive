@@ -15,6 +15,7 @@ class fenwick_tree_node
         typedef typename boost::intrusive::pointer_rebind<VoidPointer, fenwick_tree_node>::type  node_ptr;
     public:
         node_ptr *children;
+        int child_cnt;
 };
 template<class VoidPointer>
 class fenwick_tree_node_traits

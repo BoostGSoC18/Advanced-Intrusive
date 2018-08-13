@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#include<boost/GSOC18/Advanced-Intrusive/Suffix_tree/suffix_tree_node.hpp>
+#include<boost/intrusive/Suffix_tree/suffix_tree_node.hpp>
 #include<boost/intrusive/detail/algo_type.hpp>
 
 namespace boost {

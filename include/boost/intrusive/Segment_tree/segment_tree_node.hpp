@@ -23,19 +23,27 @@ class segment_tree_node_traits
     typedef segment_tree_node<VoidPointer>      node;
     typedef typename node::node_ptr     node_ptr;
     typedef typename pointer_rebind<VoidPointer, const node>::type   const_node_ptr;
-    BOOST_INTRUSIVE_FORCEINLINE static void set_left_child(node_ptr &target,node_ptr &left_child)
+    BOOST_INTRUSIVE_FORCEINLINE static void set_left_child(const node_ptr &target,const node_ptr &left_child)
     {
         target->left_child=left_child;
     }
-    BOOST_INTRUSIVE_FORCEINLINE static void set_right_child(node_ptr &target,node_ptr &right_child)
+    BOOST_INTRUSIVE_FORCEINLINE static void set_right_child(const node_ptr &target,const node_ptr &right_child)
     {
         target->right_child=right_child;
     }
-    BOOST_INTRUSIVE_FORCEINLINE static node_ptr get_left_child(node_ptr &target)
+    BOOST_INTRUSIVE_FORCEINLINE static node_ptr get_left_child(const node_ptr &target)
     {
        return target->left_child;
     }
-    BOOST_INTRUSIVE_FORCEINLINE static node_ptr get_right_child(node_ptr &target)
+    BOOST_INTRUSIVE_FORCEINLINE static node_ptr get_left_child(const const_node_ptr &target)
+    {
+       return target->left_child;
+    }
+    BOOST_INTRUSIVE_FORCEINLINE static node_ptr get_right_child(const node_ptr &target)
+    {
+        return target->right_child;
+    }
+    BOOST_INTRUSIVE_FORCEINLINE static node_ptr get_right_child(const const_node_ptr &target)
     {
         return target->right_child;
     }

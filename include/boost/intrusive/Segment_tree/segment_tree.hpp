@@ -1,7 +1,7 @@
-#include <boost/GSOC18/Advanced-Intrusive/New_segment_tree/segment_tree_algorithms.hpp>
-#include <boost/GSOC18/Advanced-Intrusive/Segment_tree/segment_tree_hook.hpp>
-#include "boost/GSOC18/Advanced-Intrusive/Segment_tree/merging_function.hpp"
-#include <boost/GSOC18/Advanced-Intrusive/Segment_tree/segment_tree_iterator.hpp>
+#include <boost/intrusive/Segment_tree/segment_tree_algorithms.hpp>
+#include <boost/intrusive/Segment_tree/segment_tree_hook.hpp>
+#include "boost/intrusive/Segment_tree/merging_function.hpp"
+#include <boost/intrusive/Segment_tree/segment_tree_iterator.hpp>
 
 #include<boost/intrusive/any_hook.hpp>
 #include <boost/intrusive/detail/get_value_traits.hpp>
@@ -56,7 +56,11 @@ struct segtree_defaults
 };
 
 /**
- * This class is main class where all the functions are defined.
+
+ <ul>
+ <li> This class is main class where all the functions are defined</li>
+ <li> This class is derived in the "segment_tree" class </li>
+  
 */
 template<typename ValueTraits, class SizeType, bool ConstantTimeSize, typename HeaderHolder>
 class segment_tree_impl
@@ -75,12 +79,11 @@ class segment_tree_impl
     typedef segtree_iterator<value_traits, true>                         const_iterator;
     typedef typename node_traits::const_node_ptr                      const_node_ptr;
     typedef SizeType                                                  size_type;
-   
-
+    ///@cond
    static const bool constant_time_size = ConstantTimeSize;
    static const bool stateful_value_traits = detail::is_stateful_value_traits<value_traits>::value;
-
-   /// @cond
+   ///@endcond
+    private:
    struct data_t : public ValueTraits
    {
       typedef typename segment_tree_impl::value_traits value_traits;
@@ -107,10 +110,18 @@ class segment_tree_impl
    const_value_traits_ptr priv_value_traits_ptr() const
    {  return pointer_traits<const_value_traits_ptr>::pointer_to(this->priv_value_traits());  }
 
-   public:
    value_type *input;
    int start,end;
    public:
+   /*!
+   <ul>
+   <li> This function initialises all the variables and constructs segment tree for given inputs </li>
+   </ul>
+   \param input input array
+   \param start starting index of input
+   \param end  last index of input
+   <p></p>
+    <b>Complexity :  </b> O(N)    */
     segment_tree_impl(value_type input[],int start,int end)
     :data_(value_traits())
     {
@@ -171,10 +182,20 @@ class segment_tree_impl
        nodes_count(mid+1,end); 
     }
     public:
+    /*!
+    <ul>
+    <li> This function builds the segment tree from the given inputs </li>
+    </ul>
+    \param func merging function
+    \return Nothing
+    <p> </p>
+    <b> Complexity </b> O(NLog(N)) where N is length of input array
+    */
     void build(auto func)
     {
        build_computation(input,start,end,func,data_.root);
     }
+    private:
     data_type build_computation(value_type  *input,int start,int end,auto func,node_ptr &curr_node)
     {
         value_type* p=value_traits::to_value_ptr(curr_node);
@@ -190,10 +211,23 @@ class segment_tree_impl
         p->value=func(left_value,right_value);
         return p->value;
     }
+    public:
+    /*!
+    <ul>
+    <li> This updates the segment tree according to given inputs </li>
+    <li> This supports only single update i.e only single element from input array needs to be updated </li>
+    </ul>
+    \param func merging function
+    \param index updated index
+    \return Nothing
+    <p> </p>
+    <b> Complexity: </b> O(Log(N)) where N is length of input array
+    */
     void update(auto func,int index)
     {
         update_computation(input,start,end,func,index,data_.root);
     }
+    private:
     data_type update_computation(value_type input[],int start,int end,auto func,int index,node_ptr &curr_node)
     {
         pointer p=value_traits::to_value_ptr(curr_node);
@@ -214,6 +248,18 @@ class segment_tree_impl
     private:
     int range_nodes=0;
     public:
+    /*!
+    <ul>
+    <li> This function queries the segment tree according to given inputs </li>
+    <li> This is very useful operation as it has many applications. </li>
+    </ul>
+    \param func merging function
+    \param index updated index
+    \return Nothing
+    <p> </p>
+    <b> Complexity: </b> O(Log(N)) where N is length of input array
+    */
+
     data_type query(auto func,int query_start,int query_end)
     {
         data_type *required_values;
@@ -249,10 +295,16 @@ class segment_tree_impl
         query_computation(input,mid+1,end,func,query_start,query_end,required_values,right_ptr);
     }
     public:
+        /*!
+This returns an iterator to the root node or source node of fenwick tree.
+*/
     iterator get_root()
     {
         return iterator(data_.root, this->priv_value_traits_ptr());
     }
+        /*!
+This returns a const iterator to the root node or source node of fenwick tree.
+*/
     const_iterator const_get_root() const
     {
         return const_iterator(data_.root, this->priv_value_traits_ptr());
@@ -268,7 +320,7 @@ template<class T, class O1 = void, class O2 = void, class O3 = void, class O4 = 
 #endif
 struct make_segment_tree
 {
-   /// @cond
+    public:
    typedef typename pack_options
       < segtree_defaults,
       #if !defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
@@ -280,13 +332,18 @@ struct make_segment_tree
 
    typedef typename detail::get_value_traits
       <T, typename packed_options::proto_value_traits>::type value_traits;
+   /*!
+   <ul>
+    <li>This is the main class which contains all the methods supported by segment tree.</li>
+    <li>This class is derived into "segment_tree" class by giving appropriate inputs.</li>
+   </ul>
+   */
    typedef segment_tree_impl
       <value_traits,
         typename packed_options::size_type,
          packed_options::constant_time_size,
          typename packed_options::header_holder_type
    > implementation_defined;
-   /// @endcond
    typedef implementation_defined type;
 };
 
@@ -321,15 +378,18 @@ class segment_tree
    typedef typename Base::iterator              iterator;
    
     public:
+        /*!
+        <ul>
+        <li> This is the first and main function used while working with any data structure.</li>
+        <li>This calls the "segment_tree_impl" function which does initialisation and declaration of variables.</li>
+        </ul>
+    */
+
     segment_tree(T input[],int start,int end)
         : Base(input,start,end)
     {
 
     };
-//        explicit list(int start,int end,int n,const value_traits &v_traits)
-//       :  Base(start,end,n,v_traits)
-//    {}
-
 };
 
 }

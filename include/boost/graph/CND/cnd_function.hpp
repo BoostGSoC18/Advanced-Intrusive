@@ -70,13 +70,16 @@ int decomposeTree(Graph input_tree,int root,bool centroidMarked[],Graph &out_tre
     return cend_tree;
 } 
 template<typename Graph>
-Graph CND(Graph input_tree,int root,int ver_cnt)
+pair<Graph,int> CND(Graph input_tree,int root,int ver_cnt)
 {
     bool centroidMarked[MAXN];
     for(int i=0;i<MAXN;i++)
         centroidMarked[i]=false;
     Graph decomposed_tree(ver_cnt);
-    decomposeTree(input_tree,root,centroidMarked,decomposed_tree);
-    return decomposed_tree;
+    int centroid=decomposeTree(input_tree,root,centroidMarked,decomposed_tree);
+    pair<Graph,int> decomposed_rooted_tree;
+    decomposed_rooted_tree.first=decomposed_tree;
+    decomposed_rooted_tree.second=centroid;
+    return decomposed_rooted_tree;
 
 }

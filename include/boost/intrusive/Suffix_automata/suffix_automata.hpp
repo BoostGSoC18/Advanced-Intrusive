@@ -1,6 +1,6 @@
-#include <boost/Advanced-Intrusive-master/Suffix_automata/suffix_automata_algorithms.hpp>
-#include <boost/Advanced-Intrusive-master/Suffix_automata/suffix_automata_hook.hpp>
-#include <boost/Advanced-Intrusive-master/Suffix_automata/suffix_automata_iterator.hpp>
+#include <boost/intrusive/Suffix_automata/suffix_automata_algorithms.hpp>
+#include <boost/intrusive/Suffix_automata/suffix_automata_hook.hpp>
+#include <boost/intrusive/Suffix_automata/suffix_automata_iterator.hpp>
 
 
 #include<boost/intrusive/any_hook.hpp>
@@ -56,6 +56,12 @@ struct suffix_automata_defaults
    typedef std::size_t size_type;
    typedef void header_holder_type;
 };
+/*!
+<ul>
+<li>This class contains all the basic methods supported by suffix automata. </li>
+<li> This class is derived in the "suffix_automata" class </li>
+</ul>
+*/
 
 template<typename ValueTraits, class SizeType, bool ConstantTimeSize, typename HeaderHolder>
 class suffix_automata_impl
@@ -71,17 +77,17 @@ class suffix_automata_impl
     typedef suffix_automata_algorithms<node_traits> algo;
     typedef typename node_traits::const_node_ptr                      const_node_ptr;
     typedef SizeType                                                  size_type;
-    // typedef suffix_automata_iterator<value_traits, false>                        iterator;
-    // typedef suffix_automata_iterator<value_traits, true>                         const_iterator;
+    typedef suffix_automata_iterator<value_traits, false>                        iterator;
+    typedef suffix_automata_iterator<value_traits, true>                         const_iterator;
     typedef typename detail::get_header_holder_type
       < value_traits, HeaderHolder >::type                           header_holder_type;
-    
+///@cond
    static const bool constant_time_size = ConstantTimeSize;
    static const bool stateful_value_traits = detail::is_stateful_value_traits<value_traits>::value;
    static const bool has_container_from_iterator =
         detail::is_same< header_holder_type, detail::default_header_holder< node_traits > >::value;
 
-   /// @cond
+   /// @endcond
 
    private:
     typedef detail::size_holder<constant_time_size, size_type>          size_traits;
@@ -126,33 +132,29 @@ class suffix_automata_impl
    const_value_traits_ptr priv_value_traits_ptr() const
    {  return pointer_traits<const_value_traits_ptr>::pointer_to(this->priv_value_traits());  }
 
-public:
+private:
 void extend_automata(char *text,int i)
 {
-    std::cout << i << "\n";
     value_type *curr_node=(value_type*)malloc(sizeof(value_type));
     node_ptr curr_ptr=value_traits::to_node_ptr(*curr_node);
     node_ptr last_ptr=value_traits::to_node_ptr(*data_.last);
     curr_ptr->length=last_ptr->length+1;
+    for(int i=0;i<26;i++)
+        curr_ptr->children[i]=nullptr;
     node_ptr p;
-    std::cout << i << "\n";
     for(p=last_ptr;(p!=nullptr && p->children[text[i]-97]==nullptr);p=p->suffix_link)
     {
         p->children[text[i]-97]=curr_ptr;
     }
-//    std::cout << i << "\n";
     if(p==nullptr)
     {
-//        std::cout << i << "\n";
         curr_ptr->suffix_link=value_traits::to_node_ptr(*data_.root);
     }
     else
     {
-        // std::cout << i << "\n";
         node_ptr q=p->children[text[i]-97];
         if(q->length==p->length+1)
         {
-//            std::cout << i << "\n";
             curr_ptr->suffix_link=q;
         }
         else
@@ -163,12 +165,10 @@ void extend_automata(char *text,int i)
             cloned_ptr->suffix_link=p->suffix_link;
             for(int i=0;i<26;i++)
                 cloned_ptr->children[i]=q->children[i];
-            std::cout << i << "\n";
             for(;(p!=nullptr &&  p->children[text[i]-97]==q);p=p->suffix_link)
             {
                 p->children[text[i]-97]=cloned_node;
             }
-            std::cout << i << "\n";
             q->suffix_link=cloned_ptr;
             curr_ptr->suffix_link=cloned_ptr;
 
@@ -178,6 +178,23 @@ void extend_automata(char *text,int i)
     
 }
 public:
+/*!
+<ul>
+<li>
+This function declares all the variables required by suffix automata and initialises them
+</li>
+<li>
+This function also builds the suffix automata for the given inputs.
+</li>
+</ul>
+\param text base string on which suffix automata needs to be built
+\param start starting index of base string to be considered
+\param end ending index of base string to be considered
+\return Nothing
+<p> </p>
+<b> Complexity: </b> O(N)
+*/
+
 suffix_automata_impl(char *text)
 {
     int len=strlen(text);
@@ -191,6 +208,14 @@ suffix_automata_impl(char *text)
         extend_automata(text,i);
     }
 }
+/*!
+This returns an iterator to the root node of suffix automata.
+*/
+iterator get_root()
+{
+    node_ptr root_node=value_traits::to_node_ptr(*data_.root);
+    return iterator(root_node,this->priv_value_traits_ptr());
+}
 
 };
 
@@ -202,7 +227,7 @@ template<class T, class O1 = void, class O2 = void, class O3 = void, class O4 = 
 #endif
 struct make_suffix_automata
 {
-   /// @cond
+   public:
    typedef typename pack_options
       < suffix_automata_defaults,
       #if !defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
@@ -214,13 +239,18 @@ struct make_suffix_automata
 
    typedef typename detail::get_value_traits
       <T, typename packed_options::proto_value_traits>::type value_traits;
+   /*!
+   <ul>
+    <li>This is the main class which contains all the methods supported by suffix automata.</li>
+    <li>This class is derived into "suffix_automata" class by giving appropriate inputs.</li>
+   </ul>
+   */
    typedef suffix_automata_impl
       <value_traits,
         typename packed_options::size_type,
          packed_options::constant_time_size,
          typename packed_options::header_holder_type
    > implementation_defined;
-   /// @endcond
    typedef implementation_defined type;
 };
 
@@ -252,7 +282,13 @@ class suffix_automata
 
  public:
    typedef typename Base::value_traits          value_traits;
-   
+       /*!
+        <ul>
+        <li> This is the first and main function used while working with any data structure.</li>
+        <li>This calls the "suffix_automata_impl" function which does initialisation and declaration of variables.</li>
+        </ul>
+    */
+
     public:
     suffix_automata(char *text)
         : Base(text)

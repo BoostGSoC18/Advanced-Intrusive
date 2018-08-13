@@ -1,6 +1,6 @@
-#include <boost/GSOC18/Advanced-Intrusive/Fenwick_tree/fenwick_tree_algorithms.hpp>
-#include <boost/GSOC18/Advanced-Intrusive/Fenwick_tree/fenwick_tree_hook.hpp>
-#include <boost/GSOC18/Advanced-Intrusive/Fenwick_tree/fenwick_tree_iterator.hpp>
+#include <boost/intrusive/Fenwick_tree/fenwick_tree_algorithms.hpp>
+#include <boost/intrusive/Fenwick_tree/fenwick_tree_hook.hpp>
+#include <boost/intrusive/Fenwick_tree/fenwick_tree_iterator.hpp>
 
 
 #include<boost/intrusive/any_hook.hpp>
@@ -56,7 +56,9 @@ struct fenwick_tree_defaults
    typedef std::size_t size_type;
    typedef void header_holder_type;
 };
-
+/*!
+This class contains all the basic methods supported by fenwick tree. 
+*/
 template<typename ValueTraits, class SizeType, bool ConstantTimeSize, typename HeaderHolder>
 class fenwick_tree_impl
 {
@@ -76,14 +78,14 @@ class fenwick_tree_impl
     typedef typename value_type::data_type data_type;
     typedef typename detail::get_header_holder_type
       < value_traits, HeaderHolder >::type                           header_holder_type;
-    
+   private: 
+   ///@cond
    static const bool constant_time_size = ConstantTimeSize;
    static const bool stateful_value_traits = detail::is_stateful_value_traits<value_traits>::value;
    static const bool has_container_from_iterator =
         detail::is_same< header_holder_type, detail::default_header_holder< node_traits > >::value;
 
-   /// @cond
-
+   ///@endcond
    private:
     typedef detail::size_holder<constant_time_size, size_type>          size_traits;
    
@@ -101,9 +103,6 @@ class fenwick_tree_impl
    struct data_t : public ValueTraits
    {
       typedef typename fenwick_tree_impl::value_traits value_traits;
-    //   explicit data_t(const value_traits &val_traits)
-    //      :  value_traits(val_traits)
-    //   {}
       root_plus_size root_plus_size_;
    } data_;
     
@@ -143,6 +142,14 @@ class fenwick_tree_impl
     node_ptr root;
    
    public:
+    /*!
+    This is a initialisation function where all the variables required for supporting fenwick tree are created and initialised with apporopriate values.
+    \param input input array 
+    \param start starting index of input array
+    \param end last index of input array 
+    \return Nothing <p></p>
+    <b> Complexity </b> O(N)
+    */
     fenwick_tree_impl(value_type input[],int start,int end)
     {
         this->input=input;
@@ -214,6 +221,12 @@ class fenwick_tree_impl
     private:
         int cnt_run=1;
     public:
+    /*!
+    This function builds the fenwick tree based on the given inputs
+    \param func merging function
+    \return Nothing
+    <p></p>
+    <b>Complexity :  </b> O(Nlog(N))    */
     void build(auto func)
     {
         for(int i=0;i<total_nodes-leaf_nodes;i++)
@@ -221,23 +234,25 @@ class fenwick_tree_impl
             ptr[i].value.a=0;
         }
         build_computation(func);
-       // check();
     }
-    void check()
-    {
-        node_ptr temp=root->children[2];
-        temp=temp->children[1];
-        pointer p=value_traits::to_value_ptr(temp);
-        //std::cout << p->value.a << "\n";
-    }
+    private:
     void build_computation(auto func)
     {
         for(int i=0;i<=end;i++)
         {
-            check();
             update(func,i,input[i]);
         }
     }
+    public:
+    /*!
+    This function updates fenwick tree according to the given inputs
+    \param func merging function
+    \param index updated index
+    \param val updated_value
+    \return Nothing
+    <p></p>
+    <b>Complexity :  </b> O(log(N))
+    */
     void update(auto func,int index,value_type val)
     {
         std::stack<int> bit_pos;
@@ -288,8 +303,15 @@ class fenwick_tree_impl
             curr_node=curr_node->children[child];
         }
     }
-    public:
     data_type curr_value;
+    public:
+    /*!
+    This function queries the fenwick tree and returns the answer corresponding to the given inputs.
+    \param func merging function
+    \param index index till which fenwick tree needs to be queried.
+    \return the query value over the range given in input.<p></p>
+    <b>Complexity :  </b> O(log(N)) 
+    */
     data_type query(auto func,int index)
     {
         std::stack<int> bit_pos;
@@ -329,6 +351,9 @@ class fenwick_tree_impl
         }
     }    
     public:
+    /*!
+This returns an iterator to the root node or source node of fenwick tree.
+*/
     iterator get_root()
     {
         return iterator(root,this->priv_value_traits_ptr());
@@ -342,7 +367,7 @@ template<class T, class O1 = void, class O2 = void, class O3 = void, class O4 = 
 #endif
 struct make_fenwick_tree
 {
-   /// @cond
+   public:
    typedef typename pack_options
       < fenwick_tree_defaults,
       #if !defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
@@ -354,13 +379,18 @@ struct make_fenwick_tree
 
    typedef typename detail::get_value_traits
       <T, typename packed_options::proto_value_traits>::type value_traits;
+   /*!
+   <ul>
+    <li>This is the main class which contains all the methods supported by fenwick tree.</li>
+    <li>This class is derived into "fenwick_tree" class by giving appropriate inputs.</li>
+   </ul>
+   */
    typedef fenwick_tree_impl
       <value_traits,
         typename packed_options::size_type,
          packed_options::constant_time_size,
          typename packed_options::header_holder_type
    > implementation_defined;
-   /// @endcond
    typedef implementation_defined type;
 };
 
@@ -394,6 +424,12 @@ class fenwick_tree
    typedef typename Base::value_traits          value_traits;
    
     public:
+    /*!
+        <ul>
+        <li> This is the first and main function used while working with any data structure.</li>
+        <li>This calls the "fenwick_tree_impl" function which does initialisation and declaration of variables.</li>
+        </ul>
+    */
     fenwick_tree(T input[],int start,int end)
         : Base(input,start,end)
     {

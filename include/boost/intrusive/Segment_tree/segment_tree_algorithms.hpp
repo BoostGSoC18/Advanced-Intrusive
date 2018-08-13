@@ -1,4 +1,4 @@
-#include <boost/GSOC18/Advanced-Intrusive/New_segment_tree/segment_tree_node.hpp>
+#include <boost/intrusive/Segment_tree/segment_tree_node.hpp>
 #include<boost/intrusive/detail/algo_type.hpp>
 
 namespace boost {
@@ -20,6 +20,7 @@ class segment_tree_algorithms
     }
     BOOST_INTRUSIVE_FORCEINLINE static bool unique(const const_node_ptr &this_node)
     {
+        
         return true;
     }
 };

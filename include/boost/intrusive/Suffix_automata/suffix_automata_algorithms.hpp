@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#include<boost/Advanced-Intrusive-master/Suffix_automata/suffix_automata_node.hpp>
+#include<boost/intrusive/Suffix_automata/suffix_automata_node.hpp>
 #include<boost/intrusive/detail/algo_type.hpp>
 
 namespace boost {

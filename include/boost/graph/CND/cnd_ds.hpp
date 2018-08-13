@@ -1,13 +1,26 @@
 #define MAXN 1025
-
 namespace boost{
-    namespace intrusive{
+    namespace graph{
+/*!
+<ul>
+<li>This is the main class which contains all the methods related to Centroid decomposition.</li>
+<li>This is a very popular decomposition because it has many applications in solving tree based problems.</li>
+<li>This decomposition creates a tree of height O(log(N))</li>  
+</ul>
+*/
         template<typename Graph>
         class CND
         {
             public:
+            /*!
+            This contains decomposed tree formed by centroid decomposition
+            */
             Graph decomposed_rooted_tree;
+            /*!
+            This contains the root of decomposed tree.
+            */
             int decomposed_root;
+            private:
             void DFS(int src, Graph input_tree, bool visited[], int subtree_size[],bool centroidMarked[], int* n)
             {
                 visited[src] = true;
@@ -73,7 +86,20 @@ namespace boost{
                     }
                 }
                 return cend_tree;
-            } 
+            }
+        /*!
+        <ul>
+        <li> This function creates a tree of height O(log(N)) by recursively selecting centroid and decomposing tree.
+        </li>
+        </ul>
+        \param input_tree input tree
+        \param root root of input tree
+        \param ver_cnt total number of vertices in input tree
+        \return Nothing
+        <p> </p>
+        <b> Complexity: </b> O(N)
+    */
+            public:
             CND(Graph input_tree,int root,int ver_cnt)
             {
                 bool centroidMarked[MAXN];
