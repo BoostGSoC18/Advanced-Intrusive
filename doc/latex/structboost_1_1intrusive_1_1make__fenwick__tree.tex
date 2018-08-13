@@ -7,17 +7,48 @@
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef implementation\+\_\+defined \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a174edb4a4fedde7b29f7aa9362d37ac0}{type}
+typedef pack\+\_\+options$<$ fenwick\+\_\+tree\+\_\+defaults, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a174edb4a4fedde7b29f7aa9362d37ac0}{type} \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_affdbeb1683bbfebf917e9a35cbd31b81}{packed\+\_\+options}
+\item 
+typedef detail\+::get\+\_\+value\+\_\+traits$<$ T, typename packed\+\_\+options\+::proto\+\_\+value\+\_\+traits $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a174edb4a4fedde7b29f7aa9362d37ac0}{type} \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a3ee00a7f2c43d65e29ad42d24f33235a}{value\+\_\+traits}
+\item 
+typedef \hyperlink{classboost_1_1intrusive_1_1fenwick__tree__impl}{fenwick\+\_\+tree\+\_\+impl}$<$ \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a3ee00a7f2c43d65e29ad42d24f33235a}{value\+\_\+traits}, iterator get\+\_\+root()\{ node\+\_\+ptr root\+\_\+node=value\+\_\+traits\+::to\+\_\+node\+\_\+ptr($\ast$data\+\_\+.\+root);return iterator(root\+\_\+node, this-\/$>$priv\+\_\+value\+\_\+traits\+\_\+ptr());\} typename packed\+\_\+options\+::size\+\_\+type, packed\+\_\+options\+::constant\+\_\+time\+\_\+size, typename packed\+\_\+options\+::header\+\_\+holder\+\_\+type $>$ \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_af7a268a01bc7f0ae30cabfd6bf2be546}{implementation\+\_\+defined}
+\item 
+typedef \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_af7a268a01bc7f0ae30cabfd6bf2be546}{implementation\+\_\+defined} \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a174edb4a4fedde7b29f7aa9362d37ac0}{type}
 \end{DoxyCompactItemize}
 
 
 \subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__fenwick__tree_af7a268a01bc7f0ae30cabfd6bf2be546}\label{structboost_1_1intrusive_1_1make__fenwick__tree_af7a268a01bc7f0ae30cabfd6bf2be546}} 
+\index{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree@{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}!implementation\+\_\+defined@{implementation\+\_\+defined}}
+\index{implementation\+\_\+defined@{implementation\+\_\+defined}!boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree@{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}}
+\subsubsection{\texorpdfstring{implementation\+\_\+defined}{implementation\_defined}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef \hyperlink{classboost_1_1intrusive_1_1fenwick__tree__impl}{fenwick\+\_\+tree\+\_\+impl}$<$\hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a3ee00a7f2c43d65e29ad42d24f33235a}{value\+\_\+traits},iterator get\+\_\+root()\{ node\+\_\+ptr root\+\_\+node=value\+\_\+traits\+::to\+\_\+node\+\_\+ptr($\ast$data\+\_\+.\+root); return iterator(root\+\_\+node,this-\/$>$priv\+\_\+value\+\_\+traits\+\_\+ptr());\} typename packed\+\_\+options\+::size\+\_\+type, packed\+\_\+options\+::constant\+\_\+time\+\_\+size, typename packed\+\_\+options\+::header\+\_\+holder\+\_\+type $>$ \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree}{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_af7a268a01bc7f0ae30cabfd6bf2be546}{implementation\+\_\+defined}}
+
+
+\begin{DoxyItemize}
+\item This is the main class which contains all the methods supported by fenwick tree. 
+\item This class is derived into \char`\"{}fenwick\+\_\+tree\char`\"{} class by giving appropriate inputs. 
+\end{DoxyItemize}\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__fenwick__tree_affdbeb1683bbfebf917e9a35cbd31b81}\label{structboost_1_1intrusive_1_1make__fenwick__tree_affdbeb1683bbfebf917e9a35cbd31b81}} 
+\index{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree@{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}!packed\+\_\+options@{packed\+\_\+options}}
+\index{packed\+\_\+options@{packed\+\_\+options}!boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree@{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}}
+\subsubsection{\texorpdfstring{packed\+\_\+options}{packed\_options}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef pack\+\_\+options$<$ fenwick\+\_\+tree\+\_\+defaults, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a174edb4a4fedde7b29f7aa9362d37ac0}{type} \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree}{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_affdbeb1683bbfebf917e9a35cbd31b81}{packed\+\_\+options}}
+
 \mbox{\Hypertarget{structboost_1_1intrusive_1_1make__fenwick__tree_a174edb4a4fedde7b29f7aa9362d37ac0}\label{structboost_1_1intrusive_1_1make__fenwick__tree_a174edb4a4fedde7b29f7aa9362d37ac0}} 
 \index{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree@{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}!type@{type}}
 \index{type@{type}!boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree@{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}}
 \subsubsection{\texorpdfstring{type}{type}}
 {\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
-typedef implementation\+\_\+defined \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree}{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a174edb4a4fedde7b29f7aa9362d37ac0}{type}}
+typedef \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_af7a268a01bc7f0ae30cabfd6bf2be546}{implementation\+\_\+defined} \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree}{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a174edb4a4fedde7b29f7aa9362d37ac0}{type}}
+
+\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__fenwick__tree_a3ee00a7f2c43d65e29ad42d24f33235a}\label{structboost_1_1intrusive_1_1make__fenwick__tree_a3ee00a7f2c43d65e29ad42d24f33235a}} 
+\index{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree@{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}!value\+\_\+traits@{value\+\_\+traits}}
+\index{value\+\_\+traits@{value\+\_\+traits}!boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree@{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}}
+\subsubsection{\texorpdfstring{value\+\_\+traits}{value\_traits}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef detail\+::get\+\_\+value\+\_\+traits$<$T, typename packed\+\_\+options\+::proto\+\_\+value\+\_\+traits$>$\+::\hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a174edb4a4fedde7b29f7aa9362d37ac0}{type} \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree}{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree_a3ee00a7f2c43d65e29ad42d24f33235a}{value\+\_\+traits}}
 
 
 

@@ -7,17 +7,48 @@
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef implementation\+\_\+defined \hyperlink{structboost_1_1intrusive_1_1make__segment__tree_ac52c74ebd4a40dc2d3f2a37145bfe469}{type}
+typedef pack\+\_\+options$<$ segtree\+\_\+defaults, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__segment__tree_ac52c74ebd4a40dc2d3f2a37145bfe469}{type} \hyperlink{structboost_1_1intrusive_1_1make__segment__tree_ab09dfb845c300bf467f406f8e7545903}{packed\+\_\+options}
+\item 
+typedef detail\+::get\+\_\+value\+\_\+traits$<$ T, typename packed\+\_\+options\+::proto\+\_\+value\+\_\+traits $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__segment__tree_ac52c74ebd4a40dc2d3f2a37145bfe469}{type} \hyperlink{structboost_1_1intrusive_1_1make__segment__tree_a865aca881f5d22f89580dc0692503bff}{value\+\_\+traits}
+\item 
+typedef \hyperlink{classboost_1_1intrusive_1_1segment__tree__impl}{segment\+\_\+tree\+\_\+impl}$<$ \hyperlink{structboost_1_1intrusive_1_1make__segment__tree_a865aca881f5d22f89580dc0692503bff}{value\+\_\+traits}, typename packed\+\_\+options\+::size\+\_\+type, packed\+\_\+options\+::constant\+\_\+time\+\_\+size, typename packed\+\_\+options\+::header\+\_\+holder\+\_\+type $>$ \hyperlink{structboost_1_1intrusive_1_1make__segment__tree_a1a009d43964299a632641ecd7c2b0250}{implementation\+\_\+defined}
+\item 
+typedef \hyperlink{structboost_1_1intrusive_1_1make__segment__tree_a1a009d43964299a632641ecd7c2b0250}{implementation\+\_\+defined} \hyperlink{structboost_1_1intrusive_1_1make__segment__tree_ac52c74ebd4a40dc2d3f2a37145bfe469}{type}
 \end{DoxyCompactItemize}
 
 
 \subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__segment__tree_a1a009d43964299a632641ecd7c2b0250}\label{structboost_1_1intrusive_1_1make__segment__tree_a1a009d43964299a632641ecd7c2b0250}} 
+\index{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree@{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}!implementation\+\_\+defined@{implementation\+\_\+defined}}
+\index{implementation\+\_\+defined@{implementation\+\_\+defined}!boost\+::intrusive\+::make\+\_\+segment\+\_\+tree@{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}}
+\subsubsection{\texorpdfstring{implementation\+\_\+defined}{implementation\_defined}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef \hyperlink{classboost_1_1intrusive_1_1segment__tree__impl}{segment\+\_\+tree\+\_\+impl}$<$\hyperlink{structboost_1_1intrusive_1_1make__segment__tree_a865aca881f5d22f89580dc0692503bff}{value\+\_\+traits}, typename packed\+\_\+options\+::size\+\_\+type, packed\+\_\+options\+::constant\+\_\+time\+\_\+size, typename packed\+\_\+options\+::header\+\_\+holder\+\_\+type $>$ \hyperlink{structboost_1_1intrusive_1_1make__segment__tree}{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__segment__tree_a1a009d43964299a632641ecd7c2b0250}{implementation\+\_\+defined}}
+
+
+\begin{DoxyItemize}
+\item This is the main class which contains all the methods supported by segment tree. 
+\item This class is derived into \char`\"{}segment\+\_\+tree\char`\"{} class by giving appropriate inputs. 
+\end{DoxyItemize}\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__segment__tree_ab09dfb845c300bf467f406f8e7545903}\label{structboost_1_1intrusive_1_1make__segment__tree_ab09dfb845c300bf467f406f8e7545903}} 
+\index{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree@{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}!packed\+\_\+options@{packed\+\_\+options}}
+\index{packed\+\_\+options@{packed\+\_\+options}!boost\+::intrusive\+::make\+\_\+segment\+\_\+tree@{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}}
+\subsubsection{\texorpdfstring{packed\+\_\+options}{packed\_options}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef pack\+\_\+options$<$ segtree\+\_\+defaults, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__segment__tree_ac52c74ebd4a40dc2d3f2a37145bfe469}{type} \hyperlink{structboost_1_1intrusive_1_1make__segment__tree}{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__segment__tree_ab09dfb845c300bf467f406f8e7545903}{packed\+\_\+options}}
+
 \mbox{\Hypertarget{structboost_1_1intrusive_1_1make__segment__tree_ac52c74ebd4a40dc2d3f2a37145bfe469}\label{structboost_1_1intrusive_1_1make__segment__tree_ac52c74ebd4a40dc2d3f2a37145bfe469}} 
 \index{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree@{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}!type@{type}}
 \index{type@{type}!boost\+::intrusive\+::make\+\_\+segment\+\_\+tree@{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}}
 \subsubsection{\texorpdfstring{type}{type}}
 {\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
-typedef implementation\+\_\+defined \hyperlink{structboost_1_1intrusive_1_1make__segment__tree}{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__segment__tree_ac52c74ebd4a40dc2d3f2a37145bfe469}{type}}
+typedef \hyperlink{structboost_1_1intrusive_1_1make__segment__tree_a1a009d43964299a632641ecd7c2b0250}{implementation\+\_\+defined} \hyperlink{structboost_1_1intrusive_1_1make__segment__tree}{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__segment__tree_ac52c74ebd4a40dc2d3f2a37145bfe469}{type}}
+
+\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__segment__tree_a865aca881f5d22f89580dc0692503bff}\label{structboost_1_1intrusive_1_1make__segment__tree_a865aca881f5d22f89580dc0692503bff}} 
+\index{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree@{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}!value\+\_\+traits@{value\+\_\+traits}}
+\index{value\+\_\+traits@{value\+\_\+traits}!boost\+::intrusive\+::make\+\_\+segment\+\_\+tree@{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}}
+\subsubsection{\texorpdfstring{value\+\_\+traits}{value\_traits}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef detail\+::get\+\_\+value\+\_\+traits$<$T, typename packed\+\_\+options\+::proto\+\_\+value\+\_\+traits$>$\+::\hyperlink{structboost_1_1intrusive_1_1make__segment__tree_ac52c74ebd4a40dc2d3f2a37145bfe469}{type} \hyperlink{structboost_1_1intrusive_1_1make__segment__tree}{boost\+::intrusive\+::make\+\_\+segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__segment__tree_a865aca881f5d22f89580dc0692503bff}{value\+\_\+traits}}
 
 
 

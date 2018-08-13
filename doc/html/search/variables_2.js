@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['max',['max',['../merging__function_8hpp.html#a9dc5149580ddcb3fb7fd39cb4c910eaa',1,'merging_function.hpp']]],
-  ['min',['min',['../merging__function_8hpp.html#a30d6b0e6b93508a80df03556f70357b0',1,'merging_function.hpp']]]
+  ['decomposed_5froot',['decomposed_root',['../classboost_1_1graph_1_1CND.html#a366ea26abffc24a94b9c9e4a8bdf05be',1,'boost::graph::CND']]],
+  ['decomposed_5frooted_5ftree',['decomposed_rooted_tree',['../classboost_1_1graph_1_1CND.html#a21a1bc72301bab671c59c1e290b03e36',1,'boost::graph::CND']]]
 ];

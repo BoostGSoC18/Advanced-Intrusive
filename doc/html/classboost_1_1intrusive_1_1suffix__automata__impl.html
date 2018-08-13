@@ -74,6 +74,12 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="suffix__automata_8hpp_source.html">suffix_automata.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for boost::intrusive::suffix_automata_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classboost_1_1intrusive_1_1suffix__automata__impl__inherit__graph.png" border="0" usemap="#boost_1_1intrusive_1_1suffix__automata__impl_3_01ValueTraits_00_01SizeType_00_01ConstantTimeSize_00_01HeaderHolder_01_4_inherit__map" alt="Inheritance graph"/></div>
+<!-- MAP 0 -->
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -95,6 +101,10 @@ Public Types</h2></td></tr>
 <tr class="separator:acf5340d09b102d7fa183bcb304e96d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2fe9bd542f914c94c7d0e42cce5613c"><td class="memItemLeft" align="right" valign="top">typedef SizeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#ad2fe9bd542f914c94c7d0e42cce5613c">size_type</a></td></tr>
 <tr class="separator:ad2fe9bd542f914c94c7d0e42cce5613c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c03e2d35758eb2040a589cc35cc36c"><td class="memItemLeft" align="right" valign="top">typedef suffix_automata_iterator&lt; <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#abbf3dee8caf18613db903931801c6076">value_traits</a>, false &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#af7c03e2d35758eb2040a589cc35cc36c">iterator</a></td></tr>
+<tr class="separator:af7c03e2d35758eb2040a589cc35cc36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370d76fc868eac7454dc2554a8fc9494"><td class="memItemLeft" align="right" valign="top">typedef suffix_automata_iterator&lt; <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#abbf3dee8caf18613db903931801c6076">value_traits</a>, true &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#a370d76fc868eac7454dc2554a8fc9494">const_iterator</a></td></tr>
+<tr class="separator:a370d76fc868eac7454dc2554a8fc9494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b9a7a78415c25b6b3f377e1269f539a"><td class="memItemLeft" align="right" valign="top">typedef detail::get_header_holder_type&lt; <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#abbf3dee8caf18613db903931801c6076">value_traits</a>, HeaderHolder &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#a0b9a7a78415c25b6b3f377e1269f539a">header_holder_type</a></td></tr>
 <tr class="separator:a0b9a7a78415c25b6b3f377e1269f539a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -102,6 +112,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af726049e346e9b927b3ef5b4b4cf1ca4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#af726049e346e9b927b3ef5b4b4cf1ca4">suffix_automata_impl</a> (char *text)</td></tr>
 <tr class="separator:af726049e346e9b927b3ef5b4b4cf1ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7f64f0d173d4cba2766f3833b8adc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#af7c03e2d35758eb2040a589cc35cc36c">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#a3f7f64f0d173d4cba2766f3833b8adc1">get_root</a> ()</td></tr>
+<tr class="separator:a3f7f64f0d173d4cba2766f3833b8adc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename ValueTraits, class SizeType, bool ConstantTimeSize, typename HeaderHolder&gt;<br />
@@ -124,6 +136,22 @@ template&lt;typename ValueTraits , class SizeType , bool ConstantTimeSize, typen
       <table class="memname">
         <tr>
           <td class="memname">typedef suffix_automata_algorithms&lt;<a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#a3bf4d50a1aa7e13e6d6ded62d04a0296">node_traits</a>&gt; <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html">boost::intrusive::suffix_automata_impl</a>&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;::<a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#afa6f98d48851586ded5a3141789336d7">algo</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a370d76fc868eac7454dc2554a8fc9494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370d76fc868eac7454dc2554a8fc9494">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueTraits , class SizeType , bool ConstantTimeSize, typename HeaderHolder &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef suffix_automata_iterator&lt;<a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#abbf3dee8caf18613db903931801c6076">value_traits</a>, true&gt; <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html">boost::intrusive::suffix_automata_impl</a>&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;::<a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#a370d76fc868eac7454dc2554a8fc9494">const_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -156,6 +184,22 @@ template&lt;typename ValueTraits , class SizeType , bool ConstantTimeSize, typen
       <table class="memname">
         <tr>
           <td class="memname">typedef detail::get_header_holder_type&lt; <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#abbf3dee8caf18613db903931801c6076">value_traits</a>, HeaderHolder &gt;::type <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html">boost::intrusive::suffix_automata_impl</a>&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;::<a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#a0b9a7a78415c25b6b3f377e1269f539a">header_holder_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7c03e2d35758eb2040a589cc35cc36c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c03e2d35758eb2040a589cc35cc36c">&#9670;&nbsp;</a></span>iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueTraits , class SizeType , bool ConstantTimeSize, typename HeaderHolder &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef suffix_automata_iterator&lt;<a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#abbf3dee8caf18613db903931801c6076">value_traits</a>, false&gt; <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html">boost::intrusive::suffix_automata_impl</a>&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;::<a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#af7c03e2d35758eb2040a589cc35cc36c">iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -316,6 +360,35 @@ This function also builds the suffix automata for the given inputs.  </li>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing </dd></dl>
 <p><b> Complexity: </b> O(N) </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3f7f64f0d173d4cba2766f3833b8adc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7f64f0d173d4cba2766f3833b8adc1">&#9670;&nbsp;</a></span>get_root()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueTraits , class SizeType , bool ConstantTimeSize, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#af7c03e2d35758eb2040a589cc35cc36c">iterator</a> <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html">boost::intrusive::suffix_automata_impl</a>&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;::get_root </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This returns an iterator to the root node of suffix automata. </p>
 
 </div>
 </div>

@@ -4,5 +4,5 @@ digraph "boost::intrusive::suffix_automata&lt; T, O1, O2, O3, O4 &gt;"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node2 [label="boost::intrusive::suffix\l_automata\< T, O1, O2, O3, O4 \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="make_suffix_automata\l\< T, O1, O2, O3, O4 \>\l::type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 [label="make_suffix_automata\l\< T, O1, O2, O3, O4 \>\l::type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classboost_1_1intrusive_1_1suffix__automata__impl.html"];
 }

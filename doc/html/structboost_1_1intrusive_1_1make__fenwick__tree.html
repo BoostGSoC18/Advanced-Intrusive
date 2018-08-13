@@ -75,10 +75,54 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a174edb4a4fedde7b29f7aa9362d37ac0"><td class="memItemLeft" align="right" valign="top">typedef implementation_defined&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a174edb4a4fedde7b29f7aa9362d37ac0">type</a></td></tr>
+<tr class="memitem:affdbeb1683bbfebf917e9a35cbd31b81"><td class="memItemLeft" align="right" valign="top">typedef pack_options&lt; fenwick_tree_defaults, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a174edb4a4fedde7b29f7aa9362d37ac0">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#affdbeb1683bbfebf917e9a35cbd31b81">packed_options</a></td></tr>
+<tr class="separator:affdbeb1683bbfebf917e9a35cbd31b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee00a7f2c43d65e29ad42d24f33235a"><td class="memItemLeft" align="right" valign="top">typedef detail::get_value_traits&lt; T, typename packed_options::proto_value_traits &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a174edb4a4fedde7b29f7aa9362d37ac0">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a3ee00a7f2c43d65e29ad42d24f33235a">value_traits</a></td></tr>
+<tr class="separator:a3ee00a7f2c43d65e29ad42d24f33235a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7a268a01bc7f0ae30cabfd6bf2be546"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classboost_1_1intrusive_1_1fenwick__tree__impl.html">fenwick_tree_impl</a>&lt; <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a3ee00a7f2c43d65e29ad42d24f33235a">value_traits</a>, iterator get_root(){ node_ptr root_node=value_traits::to_node_ptr(*data_.root);return iterator(root_node, this-&gt;priv_value_traits_ptr());} typename packed_options::size_type, packed_options::constant_time_size, typename packed_options::header_holder_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#af7a268a01bc7f0ae30cabfd6bf2be546">implementation_defined</a></td></tr>
+<tr class="separator:af7a268a01bc7f0ae30cabfd6bf2be546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174edb4a4fedde7b29f7aa9362d37ac0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#af7a268a01bc7f0ae30cabfd6bf2be546">implementation_defined</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a174edb4a4fedde7b29f7aa9362d37ac0">type</a></td></tr>
 <tr class="separator:a174edb4a4fedde7b29f7aa9362d37ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="af7a268a01bc7f0ae30cabfd6bf2be546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7a268a01bc7f0ae30cabfd6bf2be546">&#9670;&nbsp;</a></span>implementation_defined</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classboost_1_1intrusive_1_1fenwick__tree__impl.html">fenwick_tree_impl</a>&lt;<a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a3ee00a7f2c43d65e29ad42d24f33235a">value_traits</a>,iterator get_root(){ node_ptr root_node=value_traits::to_node_ptr(*data_.root); return iterator(root_node,this-&gt;priv_value_traits_ptr());} typename packed_options::size_type, packed_options::constant_time_size, typename packed_options::header_holder_type &gt; <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html">boost::intrusive::make_fenwick_tree</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#af7a268a01bc7f0ae30cabfd6bf2be546">implementation_defined</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<ul>
+<li>
+This is the main class which contains all the methods supported by fenwick tree. </li>
+<li>
+This class is derived into "fenwick_tree" class by giving appropriate inputs. </li>
+</ul>
+
+</div>
+</div>
+<a id="affdbeb1683bbfebf917e9a35cbd31b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affdbeb1683bbfebf917e9a35cbd31b81">&#9670;&nbsp;</a></span>packed_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef pack_options&lt; fenwick_tree_defaults, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a174edb4a4fedde7b29f7aa9362d37ac0">type</a> <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html">boost::intrusive::make_fenwick_tree</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#affdbeb1683bbfebf917e9a35cbd31b81">packed_options</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a174edb4a4fedde7b29f7aa9362d37ac0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a174edb4a4fedde7b29f7aa9362d37ac0">&#9670;&nbsp;</a></span>type</h2>
 
@@ -88,7 +132,23 @@ Public Types</h2></td></tr>
 template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef implementation_defined <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html">boost::intrusive::make_fenwick_tree</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a174edb4a4fedde7b29f7aa9362d37ac0">type</a></td>
+          <td class="memname">typedef <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#af7a268a01bc7f0ae30cabfd6bf2be546">implementation_defined</a> <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html">boost::intrusive::make_fenwick_tree</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a174edb4a4fedde7b29f7aa9362d37ac0">type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ee00a7f2c43d65e29ad42d24f33235a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee00a7f2c43d65e29ad42d24f33235a">&#9670;&nbsp;</a></span>value_traits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef detail::get_value_traits&lt;T, typename packed_options::proto_value_traits&gt;::<a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a174edb4a4fedde7b29f7aa9362d37ac0">type</a> <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html">boost::intrusive::make_fenwick_tree</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a3ee00a7f2c43d65e29ad42d24f33235a">value_traits</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

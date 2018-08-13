@@ -75,10 +75,54 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a9b173abd26090bafc9d89d6ba31b4165"><td class="memItemLeft" align="right" valign="top">typedef implementation_defined&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a9b173abd26090bafc9d89d6ba31b4165">type</a></td></tr>
+<tr class="memitem:a33c2a1d1a4da2d12cb62017e1b8a86ae"><td class="memItemLeft" align="right" valign="top">typedef pack_options&lt; suffix_automata_defaults, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a9b173abd26090bafc9d89d6ba31b4165">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a33c2a1d1a4da2d12cb62017e1b8a86ae">packed_options</a></td></tr>
+<tr class="separator:a33c2a1d1a4da2d12cb62017e1b8a86ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a167b4c7e5a6fb43ca4238d252d8e823b"><td class="memItemLeft" align="right" valign="top">typedef detail::get_value_traits&lt; T, typename packed_options::proto_value_traits &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a9b173abd26090bafc9d89d6ba31b4165">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a167b4c7e5a6fb43ca4238d252d8e823b">value_traits</a></td></tr>
+<tr class="separator:a167b4c7e5a6fb43ca4238d252d8e823b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c449bd4e565f9b3bcdea384f96b6bd6"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html">suffix_automata_impl</a>&lt; <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a167b4c7e5a6fb43ca4238d252d8e823b">value_traits</a>, typename packed_options::size_type, packed_options::constant_time_size, typename packed_options::header_holder_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a7c449bd4e565f9b3bcdea384f96b6bd6">implementation_defined</a></td></tr>
+<tr class="separator:a7c449bd4e565f9b3bcdea384f96b6bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b173abd26090bafc9d89d6ba31b4165"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a7c449bd4e565f9b3bcdea384f96b6bd6">implementation_defined</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a9b173abd26090bafc9d89d6ba31b4165">type</a></td></tr>
 <tr class="separator:a9b173abd26090bafc9d89d6ba31b4165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a7c449bd4e565f9b3bcdea384f96b6bd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c449bd4e565f9b3bcdea384f96b6bd6">&#9670;&nbsp;</a></span>implementation_defined</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html">suffix_automata_impl</a>&lt;<a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a167b4c7e5a6fb43ca4238d252d8e823b">value_traits</a>, typename packed_options::size_type, packed_options::constant_time_size, typename packed_options::header_holder_type &gt; <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html">boost::intrusive::make_suffix_automata</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a7c449bd4e565f9b3bcdea384f96b6bd6">implementation_defined</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<ul>
+<li>
+This is the main class which contains all the methods supported by suffix automata. </li>
+<li>
+This class is derived into "suffix_automata" class by giving appropriate inputs. </li>
+</ul>
+
+</div>
+</div>
+<a id="a33c2a1d1a4da2d12cb62017e1b8a86ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c2a1d1a4da2d12cb62017e1b8a86ae">&#9670;&nbsp;</a></span>packed_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef pack_options&lt; suffix_automata_defaults, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a9b173abd26090bafc9d89d6ba31b4165">type</a> <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html">boost::intrusive::make_suffix_automata</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a33c2a1d1a4da2d12cb62017e1b8a86ae">packed_options</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9b173abd26090bafc9d89d6ba31b4165"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b173abd26090bafc9d89d6ba31b4165">&#9670;&nbsp;</a></span>type</h2>
 
@@ -88,7 +132,23 @@ Public Types</h2></td></tr>
 template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef implementation_defined <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html">boost::intrusive::make_suffix_automata</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a9b173abd26090bafc9d89d6ba31b4165">type</a></td>
+          <td class="memname">typedef <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a7c449bd4e565f9b3bcdea384f96b6bd6">implementation_defined</a> <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html">boost::intrusive::make_suffix_automata</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a9b173abd26090bafc9d89d6ba31b4165">type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a167b4c7e5a6fb43ca4238d252d8e823b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a167b4c7e5a6fb43ca4238d252d8e823b">&#9670;&nbsp;</a></span>value_traits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef detail::get_value_traits&lt;T, typename packed_options::proto_value_traits&gt;::<a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a9b173abd26090bafc9d89d6ba31b4165">type</a> <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html">boost::intrusive::make_suffix_automata</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a167b4c7e5a6fb43ca4238d252d8e823b">value_traits</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

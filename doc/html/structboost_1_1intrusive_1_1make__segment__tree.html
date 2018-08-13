@@ -75,10 +75,54 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac52c74ebd4a40dc2d3f2a37145bfe469"><td class="memItemLeft" align="right" valign="top">typedef implementation_defined&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ac52c74ebd4a40dc2d3f2a37145bfe469">type</a></td></tr>
+<tr class="memitem:ab09dfb845c300bf467f406f8e7545903"><td class="memItemLeft" align="right" valign="top">typedef pack_options&lt; segtree_defaults, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ac52c74ebd4a40dc2d3f2a37145bfe469">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ab09dfb845c300bf467f406f8e7545903">packed_options</a></td></tr>
+<tr class="separator:ab09dfb845c300bf467f406f8e7545903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865aca881f5d22f89580dc0692503bff"><td class="memItemLeft" align="right" valign="top">typedef detail::get_value_traits&lt; T, typename packed_options::proto_value_traits &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ac52c74ebd4a40dc2d3f2a37145bfe469">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#a865aca881f5d22f89580dc0692503bff">value_traits</a></td></tr>
+<tr class="separator:a865aca881f5d22f89580dc0692503bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a009d43964299a632641ecd7c2b0250"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classboost_1_1intrusive_1_1segment__tree__impl.html">segment_tree_impl</a>&lt; <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#a865aca881f5d22f89580dc0692503bff">value_traits</a>, typename packed_options::size_type, packed_options::constant_time_size, typename packed_options::header_holder_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#a1a009d43964299a632641ecd7c2b0250">implementation_defined</a></td></tr>
+<tr class="separator:a1a009d43964299a632641ecd7c2b0250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac52c74ebd4a40dc2d3f2a37145bfe469"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#a1a009d43964299a632641ecd7c2b0250">implementation_defined</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ac52c74ebd4a40dc2d3f2a37145bfe469">type</a></td></tr>
 <tr class="separator:ac52c74ebd4a40dc2d3f2a37145bfe469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a1a009d43964299a632641ecd7c2b0250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a009d43964299a632641ecd7c2b0250">&#9670;&nbsp;</a></span>implementation_defined</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classboost_1_1intrusive_1_1segment__tree__impl.html">segment_tree_impl</a>&lt;<a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#a865aca881f5d22f89580dc0692503bff">value_traits</a>, typename packed_options::size_type, packed_options::constant_time_size, typename packed_options::header_holder_type &gt; <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html">boost::intrusive::make_segment_tree</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#a1a009d43964299a632641ecd7c2b0250">implementation_defined</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<ul>
+<li>
+This is the main class which contains all the methods supported by segment tree. </li>
+<li>
+This class is derived into "segment_tree" class by giving appropriate inputs. </li>
+</ul>
+
+</div>
+</div>
+<a id="ab09dfb845c300bf467f406f8e7545903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab09dfb845c300bf467f406f8e7545903">&#9670;&nbsp;</a></span>packed_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef pack_options&lt; segtree_defaults, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ac52c74ebd4a40dc2d3f2a37145bfe469">type</a> <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html">boost::intrusive::make_segment_tree</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ab09dfb845c300bf467f406f8e7545903">packed_options</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac52c74ebd4a40dc2d3f2a37145bfe469"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac52c74ebd4a40dc2d3f2a37145bfe469">&#9670;&nbsp;</a></span>type</h2>
 
@@ -88,7 +132,23 @@ Public Types</h2></td></tr>
 template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef implementation_defined <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html">boost::intrusive::make_segment_tree</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ac52c74ebd4a40dc2d3f2a37145bfe469">type</a></td>
+          <td class="memname">typedef <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#a1a009d43964299a632641ecd7c2b0250">implementation_defined</a> <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html">boost::intrusive::make_segment_tree</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ac52c74ebd4a40dc2d3f2a37145bfe469">type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a865aca881f5d22f89580dc0692503bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865aca881f5d22f89580dc0692503bff">&#9670;&nbsp;</a></span>value_traits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef detail::get_value_traits&lt;T, typename packed_options::proto_value_traits&gt;::<a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ac52c74ebd4a40dc2d3f2a37145bfe469">type</a> <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html">boost::intrusive::make_segment_tree</a>&lt; T, O1, O2, O3, O4 &gt;::<a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#a865aca881f5d22f89580dc0692503bff">value_traits</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,3 +1,67 @@
 \hypertarget{cnd__function_8hpp}{}\section{/home/hari/\+G\+S\+O\+C/boost\+\_\+1\+\_\+67\+\_\+0/boost/\+Advanced-\/\+Intrusive-\/master/\+C\+N\+D/cnd\+\_\+function.hpp File Reference}
 \label{cnd__function_8hpp}\index{/home/hari/\+G\+S\+O\+C/boost\+\_\+1\+\_\+67\+\_\+0/boost/\+Advanced-\/\+Intrusive-\/master/\+C\+N\+D/cnd\+\_\+function.\+hpp@{/home/hari/\+G\+S\+O\+C/boost\+\_\+1\+\_\+67\+\_\+0/boost/\+Advanced-\/\+Intrusive-\/master/\+C\+N\+D/cnd\+\_\+function.\+hpp}}
-This graph shows which files directly or indirectly include this file\+:
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cnd__function_8hpp_ad1f79d9d99776d7353c6659c307c83c6}{M\+A\+XN}~1025
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Graph $>$ }\\void \hyperlink{cnd__function_8hpp_a55fef07cc596053c17a42d5b9b4ace3d}{D\+FS} (int src, Graph input\+\_\+tree, bool visited\mbox{[}$\,$\mbox{]}, int subtree\+\_\+size\mbox{[}$\,$\mbox{]}, bool centroid\+Marked\mbox{[}$\,$\mbox{]}, int $\ast$n)
+\item 
+{\footnotesize template$<$typename Graph $>$ }\\int \hyperlink{cnd__function_8hpp_aea6a7a30670e1c4db006b14f12b4a1f5}{get\+Centroid} (int src, Graph input\+\_\+tree, bool visited\mbox{[}$\,$\mbox{]}, int subtree\+\_\+size\mbox{[}$\,$\mbox{]}, bool centroid\+Marked\mbox{[}$\,$\mbox{]}, int n)
+\item 
+{\footnotesize template$<$typename Graph $>$ }\\int \hyperlink{cnd__function_8hpp_a7f79ffe4433756054b5871ea99e200cf}{get\+Centroid} (bool centroid\+Marked\mbox{[}$\,$\mbox{]}, Graph input\+\_\+tree, int src)
+\item 
+{\footnotesize template$<$typename Graph $>$ }\\int \hyperlink{cnd__function_8hpp_a997f63e0c22622a86f6cf41eac03388c}{decompose\+Tree} (Graph input\+\_\+tree, int root, bool centroid\+Marked\mbox{[}$\,$\mbox{]}, Graph \&out\+\_\+tree)
+\item 
+{\footnotesize template$<$typename Graph $>$ }\\pair$<$ Graph, int $>$ \hyperlink{cnd__function_8hpp_a42051b38774a0992e57a2f689b2edb95}{C\+ND} (Graph input\+\_\+tree, int root, int ver\+\_\+cnt)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cnd__function_8hpp_ad1f79d9d99776d7353c6659c307c83c6}\label{cnd__function_8hpp_ad1f79d9d99776d7353c6659c307c83c6}} 
+\index{cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}!M\+A\+XN@{M\+A\+XN}}
+\index{M\+A\+XN@{M\+A\+XN}!cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+XN}{MAXN}}
+{\footnotesize\ttfamily \#define M\+A\+XN~1025}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cnd__function_8hpp_a42051b38774a0992e57a2f689b2edb95}\label{cnd__function_8hpp_a42051b38774a0992e57a2f689b2edb95}} 
+\index{cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}!C\+ND@{C\+ND}}
+\index{C\+ND@{C\+ND}!cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}}
+\subsubsection{\texorpdfstring{C\+N\+D()}{CND()}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+pair$<$Graph,int$>$ C\+ND (\begin{DoxyParamCaption}\item[{Graph}]{input\+\_\+tree,  }\item[{int}]{root,  }\item[{int}]{ver\+\_\+cnt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cnd__function_8hpp_a997f63e0c22622a86f6cf41eac03388c}\label{cnd__function_8hpp_a997f63e0c22622a86f6cf41eac03388c}} 
+\index{cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}!decompose\+Tree@{decompose\+Tree}}
+\index{decompose\+Tree@{decompose\+Tree}!cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}}
+\subsubsection{\texorpdfstring{decompose\+Tree()}{decomposeTree()}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+int decompose\+Tree (\begin{DoxyParamCaption}\item[{Graph}]{input\+\_\+tree,  }\item[{int}]{root,  }\item[{bool}]{centroid\+Marked\mbox{[}$\,$\mbox{]},  }\item[{Graph \&}]{out\+\_\+tree }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cnd__function_8hpp_a55fef07cc596053c17a42d5b9b4ace3d}\label{cnd__function_8hpp_a55fef07cc596053c17a42d5b9b4ace3d}} 
+\index{cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}!D\+FS@{D\+FS}}
+\index{D\+FS@{D\+FS}!cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}}
+\subsubsection{\texorpdfstring{D\+F\+S()}{DFS()}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+void D\+FS (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{Graph}]{input\+\_\+tree,  }\item[{bool}]{visited\mbox{[}$\,$\mbox{]},  }\item[{int}]{subtree\+\_\+size\mbox{[}$\,$\mbox{]},  }\item[{bool}]{centroid\+Marked\mbox{[}$\,$\mbox{]},  }\item[{int $\ast$}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cnd__function_8hpp_aea6a7a30670e1c4db006b14f12b4a1f5}\label{cnd__function_8hpp_aea6a7a30670e1c4db006b14f12b4a1f5}} 
+\index{cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}!get\+Centroid@{get\+Centroid}}
+\index{get\+Centroid@{get\+Centroid}!cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}}
+\subsubsection{\texorpdfstring{get\+Centroid()}{getCentroid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+int get\+Centroid (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{Graph}]{input\+\_\+tree,  }\item[{bool}]{visited\mbox{[}$\,$\mbox{]},  }\item[{int}]{subtree\+\_\+size\mbox{[}$\,$\mbox{]},  }\item[{bool}]{centroid\+Marked\mbox{[}$\,$\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cnd__function_8hpp_a7f79ffe4433756054b5871ea99e200cf}\label{cnd__function_8hpp_a7f79ffe4433756054b5871ea99e200cf}} 
+\index{cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}!get\+Centroid@{get\+Centroid}}
+\index{get\+Centroid@{get\+Centroid}!cnd\+\_\+function.\+hpp@{cnd\+\_\+function.\+hpp}}
+\subsubsection{\texorpdfstring{get\+Centroid()}{getCentroid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+int get\+Centroid (\begin{DoxyParamCaption}\item[{bool}]{centroid\+Marked\mbox{[}$\,$\mbox{]},  }\item[{Graph}]{input\+\_\+tree,  }\item[{int}]{src }\end{DoxyParamCaption})}
+

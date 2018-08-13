@@ -17,7 +17,7 @@ Collaboration diagram for boost\+:\+:intrusive\+:\+:suffix\+\_\+tree$<$ T, O1, O
 \item 
 typedef \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree}{make\+\_\+suffix\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::type \hyperlink{classboost_1_1intrusive_1_1suffix__tree_a4e4d560ba016e68c15ecf4c4f88331e5}{Base}
 \item 
-typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1suffix__tree_a20b10e59065c1615575e5f76038289fd}{value\+\_\+traits}
+typedef \hyperlink{classboost_1_1intrusive_1_1suffix__tree__impl_a30d9e164c38c11cd38917ad14e9f3e88}{Base\+::value\+\_\+traits} \hyperlink{classboost_1_1intrusive_1_1suffix__tree_a20b10e59065c1615575e5f76038289fd}{value\+\_\+traits}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -39,7 +39,7 @@ typedef \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree}{make\+\_\+suf
 \index{value\+\_\+traits@{value\+\_\+traits}!boost\+::intrusive\+::suffix\+\_\+tree@{boost\+::intrusive\+::suffix\+\_\+tree}}
 \subsubsection{\texorpdfstring{value\+\_\+traits}{value\_traits}}
 {\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
-typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1suffix__tree}{boost\+::intrusive\+::suffix\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__tree_a20b10e59065c1615575e5f76038289fd}{value\+\_\+traits}}
+typedef \hyperlink{classboost_1_1intrusive_1_1suffix__tree__impl_a30d9e164c38c11cd38917ad14e9f3e88}{Base\+::value\+\_\+traits} \hyperlink{classboost_1_1intrusive_1_1suffix__tree}{boost\+::intrusive\+::suffix\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__tree__impl_a30d9e164c38c11cd38917ad14e9f3e88}{value\+\_\+traits}}
 
 
 
@@ -52,6 +52,10 @@ typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1suffix__
 \hyperlink{classboost_1_1intrusive_1_1suffix__tree}{boost\+::intrusive\+::suffix\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__tree}{suffix\+\_\+tree} (\begin{DoxyParamCaption}\item[{char $\ast$}]{text,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+\begin{DoxyItemize}
+\item This is the first and main function used while working with any data structure. 
+\item This calls the \char`\"{}suffix\+\_\+tree\+\_\+impl\char`\"{} function which does initialisation and declaration of variables. 
+\end{DoxyItemize}
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

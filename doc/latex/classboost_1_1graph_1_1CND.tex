@@ -1,0 +1,78 @@
+\hypertarget{classboost_1_1graph_1_1CND}{}\section{boost\+:\+:graph\+:\+:C\+ND$<$ Graph $>$ Class Template Reference}
+\label{classboost_1_1graph_1_1CND}\index{boost\+::graph\+::\+C\+N\+D$<$ Graph $>$@{boost\+::graph\+::\+C\+N\+D$<$ Graph $>$}}
+
+
+{\ttfamily \#include $<$cnd\+\_\+ds.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classboost_1_1graph_1_1CND_a57be1dfcac9859d683aeb836dc55e49e}{C\+ND} (Graph input\+\_\+tree, int root, int ver\+\_\+cnt)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Graph \hyperlink{classboost_1_1graph_1_1CND_a21a1bc72301bab671c59c1e290b03e36}{decomposed\+\_\+rooted\+\_\+tree}
+\item 
+int \hyperlink{classboost_1_1graph_1_1CND_a366ea26abffc24a94b9c9e4a8bdf05be}{decomposed\+\_\+root}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Graph$>$\newline
+class boost\+::graph\+::\+C\+N\+D$<$ Graph $>$}
+
+
+\begin{DoxyItemize}
+\item This is the main class which contains all the methods related to Centroid decomposition. 
+\item This is a very popular decomposition because it has many applications in solving tree based problems. 
+\item This decomposition creates a tree of height O(log(\+N)) 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classboost_1_1graph_1_1CND_a57be1dfcac9859d683aeb836dc55e49e}\label{classboost_1_1graph_1_1CND_a57be1dfcac9859d683aeb836dc55e49e}} 
+\index{boost\+::graph\+::\+C\+ND@{boost\+::graph\+::\+C\+ND}!C\+ND@{C\+ND}}
+\index{C\+ND@{C\+ND}!boost\+::graph\+::\+C\+ND@{boost\+::graph\+::\+C\+ND}}
+\subsubsection{\texorpdfstring{C\+N\+D()}{CND()}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+\hyperlink{classboost_1_1graph_1_1CND}{boost\+::graph\+::\+C\+ND}$<$ Graph $>$\+::\hyperlink{classboost_1_1graph_1_1CND}{C\+ND} (\begin{DoxyParamCaption}\item[{Graph}]{input\+\_\+tree,  }\item[{int}]{root,  }\item[{int}]{ver\+\_\+cnt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyItemize}
+\item This function creates a tree of height O(log(\+N)) by recursively selecting centroid and decomposing tree.  
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+tree} & input tree \\
+\hline
+{\em root} & root of input tree \\
+\hline
+{\em ver\+\_\+cnt} & total number of vertices in input tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+{\bfseries  Complexity\+: } O(\+N) 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classboost_1_1graph_1_1CND_a366ea26abffc24a94b9c9e4a8bdf05be}\label{classboost_1_1graph_1_1CND_a366ea26abffc24a94b9c9e4a8bdf05be}} 
+\index{boost\+::graph\+::\+C\+ND@{boost\+::graph\+::\+C\+ND}!decomposed\+\_\+root@{decomposed\+\_\+root}}
+\index{decomposed\+\_\+root@{decomposed\+\_\+root}!boost\+::graph\+::\+C\+ND@{boost\+::graph\+::\+C\+ND}}
+\subsubsection{\texorpdfstring{decomposed\+\_\+root}{decomposed\_root}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+int \hyperlink{classboost_1_1graph_1_1CND}{boost\+::graph\+::\+C\+ND}$<$ Graph $>$\+::decomposed\+\_\+root}
+
+This contains the root of decomposed tree. \mbox{\Hypertarget{classboost_1_1graph_1_1CND_a21a1bc72301bab671c59c1e290b03e36}\label{classboost_1_1graph_1_1CND_a21a1bc72301bab671c59c1e290b03e36}} 
+\index{boost\+::graph\+::\+C\+ND@{boost\+::graph\+::\+C\+ND}!decomposed\+\_\+rooted\+\_\+tree@{decomposed\+\_\+rooted\+\_\+tree}}
+\index{decomposed\+\_\+rooted\+\_\+tree@{decomposed\+\_\+rooted\+\_\+tree}!boost\+::graph\+::\+C\+ND@{boost\+::graph\+::\+C\+ND}}
+\subsubsection{\texorpdfstring{decomposed\+\_\+rooted\+\_\+tree}{decomposed\_rooted\_tree}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+Graph \hyperlink{classboost_1_1graph_1_1CND}{boost\+::graph\+::\+C\+ND}$<$ Graph $>$\+::decomposed\+\_\+rooted\+\_\+tree}
+
+This contains decomposed tree formed by centroid decomposition 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/hari/\+G\+S\+O\+C/boost\+\_\+1\+\_\+67\+\_\+0/boost/\+Advanced-\/\+Intrusive-\/master/\+C\+N\+D/\hyperlink{cnd__ds_8hpp}{cnd\+\_\+ds.\+hpp}\end{DoxyCompactItemize}

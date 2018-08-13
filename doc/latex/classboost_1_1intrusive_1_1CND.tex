@@ -1,0 +1,67 @@
+\hypertarget{classboost_1_1intrusive_1_1CND}{}\section{boost\+:\+:intrusive\+:\+:C\+ND$<$ Graph $>$ Class Template Reference}
+\label{classboost_1_1intrusive_1_1CND}\index{boost\+::intrusive\+::\+C\+N\+D$<$ Graph $>$@{boost\+::intrusive\+::\+C\+N\+D$<$ Graph $>$}}
+
+
+{\ttfamily \#include $<$cnd\+\_\+ds.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classboost_1_1intrusive_1_1CND_a64cac05d77acc3287a1eea532d11e791}{C\+ND} (Graph input\+\_\+tree, int root, int ver\+\_\+cnt)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Graph \hyperlink{classboost_1_1intrusive_1_1CND_ab89e0135816b15eda77a307fda40d472}{decomposed\+\_\+rooted\+\_\+tree}
+\item 
+int \hyperlink{classboost_1_1intrusive_1_1CND_a3219b3d68c52b7dfcaac88f40e96d373}{decomposed\+\_\+root}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1CND_a64cac05d77acc3287a1eea532d11e791}\label{classboost_1_1intrusive_1_1CND_a64cac05d77acc3287a1eea532d11e791}} 
+\index{boost\+::intrusive\+::\+C\+ND@{boost\+::intrusive\+::\+C\+ND}!C\+ND@{C\+ND}}
+\index{C\+ND@{C\+ND}!boost\+::intrusive\+::\+C\+ND@{boost\+::intrusive\+::\+C\+ND}}
+\subsubsection{\texorpdfstring{C\+N\+D()}{CND()}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1CND}{boost\+::intrusive\+::\+C\+ND}$<$ Graph $>$\+::\hyperlink{classboost_1_1intrusive_1_1CND}{C\+ND} (\begin{DoxyParamCaption}\item[{Graph}]{input\+\_\+tree,  }\item[{int}]{root,  }\item[{int}]{ver\+\_\+cnt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyItemize}
+\item This function creates a tree of height O(log(\+N)) by recursively selecting centroid and decomposing tree.  
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+tree} & input tree \\
+\hline
+{\em root} & root of input tree \\
+\hline
+{\em ver\+\_\+cnt} & total number of vertices in input tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+{\bfseries  Complexity\+: } O(\+N) 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1CND_a3219b3d68c52b7dfcaac88f40e96d373}\label{classboost_1_1intrusive_1_1CND_a3219b3d68c52b7dfcaac88f40e96d373}} 
+\index{boost\+::intrusive\+::\+C\+ND@{boost\+::intrusive\+::\+C\+ND}!decomposed\+\_\+root@{decomposed\+\_\+root}}
+\index{decomposed\+\_\+root@{decomposed\+\_\+root}!boost\+::intrusive\+::\+C\+ND@{boost\+::intrusive\+::\+C\+ND}}
+\subsubsection{\texorpdfstring{decomposed\+\_\+root}{decomposed\_root}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+int \hyperlink{classboost_1_1intrusive_1_1CND}{boost\+::intrusive\+::\+C\+ND}$<$ Graph $>$\+::decomposed\+\_\+root}
+
+This contains the root of decomposed tree. \mbox{\Hypertarget{classboost_1_1intrusive_1_1CND_ab89e0135816b15eda77a307fda40d472}\label{classboost_1_1intrusive_1_1CND_ab89e0135816b15eda77a307fda40d472}} 
+\index{boost\+::intrusive\+::\+C\+ND@{boost\+::intrusive\+::\+C\+ND}!decomposed\+\_\+rooted\+\_\+tree@{decomposed\+\_\+rooted\+\_\+tree}}
+\index{decomposed\+\_\+rooted\+\_\+tree@{decomposed\+\_\+rooted\+\_\+tree}!boost\+::intrusive\+::\+C\+ND@{boost\+::intrusive\+::\+C\+ND}}
+\subsubsection{\texorpdfstring{decomposed\+\_\+rooted\+\_\+tree}{decomposed\_rooted\_tree}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+Graph \hyperlink{classboost_1_1intrusive_1_1CND}{boost\+::intrusive\+::\+C\+ND}$<$ Graph $>$\+::decomposed\+\_\+rooted\+\_\+tree}
+
+This contains decomposed tree formed by centroid decomposition 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/hari/\+G\+S\+O\+C/boost\+\_\+1\+\_\+67\+\_\+0/boost/\+Advanced-\/\+Intrusive-\/master/\+C\+N\+D/\hyperlink{cnd__ds_8hpp}{cnd\+\_\+ds.\+hpp}\end{DoxyCompactItemize}

@@ -85,6 +85,7 @@ $(function() {
 <li>const_iterator
 : <a class="el" href="classboost_1_1intrusive_1_1fenwick__tree__impl.html#a54559dc10b4a93114b1048ad9e41b5f1">boost::intrusive::fenwick_tree_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1segment__tree__impl.html#a6957e501101f1d5427f611f6ee8d1ded">boost::intrusive::segment_tree_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
+, <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#a370d76fc868eac7454dc2554a8fc9494">boost::intrusive::suffix_automata_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1suffix__tree__impl.html#a221fd6a26db0f6aa44951317caa66126">boost::intrusive::suffix_tree_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
 </li>
 <li>const_node_ptr
@@ -115,15 +116,22 @@ $(function() {
 
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>implementation_defined
-: <a class="el" href="classboost_1_1intrusive_1_1make__fenwick__tree__base__hook.html#af661b0546c575716fb1fc71c0446929c">boost::intrusive::make_fenwick_tree_base_hook&lt; O1, O2, O3 &gt;</a>
+: <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#af7a268a01bc7f0ae30cabfd6bf2be546">boost::intrusive::make_fenwick_tree&lt; T, O1, O2, O3, O4 &gt;</a>
+, <a class="el" href="classboost_1_1intrusive_1_1make__fenwick__tree__base__hook.html#af661b0546c575716fb1fc71c0446929c">boost::intrusive::make_fenwick_tree_base_hook&lt; O1, O2, O3 &gt;</a>
+, <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#a1a009d43964299a632641ecd7c2b0250">boost::intrusive::make_segment_tree&lt; T, O1, O2, O3, O4 &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1make__segment__tree__base__hook.html#ac9e2687ae1be3fafd1465686917f339b">boost::intrusive::make_segment_tree_base_hook&lt; O1, O2, O3 &gt;</a>
+, <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a7c449bd4e565f9b3bcdea384f96b6bd6">boost::intrusive::make_suffix_automata&lt; T, O1, O2, O3, O4 &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1make__suffix__automata__base__hook.html#a8b3a0f3343ae07dbe98811acc5c67d10">boost::intrusive::make_suffix_automata_base_hook&lt; O1, O2, O3 &gt;</a>
+, <a class="el" href="classboost_1_1intrusive_1_1make__suffix__automata__member__hook.html#aca176c172e71c868f0cbcfbd2d1d6577">boost::intrusive::make_suffix_automata_member_hook&lt; O1, O2, O3 &gt;</a>
+, <a class="el" href="structboost_1_1intrusive_1_1make__suffix__tree.html#a4f100a03f40c26d5b31299af18214df1">boost::intrusive::make_suffix_tree&lt; T, O1, O2, O3, O4 &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1make__suffix__tree__base__hook.html#a21cb881040ae75027aaa684f98669d45">boost::intrusive::make_suffix_tree_base_hook&lt; O1, O2, O3 &gt;</a>
+, <a class="el" href="classboost_1_1intrusive_1_1make__suffix__tree__member__hook.html#a933f8ac391dbd99a5f61386b58a04d60">boost::intrusive::make_suffix_tree_member_hook&lt; O1, O2, O3 &gt;</a>
 </li>
 <li>iterator
 : <a class="el" href="classboost_1_1intrusive_1_1fenwick__tree__impl.html#a6293502e34de9b16ae198ec557c82132">boost::intrusive::fenwick_tree_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1segment__tree.html#a20e4825aed9b33d2de0b7f4177bacd7b">boost::intrusive::segment_tree&lt; T, O1, O2, O3, O4 &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1segment__tree__impl.html#a9f1be9b01be5078fb59b2e34520b374a">boost::intrusive::segment_tree_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
+, <a class="el" href="classboost_1_1intrusive_1_1suffix__automata__impl.html#af7c03e2d35758eb2040a589cc35cc36c">boost::intrusive::suffix_automata_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1suffix__tree__impl.html#a2df3b52dced59346b59db470e93ba87c">boost::intrusive::suffix_tree_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
 </li>
 </ul>
@@ -147,10 +155,16 @@ $(function() {
 
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>packed_options
-: <a class="el" href="classboost_1_1intrusive_1_1make__fenwick__tree__base__hook.html#af7deddd956f4b6beda854f8c98dcf637">boost::intrusive::make_fenwick_tree_base_hook&lt; O1, O2, O3 &gt;</a>
+: <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#affdbeb1683bbfebf917e9a35cbd31b81">boost::intrusive::make_fenwick_tree&lt; T, O1, O2, O3, O4 &gt;</a>
+, <a class="el" href="classboost_1_1intrusive_1_1make__fenwick__tree__base__hook.html#af7deddd956f4b6beda854f8c98dcf637">boost::intrusive::make_fenwick_tree_base_hook&lt; O1, O2, O3 &gt;</a>
+, <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#ab09dfb845c300bf467f406f8e7545903">boost::intrusive::make_segment_tree&lt; T, O1, O2, O3, O4 &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1make__segment__tree__base__hook.html#a98fb49751f922d9d2bd29b788fae7de6">boost::intrusive::make_segment_tree_base_hook&lt; O1, O2, O3 &gt;</a>
+, <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a33c2a1d1a4da2d12cb62017e1b8a86ae">boost::intrusive::make_suffix_automata&lt; T, O1, O2, O3, O4 &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1make__suffix__automata__base__hook.html#af169eb92a361f67464ec4beb9ff5a314">boost::intrusive::make_suffix_automata_base_hook&lt; O1, O2, O3 &gt;</a>
+, <a class="el" href="classboost_1_1intrusive_1_1make__suffix__automata__member__hook.html#aa4b18a9fa9fc8cac2b6cb46a3cf806cb">boost::intrusive::make_suffix_automata_member_hook&lt; O1, O2, O3 &gt;</a>
+, <a class="el" href="structboost_1_1intrusive_1_1make__suffix__tree.html#ad2983281b8c78b0c85e4854e40207ffd">boost::intrusive::make_suffix_tree&lt; T, O1, O2, O3, O4 &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1make__suffix__tree__base__hook.html#addb846ee0efa5e8b70f2788c2c6c3381">boost::intrusive::make_suffix_tree_base_hook&lt; O1, O2, O3 &gt;</a>
+, <a class="el" href="classboost_1_1intrusive_1_1make__suffix__tree__member__hook.html#a2a13362c40f5ef968999753023916ccb">boost::intrusive::make_suffix_tree_member_hook&lt; O1, O2, O3 &gt;</a>
 </li>
 <li>pointer
 : <a class="el" href="classboost_1_1intrusive_1_1fenwick__tree__impl.html#a5900d4b71e9c5715db38a848acbe270b">boost::intrusive::fenwick_tree_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
@@ -203,6 +217,10 @@ $(function() {
 <li>value_traits
 : <a class="el" href="classboost_1_1intrusive_1_1fenwick__tree.html#aa7fcc6f3fabb763e2aed47bc0f0a073c">boost::intrusive::fenwick_tree&lt; T, O1, O2, O3, O4 &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1fenwick__tree__impl.html#a2e87a9b3164c911991b62a4405bdca5f">boost::intrusive::fenwick_tree_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
+, <a class="el" href="structboost_1_1intrusive_1_1make__fenwick__tree.html#a3ee00a7f2c43d65e29ad42d24f33235a">boost::intrusive::make_fenwick_tree&lt; T, O1, O2, O3, O4 &gt;</a>
+, <a class="el" href="structboost_1_1intrusive_1_1make__segment__tree.html#a865aca881f5d22f89580dc0692503bff">boost::intrusive::make_segment_tree&lt; T, O1, O2, O3, O4 &gt;</a>
+, <a class="el" href="structboost_1_1intrusive_1_1make__suffix__automata.html#a167b4c7e5a6fb43ca4238d252d8e823b">boost::intrusive::make_suffix_automata&lt; T, O1, O2, O3, O4 &gt;</a>
+, <a class="el" href="structboost_1_1intrusive_1_1make__suffix__tree.html#a9274e519ecd5f67199f45a6b29c86c04">boost::intrusive::make_suffix_tree&lt; T, O1, O2, O3, O4 &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1segment__tree.html#aaff3016f655ec2b1dfe44282913cefea">boost::intrusive::segment_tree&lt; T, O1, O2, O3, O4 &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1segment__tree__impl.html#a929c1b3f1e6bb851a911b9b54a4c0dc2">boost::intrusive::segment_tree_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
 , <a class="el" href="classboost_1_1intrusive_1_1suffix__automata.html#a159d8fbab457d5f8aae6ebb5a98b18c2">boost::intrusive::suffix_automata&lt; T, O1, O2, O3, O4 &gt;</a>

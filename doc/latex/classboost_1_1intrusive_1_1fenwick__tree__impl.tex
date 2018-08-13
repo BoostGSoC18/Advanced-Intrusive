@@ -190,14 +190,14 @@ Nothing
 \end{DoxyReturn}
 
 
-{\bfseries Complexity \+: } O(\+N) \mbox{\Hypertarget{classboost_1_1intrusive_1_1fenwick__tree__impl_a47f1c138ed862fc41b178ca30478e0f9}\label{classboost_1_1intrusive_1_1fenwick__tree__impl_a47f1c138ed862fc41b178ca30478e0f9}} 
+{\bfseries Complexity \+: } O(\+Nlog(\+N)) \mbox{\Hypertarget{classboost_1_1intrusive_1_1fenwick__tree__impl_a47f1c138ed862fc41b178ca30478e0f9}\label{classboost_1_1intrusive_1_1fenwick__tree__impl_a47f1c138ed862fc41b178ca30478e0f9}} 
 \index{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl@{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl}!get\+\_\+root@{get\+\_\+root}}
 \index{get\+\_\+root@{get\+\_\+root}!boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl@{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl}}
 \subsubsection{\texorpdfstring{get\+\_\+root()}{get\_root()}}
 {\footnotesize\ttfamily template$<$typename Value\+Traits , class Size\+Type , bool Constant\+Time\+Size, typename Header\+Holder $>$ \\
 \hyperlink{classboost_1_1intrusive_1_1fenwick__tree__impl_a6293502e34de9b16ae198ec557c82132}{iterator} \hyperlink{classboost_1_1intrusive_1_1fenwick__tree__impl}{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl}$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$\+::get\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classboost_1_1intrusive_1_1fenwick__tree__impl_ab264157cf44f71965593bef1444d97ec}\label{classboost_1_1intrusive_1_1fenwick__tree__impl_ab264157cf44f71965593bef1444d97ec}} 
+This returns an iterator to the root node or source node of fenwick tree. \mbox{\Hypertarget{classboost_1_1intrusive_1_1fenwick__tree__impl_ab264157cf44f71965593bef1444d97ec}\label{classboost_1_1intrusive_1_1fenwick__tree__impl_ab264157cf44f71965593bef1444d97ec}} 
 \index{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl@{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl}!query@{query}}
 \index{query@{query}!boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl@{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl}}
 \subsubsection{\texorpdfstring{query()}{query()}}
@@ -216,7 +216,7 @@ the query value over the range given in input.
 \end{DoxyReturn}
 
 
-{\bfseries Complexity \+: } O(\+N) \mbox{\Hypertarget{classboost_1_1intrusive_1_1fenwick__tree__impl_ab81aaa5b75e064b740db9ec6959a5ae6}\label{classboost_1_1intrusive_1_1fenwick__tree__impl_ab81aaa5b75e064b740db9ec6959a5ae6}} 
+{\bfseries Complexity \+: } O(log(\+N)) \mbox{\Hypertarget{classboost_1_1intrusive_1_1fenwick__tree__impl_ab81aaa5b75e064b740db9ec6959a5ae6}\label{classboost_1_1intrusive_1_1fenwick__tree__impl_ab81aaa5b75e064b740db9ec6959a5ae6}} 
 \index{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl@{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl}!update@{update}}
 \index{update@{update}!boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl@{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl}}
 \subsubsection{\texorpdfstring{update()}{update()}}
@@ -237,7 +237,7 @@ Nothing
 \end{DoxyReturn}
 
 
-{\bfseries Complexity \+: } O(\+N) 
+{\bfseries Complexity \+: } O(log(\+N)) 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

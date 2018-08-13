@@ -419,7 +419,7 @@ template&lt;typename ValueTraits , class SizeType , bool ConstantTimeSize, typen
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing </dd></dl>
-<p><b>Complexity : </b> O(N) </p>
+<p><b>Complexity : </b> O(Nlog(N)) </p>
 
 </div>
 </div>
@@ -447,6 +447,7 @@ template&lt;typename ValueTraits , class SizeType , bool ConstantTimeSize, typen
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This returns an iterator to the root node or source node of fenwick tree. </p>
 
 </div>
 </div>
@@ -493,7 +494,7 @@ template&lt;typename ValueTraits , class SizeType , bool ConstantTimeSize, typen
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the query value over the range given in input.</dd></dl>
-<p><b>Complexity : </b> O(N) </p>
+<p><b>Complexity : </b> O(log(N)) </p>
 
 </div>
 </div>
@@ -547,7 +548,7 @@ template&lt;typename ValueTraits , class SizeType , bool ConstantTimeSize, typen
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing </dd></dl>
-<p><b>Complexity : </b> O(N) </p>
+<p><b>Complexity : </b> O(log(N)) </p>
 
 </div>
 </div>

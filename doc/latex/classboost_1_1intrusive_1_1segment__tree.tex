@@ -17,9 +17,9 @@ Collaboration diagram for boost\+:\+:intrusive\+:\+:segment\+\_\+tree$<$ T, O1, 
 \item 
 typedef \hyperlink{structboost_1_1intrusive_1_1make__segment__tree}{make\+\_\+segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::type \hyperlink{classboost_1_1intrusive_1_1segment__tree_a56984f6fac5fb61618c53ca07704cf45}{Base}
 \item 
-typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1segment__tree_aaff3016f655ec2b1dfe44282913cefea}{value\+\_\+traits}
+typedef \hyperlink{classboost_1_1intrusive_1_1segment__tree__impl_a929c1b3f1e6bb851a911b9b54a4c0dc2}{Base\+::value\+\_\+traits} \hyperlink{classboost_1_1intrusive_1_1segment__tree_aaff3016f655ec2b1dfe44282913cefea}{value\+\_\+traits}
 \item 
-typedef Base\+::iterator \hyperlink{classboost_1_1intrusive_1_1segment__tree_a20e4825aed9b33d2de0b7f4177bacd7b}{iterator}
+typedef \hyperlink{classboost_1_1intrusive_1_1segment__tree__impl_a9f1be9b01be5078fb59b2e34520b374a}{Base\+::iterator} \hyperlink{classboost_1_1intrusive_1_1segment__tree_a20e4825aed9b33d2de0b7f4177bacd7b}{iterator}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -41,14 +41,14 @@ typedef \hyperlink{structboost_1_1intrusive_1_1make__segment__tree}{make\+\_\+se
 \index{iterator@{iterator}!boost\+::intrusive\+::segment\+\_\+tree@{boost\+::intrusive\+::segment\+\_\+tree}}
 \subsubsection{\texorpdfstring{iterator}{iterator}}
 {\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
-typedef Base\+::iterator \hyperlink{classboost_1_1intrusive_1_1segment__tree}{boost\+::intrusive\+::segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1segment__tree_a20e4825aed9b33d2de0b7f4177bacd7b}{iterator}}
+typedef \hyperlink{classboost_1_1intrusive_1_1segment__tree__impl_a9f1be9b01be5078fb59b2e34520b374a}{Base\+::iterator} \hyperlink{classboost_1_1intrusive_1_1segment__tree}{boost\+::intrusive\+::segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1segment__tree__impl_a9f1be9b01be5078fb59b2e34520b374a}{iterator}}
 
 \mbox{\Hypertarget{classboost_1_1intrusive_1_1segment__tree_aaff3016f655ec2b1dfe44282913cefea}\label{classboost_1_1intrusive_1_1segment__tree_aaff3016f655ec2b1dfe44282913cefea}} 
 \index{boost\+::intrusive\+::segment\+\_\+tree@{boost\+::intrusive\+::segment\+\_\+tree}!value\+\_\+traits@{value\+\_\+traits}}
 \index{value\+\_\+traits@{value\+\_\+traits}!boost\+::intrusive\+::segment\+\_\+tree@{boost\+::intrusive\+::segment\+\_\+tree}}
 \subsubsection{\texorpdfstring{value\+\_\+traits}{value\_traits}}
 {\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
-typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1segment__tree}{boost\+::intrusive\+::segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1segment__tree_aaff3016f655ec2b1dfe44282913cefea}{value\+\_\+traits}}
+typedef \hyperlink{classboost_1_1intrusive_1_1segment__tree__impl_a929c1b3f1e6bb851a911b9b54a4c0dc2}{Base\+::value\+\_\+traits} \hyperlink{classboost_1_1intrusive_1_1segment__tree}{boost\+::intrusive\+::segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1segment__tree__impl_a929c1b3f1e6bb851a911b9b54a4c0dc2}{value\+\_\+traits}}
 
 
 
@@ -61,6 +61,10 @@ typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1segment_
 \hyperlink{classboost_1_1intrusive_1_1segment__tree}{boost\+::intrusive\+::segment\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1segment__tree}{segment\+\_\+tree} (\begin{DoxyParamCaption}\item[{T}]{input\mbox{[}$\,$\mbox{]},  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+\begin{DoxyItemize}
+\item This is the first and main function used while working with any data structure. 
+\item This calls the \char`\"{}segment\+\_\+tree\+\_\+impl\char`\"{} function which does initialisation and declaration of variables. 
+\end{DoxyItemize}
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

@@ -17,7 +17,7 @@ Collaboration diagram for boost\+:\+:intrusive\+:\+:suffix\+\_\+automata$<$ T, O
 \item 
 typedef \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata}{make\+\_\+suffix\+\_\+automata}$<$ T, O1, O2, O3, O4 $>$\+::type \hyperlink{classboost_1_1intrusive_1_1suffix__automata_af5152d681de2ae59737825d5b2c2b027}{Base}
 \item 
-typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1suffix__automata_a159d8fbab457d5f8aae6ebb5a98b18c2}{value\+\_\+traits}
+typedef \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_abbf3dee8caf18613db903931801c6076}{Base\+::value\+\_\+traits} \hyperlink{classboost_1_1intrusive_1_1suffix__automata_a159d8fbab457d5f8aae6ebb5a98b18c2}{value\+\_\+traits}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -39,7 +39,7 @@ typedef \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata}{make\+\_\
 \index{value\+\_\+traits@{value\+\_\+traits}!boost\+::intrusive\+::suffix\+\_\+automata@{boost\+::intrusive\+::suffix\+\_\+automata}}
 \subsubsection{\texorpdfstring{value\+\_\+traits}{value\_traits}}
 {\footnotesize\ttfamily template$<$class T , class O1 , class O2 , class O3 , class O4 $>$ \\
-typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1suffix__automata}{boost\+::intrusive\+::suffix\+\_\+automata}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata_a159d8fbab457d5f8aae6ebb5a98b18c2}{value\+\_\+traits}}
+typedef \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_abbf3dee8caf18613db903931801c6076}{Base\+::value\+\_\+traits} \hyperlink{classboost_1_1intrusive_1_1suffix__automata}{boost\+::intrusive\+::suffix\+\_\+automata}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl_abbf3dee8caf18613db903931801c6076}{value\+\_\+traits}}
 
 
 
@@ -52,6 +52,10 @@ typedef Base\+::value\+\_\+traits \hyperlink{classboost_1_1intrusive_1_1suffix__
 \hyperlink{classboost_1_1intrusive_1_1suffix__automata}{boost\+::intrusive\+::suffix\+\_\+automata}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{classboost_1_1intrusive_1_1suffix__automata}{suffix\+\_\+automata} (\begin{DoxyParamCaption}\item[{char $\ast$}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+\begin{DoxyItemize}
+\item This is the first and main function used while working with any data structure. 
+\item This calls the \char`\"{}suffix\+\_\+automata\+\_\+impl\char`\"{} function which does initialisation and declaration of variables. 
+\end{DoxyItemize}
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

@@ -82,7 +82,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a52a0f91efab2e5fcee4e715dffb114cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1HLD.html#a52a0f91efab2e5fcee4e715dffb114cf">get_chain_size</a> (int node)</td></tr>
 <tr class="separator:a52a0f91efab2e5fcee4e715dffb114cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename Graph&gt;<br />
+class boost::intrusive::HLD&lt; Graph &gt;</h3>
+
+<ul>
+<li>
+This is the main class which contains all the methods related to Heavy light decomposition. </li>
+<li>
+This is a very popular decomposition because it has many applications in solving tree based problems. </li>
+<li>
+With this decomposition we can travel between any 2 nodes in tree with just O(log(N)) chains. </li>
+</ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a57f95a8d4653ba18178223b24a8b1fcd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57f95a8d4653ba18178223b24a8b1fcd">&#9670;&nbsp;</a></span>HLD()</h2>
 
@@ -130,9 +142,9 @@ This function decomposes the input tree into chains by selecting heavy child.  <
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">root</td><td>root of input graph </td></tr>
-    <tr><td class="paramname">num_nodes</td><td>total number of vertices in input graph </td></tr>
-    <tr><td class="paramname">graph</td><td>input graph </td></tr>
+    <tr><td class="paramname">root</td><td>root of input tree </td></tr>
+    <tr><td class="paramname">num_nodes</td><td>total number of vertices in input tree </td></tr>
+    <tr><td class="paramname">graph</td><td>input tree </td></tr>
   </table>
   </dd>
 </dl>

@@ -7,17 +7,48 @@
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef implementation\+\_\+defined \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a9b173abd26090bafc9d89d6ba31b4165}{type}
+typedef pack\+\_\+options$<$ suffix\+\_\+automata\+\_\+defaults, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a9b173abd26090bafc9d89d6ba31b4165}{type} \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a33c2a1d1a4da2d12cb62017e1b8a86ae}{packed\+\_\+options}
+\item 
+typedef detail\+::get\+\_\+value\+\_\+traits$<$ T, typename packed\+\_\+options\+::proto\+\_\+value\+\_\+traits $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a9b173abd26090bafc9d89d6ba31b4165}{type} \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a167b4c7e5a6fb43ca4238d252d8e823b}{value\+\_\+traits}
+\item 
+typedef \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{suffix\+\_\+automata\+\_\+impl}$<$ \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a167b4c7e5a6fb43ca4238d252d8e823b}{value\+\_\+traits}, typename packed\+\_\+options\+::size\+\_\+type, packed\+\_\+options\+::constant\+\_\+time\+\_\+size, typename packed\+\_\+options\+::header\+\_\+holder\+\_\+type $>$ \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a7c449bd4e565f9b3bcdea384f96b6bd6}{implementation\+\_\+defined}
+\item 
+typedef \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a7c449bd4e565f9b3bcdea384f96b6bd6}{implementation\+\_\+defined} \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a9b173abd26090bafc9d89d6ba31b4165}{type}
 \end{DoxyCompactItemize}
 
 
 \subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__suffix__automata_a7c449bd4e565f9b3bcdea384f96b6bd6}\label{structboost_1_1intrusive_1_1make__suffix__automata_a7c449bd4e565f9b3bcdea384f96b6bd6}} 
+\index{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}!implementation\+\_\+defined@{implementation\+\_\+defined}}
+\index{implementation\+\_\+defined@{implementation\+\_\+defined}!boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}}
+\subsubsection{\texorpdfstring{implementation\+\_\+defined}{implementation\_defined}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef \hyperlink{classboost_1_1intrusive_1_1suffix__automata__impl}{suffix\+\_\+automata\+\_\+impl}$<$\hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a167b4c7e5a6fb43ca4238d252d8e823b}{value\+\_\+traits}, typename packed\+\_\+options\+::size\+\_\+type, packed\+\_\+options\+::constant\+\_\+time\+\_\+size, typename packed\+\_\+options\+::header\+\_\+holder\+\_\+type $>$ \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata}{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a7c449bd4e565f9b3bcdea384f96b6bd6}{implementation\+\_\+defined}}
+
+
+\begin{DoxyItemize}
+\item This is the main class which contains all the methods supported by suffix automata. 
+\item This class is derived into \char`\"{}suffix\+\_\+automata\char`\"{} class by giving appropriate inputs. 
+\end{DoxyItemize}\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__suffix__automata_a33c2a1d1a4da2d12cb62017e1b8a86ae}\label{structboost_1_1intrusive_1_1make__suffix__automata_a33c2a1d1a4da2d12cb62017e1b8a86ae}} 
+\index{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}!packed\+\_\+options@{packed\+\_\+options}}
+\index{packed\+\_\+options@{packed\+\_\+options}!boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}}
+\subsubsection{\texorpdfstring{packed\+\_\+options}{packed\_options}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef pack\+\_\+options$<$ suffix\+\_\+automata\+\_\+defaults, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a9b173abd26090bafc9d89d6ba31b4165}{type} \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata}{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a33c2a1d1a4da2d12cb62017e1b8a86ae}{packed\+\_\+options}}
+
 \mbox{\Hypertarget{structboost_1_1intrusive_1_1make__suffix__automata_a9b173abd26090bafc9d89d6ba31b4165}\label{structboost_1_1intrusive_1_1make__suffix__automata_a9b173abd26090bafc9d89d6ba31b4165}} 
 \index{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}!type@{type}}
 \index{type@{type}!boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}}
 \subsubsection{\texorpdfstring{type}{type}}
 {\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
-typedef implementation\+\_\+defined \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata}{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a9b173abd26090bafc9d89d6ba31b4165}{type}}
+typedef \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a7c449bd4e565f9b3bcdea384f96b6bd6}{implementation\+\_\+defined} \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata}{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a9b173abd26090bafc9d89d6ba31b4165}{type}}
+
+\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__suffix__automata_a167b4c7e5a6fb43ca4238d252d8e823b}\label{structboost_1_1intrusive_1_1make__suffix__automata_a167b4c7e5a6fb43ca4238d252d8e823b}} 
+\index{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}!value\+\_\+traits@{value\+\_\+traits}}
+\index{value\+\_\+traits@{value\+\_\+traits}!boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}}
+\subsubsection{\texorpdfstring{value\+\_\+traits}{value\_traits}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef detail\+::get\+\_\+value\+\_\+traits$<$T, typename packed\+\_\+options\+::proto\+\_\+value\+\_\+traits$>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a9b173abd26090bafc9d89d6ba31b4165}{type} \hyperlink{structboost_1_1intrusive_1_1make__suffix__automata}{boost\+::intrusive\+::make\+\_\+suffix\+\_\+automata}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__automata_a167b4c7e5a6fb43ca4238d252d8e823b}{value\+\_\+traits}}
 
 
 

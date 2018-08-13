@@ -1,0 +1,9 @@
+digraph "/home/hari/GSOC/boost_1_67_0/boost/Advanced-Intrusive-master/Suffix_automata/test" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a808b0cf422eec9f7b7f8e8bc78715f7 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Suffix_automata" fontname="Helvetica", fontsize="10", URL="dir_a808b0cf422eec9f7b7f8e8bc78715f7.html"]
+  dir_5cbbebbe75185fb97b856135b213ef55 [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5cbbebbe75185fb97b856135b213ef55.html"];
+  }
+}

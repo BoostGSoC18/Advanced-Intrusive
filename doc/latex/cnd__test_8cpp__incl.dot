@@ -20,5 +20,5 @@ digraph "/home/hari/GSOC/boost_1_67_0/boost/Advanced-Intrusive-master/CND/test/c
   Node0 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
   Node8 [label="boost/graph/dijkstra\l_shortest_paths.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node0 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
-  Node9 [label="boost/Advanced-Intrusive\l-master/CND/cnd_function.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cnd__function_8hpp.html"];
+  Node9 [label="boost/Advanced-Intrusive\l-master/CND/cnd_ds.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cnd__ds_8hpp.html"];
 }

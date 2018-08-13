@@ -7,17 +7,48 @@
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef implementation\+\_\+defined \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_af7a1a8fa230f6e5be3305bdc0f8287b1}{type}
+typedef pack\+\_\+options$<$ suffix\+\_\+tree\+\_\+defaults, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_af7a1a8fa230f6e5be3305bdc0f8287b1}{type} \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_ad2983281b8c78b0c85e4854e40207ffd}{packed\+\_\+options}
+\item 
+typedef detail\+::get\+\_\+value\+\_\+traits$<$ T, typename packed\+\_\+options\+::proto\+\_\+value\+\_\+traits $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_af7a1a8fa230f6e5be3305bdc0f8287b1}{type} \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_a9274e519ecd5f67199f45a6b29c86c04}{value\+\_\+traits}
+\item 
+typedef \hyperlink{classboost_1_1intrusive_1_1suffix__tree__impl}{suffix\+\_\+tree\+\_\+impl}$<$ \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_a9274e519ecd5f67199f45a6b29c86c04}{value\+\_\+traits}, typename packed\+\_\+options\+::size\+\_\+type, packed\+\_\+options\+::constant\+\_\+time\+\_\+size, typename packed\+\_\+options\+::header\+\_\+holder\+\_\+type $>$ \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_a4f100a03f40c26d5b31299af18214df1}{implementation\+\_\+defined}
+\item 
+typedef \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_a4f100a03f40c26d5b31299af18214df1}{implementation\+\_\+defined} \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_af7a1a8fa230f6e5be3305bdc0f8287b1}{type}
 \end{DoxyCompactItemize}
 
 
 \subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__suffix__tree_a4f100a03f40c26d5b31299af18214df1}\label{structboost_1_1intrusive_1_1make__suffix__tree_a4f100a03f40c26d5b31299af18214df1}} 
+\index{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}!implementation\+\_\+defined@{implementation\+\_\+defined}}
+\index{implementation\+\_\+defined@{implementation\+\_\+defined}!boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}}
+\subsubsection{\texorpdfstring{implementation\+\_\+defined}{implementation\_defined}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef \hyperlink{classboost_1_1intrusive_1_1suffix__tree__impl}{suffix\+\_\+tree\+\_\+impl}$<$\hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_a9274e519ecd5f67199f45a6b29c86c04}{value\+\_\+traits}, typename packed\+\_\+options\+::size\+\_\+type, packed\+\_\+options\+::constant\+\_\+time\+\_\+size, typename packed\+\_\+options\+::header\+\_\+holder\+\_\+type $>$ \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree}{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_a4f100a03f40c26d5b31299af18214df1}{implementation\+\_\+defined}}
+
+
+\begin{DoxyItemize}
+\item This is the main class which contains all the methods supported by suffix tree. 
+\item This class is derived into \char`\"{}suffix\+\_\+tree\char`\"{} class by giving appropriate inputs. 
+\end{DoxyItemize}\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__suffix__tree_ad2983281b8c78b0c85e4854e40207ffd}\label{structboost_1_1intrusive_1_1make__suffix__tree_ad2983281b8c78b0c85e4854e40207ffd}} 
+\index{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}!packed\+\_\+options@{packed\+\_\+options}}
+\index{packed\+\_\+options@{packed\+\_\+options}!boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}}
+\subsubsection{\texorpdfstring{packed\+\_\+options}{packed\_options}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef pack\+\_\+options$<$ suffix\+\_\+tree\+\_\+defaults, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_af7a1a8fa230f6e5be3305bdc0f8287b1}{type} \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree}{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_ad2983281b8c78b0c85e4854e40207ffd}{packed\+\_\+options}}
+
 \mbox{\Hypertarget{structboost_1_1intrusive_1_1make__suffix__tree_af7a1a8fa230f6e5be3305bdc0f8287b1}\label{structboost_1_1intrusive_1_1make__suffix__tree_af7a1a8fa230f6e5be3305bdc0f8287b1}} 
 \index{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}!type@{type}}
 \index{type@{type}!boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}}
 \subsubsection{\texorpdfstring{type}{type}}
 {\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
-typedef implementation\+\_\+defined \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree}{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_af7a1a8fa230f6e5be3305bdc0f8287b1}{type}}
+typedef \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_a4f100a03f40c26d5b31299af18214df1}{implementation\+\_\+defined} \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree}{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_af7a1a8fa230f6e5be3305bdc0f8287b1}{type}}
+
+\mbox{\Hypertarget{structboost_1_1intrusive_1_1make__suffix__tree_a9274e519ecd5f67199f45a6b29c86c04}\label{structboost_1_1intrusive_1_1make__suffix__tree_a9274e519ecd5f67199f45a6b29c86c04}} 
+\index{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}!value\+\_\+traits@{value\+\_\+traits}}
+\index{value\+\_\+traits@{value\+\_\+traits}!boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree@{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}}
+\subsubsection{\texorpdfstring{value\+\_\+traits}{value\_traits}}
+{\footnotesize\ttfamily template$<$class T, class O1 = void, class O2 = void, class O3 = void, class O4 = void$>$ \\
+typedef detail\+::get\+\_\+value\+\_\+traits$<$T, typename packed\+\_\+options\+::proto\+\_\+value\+\_\+traits$>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_af7a1a8fa230f6e5be3305bdc0f8287b1}{type} \hyperlink{structboost_1_1intrusive_1_1make__suffix__tree}{boost\+::intrusive\+::make\+\_\+suffix\+\_\+tree}$<$ T, O1, O2, O3, O4 $>$\+::\hyperlink{structboost_1_1intrusive_1_1make__suffix__tree_a9274e519ecd5f67199f45a6b29c86c04}{value\+\_\+traits}}
 
 
 

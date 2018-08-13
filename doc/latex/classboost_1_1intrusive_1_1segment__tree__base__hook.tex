@@ -12,7 +12,77 @@ Inheritance diagram for boost\+:\+:intrusive\+:\+:segment\+\_\+tree\+\_\+base\+\
 
 Collaboration diagram for boost\+:\+:intrusive\+:\+:segment\+\_\+tree\+\_\+base\+\_\+hook$<$ O1, O2, O3 $>$\+:
 % FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook_a05cca2dfb1187df59458f74e582dbe24}{segment\+\_\+tree\+\_\+base\+\_\+hook} ()
+\item 
+\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook_a62ff8e9e17018de32ebdf3cfaefef2a4}{segment\+\_\+tree\+\_\+base\+\_\+hook} (const \hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{segment\+\_\+tree\+\_\+base\+\_\+hook} \&)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{segment\+\_\+tree\+\_\+base\+\_\+hook} \& \hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook_af7ba30a6fe62f2870197836df44f1ff9}{operator=} (const \hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{segment\+\_\+tree\+\_\+base\+\_\+hook} \&)
+\item 
+\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook_a85af62343b5a68ef5fd830dd48e4c1d1}{$\sim$segment\+\_\+tree\+\_\+base\+\_\+hook} ()
+\item 
+bool \hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook_aacea6fce2437d1e3a30219fe4292bbb5}{is\+\_\+linked} () const
+\end{DoxyCompactItemize}
 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1segment__tree__base__hook_a05cca2dfb1187df59458f74e582dbe24}\label{classboost_1_1intrusive_1_1segment__tree__base__hook_a05cca2dfb1187df59458f74e582dbe24}} 
+\index{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook@{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}!segment\+\_\+tree\+\_\+base\+\_\+hook@{segment\+\_\+tree\+\_\+base\+\_\+hook}}
+\index{segment\+\_\+tree\+\_\+base\+\_\+hook@{segment\+\_\+tree\+\_\+base\+\_\+hook}!boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook@{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}}
+\subsubsection{\texorpdfstring{segment\+\_\+tree\+\_\+base\+\_\+hook()}{segment\_tree\_base\_hook()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class O1 , class O2 , class O3 $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}$<$ O1, O2, O3 $>$\+::\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{segment\+\_\+tree\+\_\+base\+\_\+hook} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Effects}\+: If link\+\_\+mode is {\ttfamily auto\+\_\+unlink} or {\ttfamily safe\+\_\+link} initializes the node to an unlinked state.
+
+{\bfseries Throws}\+: Nothing. \mbox{\Hypertarget{classboost_1_1intrusive_1_1segment__tree__base__hook_a62ff8e9e17018de32ebdf3cfaefef2a4}\label{classboost_1_1intrusive_1_1segment__tree__base__hook_a62ff8e9e17018de32ebdf3cfaefef2a4}} 
+\index{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook@{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}!segment\+\_\+tree\+\_\+base\+\_\+hook@{segment\+\_\+tree\+\_\+base\+\_\+hook}}
+\index{segment\+\_\+tree\+\_\+base\+\_\+hook@{segment\+\_\+tree\+\_\+base\+\_\+hook}!boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook@{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}}
+\subsubsection{\texorpdfstring{segment\+\_\+tree\+\_\+base\+\_\+hook()}{segment\_tree\_base\_hook()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class O1 , class O2 , class O3 $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}$<$ O1, O2, O3 $>$\+::\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{segment\+\_\+tree\+\_\+base\+\_\+hook} (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{segment\+\_\+tree\+\_\+base\+\_\+hook}$<$ O1, O2, O3 $>$ \&}]{ }\end{DoxyParamCaption})}
+
+{\bfseries Effects}\+: If link\+\_\+mode is {\ttfamily auto\+\_\+unlink} or {\ttfamily safe\+\_\+link} initializes the node to an unlinked state. The argument is ignored.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Rationale}\+: Providing a copy-\/constructor makes classes using the hook S\+T\+L-\/compliant without forcing the user to do some additional work. {\ttfamily swap} can be used to emulate move-\/semantics. \mbox{\Hypertarget{classboost_1_1intrusive_1_1segment__tree__base__hook_a85af62343b5a68ef5fd830dd48e4c1d1}\label{classboost_1_1intrusive_1_1segment__tree__base__hook_a85af62343b5a68ef5fd830dd48e4c1d1}} 
+\index{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook@{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}!````~segment\+\_\+tree\+\_\+base\+\_\+hook@{$\sim$segment\+\_\+tree\+\_\+base\+\_\+hook}}
+\index{````~segment\+\_\+tree\+\_\+base\+\_\+hook@{$\sim$segment\+\_\+tree\+\_\+base\+\_\+hook}!boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook@{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}}
+\subsubsection{\texorpdfstring{$\sim$segment\+\_\+tree\+\_\+base\+\_\+hook()}{~segment\_tree\_base\_hook()}}
+{\footnotesize\ttfamily template$<$class O1 , class O2 , class O3 $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}$<$ O1, O2, O3 $>$\+::$\sim$\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{segment\+\_\+tree\+\_\+base\+\_\+hook} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Effects}\+: If link\+\_\+mode is {\ttfamily normal\+\_\+link}, the destructor does nothing (ie. no code is generated). If link\+\_\+mode is {\ttfamily safe\+\_\+link} and the object is stored in an segment tree an assertion is raised. If link\+\_\+mode is {\ttfamily auto\+\_\+unlink} and {\ttfamily \hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook_aacea6fce2437d1e3a30219fe4292bbb5}{is\+\_\+linked()}} is true, the node is unlinked.
+
+{\bfseries Throws}\+: Nothing. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classboost_1_1intrusive_1_1segment__tree__base__hook_aacea6fce2437d1e3a30219fe4292bbb5}\label{classboost_1_1intrusive_1_1segment__tree__base__hook_aacea6fce2437d1e3a30219fe4292bbb5}} 
+\index{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook@{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}!is\+\_\+linked@{is\+\_\+linked}}
+\index{is\+\_\+linked@{is\+\_\+linked}!boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook@{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}}
+\subsubsection{\texorpdfstring{is\+\_\+linked()}{is\_linked()}}
+{\footnotesize\ttfamily template$<$class O1 , class O2 , class O3 $>$ \\
+bool \hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}$<$ O1, O2, O3 $>$\+::is\+\_\+linked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+{\bfseries Precondition}\+: link\+\_\+mode must be {\ttfamily safe\+\_\+link} or {\ttfamily auto\+\_\+unlink}.
+
+{\bfseries Returns}\+: true, if the node belongs to a container, false otherwise. This function can be used to test whether {\ttfamily list\+::iterator\+\_\+to} will return a valid iterator.
+
+{\bfseries Complexity}\+: Constant \mbox{\Hypertarget{classboost_1_1intrusive_1_1segment__tree__base__hook_af7ba30a6fe62f2870197836df44f1ff9}\label{classboost_1_1intrusive_1_1segment__tree__base__hook_af7ba30a6fe62f2870197836df44f1ff9}} 
+\index{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook@{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}!operator=@{operator=}}
+\index{operator=@{operator=}!boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook@{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class O1 , class O2 , class O3 $>$ \\
+\hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{segment\+\_\+tree\+\_\+base\+\_\+hook}\& \hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{boost\+::intrusive\+::segment\+\_\+tree\+\_\+base\+\_\+hook}$<$ O1, O2, O3 $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classboost_1_1intrusive_1_1segment__tree__base__hook}{segment\+\_\+tree\+\_\+base\+\_\+hook}$<$ O1, O2, O3 $>$ \&}]{ }\end{DoxyParamCaption})}
+
+{\bfseries Effects}\+: Empty function. The argument is ignored.
+
+{\bfseries Throws}\+: Nothing.
+
+{\bfseries Rationale}\+: Providing an assignment operator makes classes using the hook S\+T\+L-\/compliant without forcing the user to do some additional work. {\ttfamily swap} can be used to emulate move-\/semantics. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
