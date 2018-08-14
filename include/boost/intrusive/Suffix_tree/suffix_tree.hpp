@@ -296,7 +296,8 @@ struct make_suffix_tree
          #endif
          >::type packed_options;
 
-   typedef typename detail::get_value_traits<T, typename packed_options::proto_value_traits>::type value_traits;
+   typedef typename detail::get_value_traits
+      <T, typename packed_options::proto_value_traits>::type value_traits;
    /*!
    <ul>
     <li>This is the main class which contains all the methods supported by suffix tree.</li>

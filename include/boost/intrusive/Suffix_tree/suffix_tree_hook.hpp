@@ -56,8 +56,7 @@ class suffix_tree_base_hook
     ::type      
 {
    public:
-      #if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED)
-
+         #if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED)
    //! <b>Effects</b>: If link_mode is \c auto_unlink or \c safe_link
    //!   initializes the node to an unlinked state.
    //!
@@ -146,6 +145,8 @@ class suffix_tree_member_hook
       ::type
 {
     public:
+          #if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED)
+   
    //! <b>Effects</b>: If link_mode is \c auto_unlink or \c safe_link
    //!   initializes the node to an unlinked state.
    //!
@@ -189,6 +190,7 @@ class suffix_tree_member_hook
    //!
    //! <b>Complexity</b>: Constant
    bool is_linked() const;
+   #endif
 };
 #include <boost/intrusive/detail/config_end.hpp>            
     

@@ -1,4 +1,4 @@
-#include <boost/GSOC18/Advanced-Intrusive/New_segment_tree/segment_tree.hpp>
+#include <boost/intrusive/Segment_tree/segment_tree.hpp>
 #include <boost/intrusive/pointer_traits.hpp>
 #include "test/itestvalue.hpp"
 #include "test/bptr_value.hpp"

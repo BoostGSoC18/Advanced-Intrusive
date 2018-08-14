@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
+#include <fstream>
 using namespace std;
-#include "boost/Advanced-Intrusive-master/Suffix_tree/suffix_tree.hpp"
+#include "boost/intrusive/Suffix_tree/suffix_tree.hpp"
 using namespace boost::intrusive;
 struct test_node
 {
@@ -156,17 +157,33 @@ class Myclass :public suffix_tree_base_hook<>
 };
 int main()
 {
-    char text[100];
-    scanf("%s",text);
-    suffix_tree<Myclass> first_tree(text,0,strlen(text)-1);
-    typedef suffix_tree<Myclass>::iterator iterator;
-    iterator itr=first_tree.get_root();
-    struct test_node *test_root=(struct test_node*)malloc(sizeof(struct test_node));
-    for(int i=0;i<256;i++)
+    vector<string> testcases;
+    vector<string>::iterator itr;
+    ifstream file("suffix_tree_testcases");
+    string line;
+    while(getline(file, line))
     {
-    	test_root->children[i]=NULL;
-	}
-    construct_suffix_tree(test_root,text,0,strlen(text)-1);
-    testing<iterator>(text,test_root,itr);
+        testcases.push_back(line);
+    }
+    testcases.push_back("adfadffadsf");
+    for(int t=0;t<testcases.size();t++)
+    {
+        char text[100];int i;
+        for(i=0;i<testcases[t].size();i++)
+        {
+            text[i]=testcases[t][i];
+        }
+        text[i]='\0';
+        suffix_tree<Myclass> first_tree(text,0,strlen(text)-1);
+        typedef suffix_tree<Myclass>::iterator iterator;
+        iterator itr=first_tree.get_root();
+        struct test_node *test_root=(struct test_node*)malloc(sizeof(struct test_node));
+        for(i=0;i<256;i++)
+        {
+            test_root->children[i]=NULL;
+        }
+        construct_suffix_tree(test_root,text,0,strlen(text)-1);
+        testing<iterator>(text,test_root,itr);
+    }
     return 0;
 }

@@ -57,6 +57,7 @@ class suffix_automata_base_hook
     ::type      
 {
    public:
+         #if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED)
    //! <b>Effects</b>: If link_mode is \c auto_unlink or \c safe_link
    //!   initializes the node to an unlinked state.
    //!
@@ -100,6 +101,7 @@ class suffix_automata_base_hook
    //!
    //! <b>Complexity</b>: Constant
    bool is_linked() const;
+   #endif
 };
 #if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED) || defined(BOOST_INTRUSIVE_VARIADIC_TEMPLATES)
 template<class ...Options>
@@ -143,6 +145,7 @@ class suffix_automata_member_hook
       ::type
 {
     public:
+  #if defined(BOOST_INTRUSIVE_DOXYGEN_INVOKED)
    //! <b>Effects</b>: If link_mode is \c auto_unlink or \c safe_link
    //!   initializes the node to an unlinked state.
    //!
@@ -186,6 +189,7 @@ class suffix_automata_member_hook
    //!
    //! <b>Complexity</b>: Constant
    bool is_linked() const;
+   #endif
 };
 #include <boost/intrusive/detail/config_end.hpp>            
     

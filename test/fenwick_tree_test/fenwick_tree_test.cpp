@@ -1,4 +1,4 @@
-#include <boost/GSOC18/Advanced-Intrusive/Fenwick_tree/fenwick_tree.hpp>
+#include <boost/intrusive/Fenwick_tree/fenwick_tree.hpp>
 #include <boost/intrusive/pointer_traits.hpp>
 #include "test/itestvalue.hpp"
 #include "test/bptr_value.hpp"

@@ -139,6 +139,7 @@ void extend_automata(char *text,int i)
     node_ptr curr_ptr=value_traits::to_node_ptr(*curr_node);
     node_ptr last_ptr=value_traits::to_node_ptr(*data_.last);
     curr_ptr->length=last_ptr->length+1;
+    curr_ptr->suffix_link=nullptr;
     for(int i=0;i<26;i++)
         curr_ptr->children[i]=nullptr;
     node_ptr p;
@@ -162,16 +163,14 @@ void extend_automata(char *text,int i)
             value_type *cloned_node=(value_type*)malloc(sizeof(value_type));
             node_ptr cloned_ptr=value_traits::to_node_ptr(*cloned_node);
             cloned_ptr->length=p->length+1;
-            cloned_ptr->suffix_link=p->suffix_link;
+            cloned_ptr->suffix_link=q->suffix_link;
             for(int i=0;i<26;i++)
                 cloned_ptr->children[i]=q->children[i];
             for(;(p!=nullptr &&  p->children[text[i]-97]==q);p=p->suffix_link)
             {
                 p->children[text[i]-97]=cloned_node;
             }
-            q->suffix_link=cloned_ptr;
-            curr_ptr->suffix_link=cloned_ptr;
-
+            q->suffix_link=curr_ptr->suffix_link=cloned_ptr;
         }
     }
     data_.last=curr_node;
