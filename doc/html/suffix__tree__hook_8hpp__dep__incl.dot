@@ -5,6 +5,4 @@ digraph "/home/hari/GSOC/boost_1_67_0/boost/Advanced-Intrusive-master/Suffix_tre
   Node6 [label="/home/hari/GSOC/boost\l_1_67_0/boost/Advanced\l-Intrusive-master/Suffix\l_tree/suffix_tree_hook.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 [label="/home/hari/GSOC/boost\l_1_67_0/boost/Advanced\l-Intrusive-master/Suffix\l_tree/suffix_tree.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$suffix__tree_8hpp.html"];
-  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="/home/hari/GSOC/boost\l_1_67_0/boost/Advanced\l-Intrusive-master/Suffix\l_tree/Test/suffix_tree_testing.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$suffix__tree__testing_8cpp.html"];
 }

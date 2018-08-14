@@ -30,3 +30,20 @@
 {\ttfamily \#include $<$cstddef$>$}\newline
 {\ttfamily \#include $<$queue$>$}\newline
 Include dependency graph for fenwick\+\_\+tree.\+hpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classboost_1_1intrusive_1_1fenwick__tree__impl}{boost\+::intrusive\+::fenwick\+\_\+tree\+\_\+impl$<$ Value\+Traits, Size\+Type, Constant\+Time\+Size, Header\+Holder $>$}
+\item 
+struct \hyperlink{structboost_1_1intrusive_1_1make__fenwick__tree}{boost\+::intrusive\+::make\+\_\+fenwick\+\_\+tree$<$ T, O1, O2, O3, O4 $>$}
+\item 
+class \hyperlink{classboost_1_1intrusive_1_1fenwick__tree}{boost\+::intrusive\+::fenwick\+\_\+tree$<$ T, O1, O2, O3, O4 $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceboost}{boost}
+\item 
+ \hyperlink{namespaceboost_1_1intrusive}{boost\+::intrusive}
+\end{DoxyCompactItemize}

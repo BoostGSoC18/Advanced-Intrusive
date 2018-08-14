@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['query',['query',['../classboost_1_1intrusive_1_1fenwick__tree__impl.html#ab264157cf44f71965593bef1444d97ec',1,'boost::intrusive::fenwick_tree_impl::query()'],['../classboost_1_1intrusive_1_1segment__tree__impl.html#ad0aa848ccb9520e36cf4dfbf9149b150',1,'boost::intrusive::segment_tree_impl::query()'],['../file2_8cpp.html#a17b03fbda7b608491336e87588ae84f1',1,'query():&#160;file2.cpp']]]
+  ['update',['update',['../classboost_1_1intrusive_1_1fenwick__tree__impl.html#ab81aaa5b75e064b740db9ec6959a5ae6',1,'boost::intrusive::fenwick_tree_impl::update()'],['../classboost_1_1intrusive_1_1segment__tree__impl.html#a527965bd8a82b220f6a46c65fb97c335',1,'boost::intrusive::segment_tree_impl::update()']]]
 ];

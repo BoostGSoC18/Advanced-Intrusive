@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['graph_5fbgl_5fprac_2ecpp',['graph_bgl_prac.cpp',['../graph__bgl__prac_8cpp.html',1,'']]]
+  ['hld_5fds_2ehpp',['hld_ds.hpp',['../hld__ds_8hpp.html',1,'']]],
+  ['hld_5ffunction_2ehpp',['hld_function.hpp',['../hld__function_8hpp.html',1,'']]]
 ];

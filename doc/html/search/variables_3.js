@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['max',['max',['../merging__function_8hpp.html#a9dc5149580ddcb3fb7fd39cb4c910eaa',1,'merging_function.hpp']]],
-  ['min',['min',['../merging__function_8hpp.html#a30d6b0e6b93508a80df03556f70357b0',1,'merging_function.hpp']]]
+  ['subtree',['subtree',['../hld__function_8hpp.html#afd7021401cee31c6e1ffe224e0064205',1,'hld_function.hpp']]],
+  ['sum',['sum',['../merging__function_8hpp.html#a7d8d9c0a66c20e841bb2894d5720234b',1,'merging_function.hpp']]]
 ];

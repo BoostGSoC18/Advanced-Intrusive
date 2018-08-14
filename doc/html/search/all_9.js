@@ -1,20 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../cnd__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;cnd_test.cpp'],['../file2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;file2.cpp'],['../graph__bgl__prac_8cpp.html#a81ce304348a420752ee080480d2b3095',1,'main(int, char *[]):&#160;graph_bgl_prac.cpp'],['../hld__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;hld_test.cpp'],['../suffix__automata__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;suffix_automata_test.cpp'],['../suffix__tree__bruteforce_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;suffix_tree_bruteforce.cpp'],['../suffix__tree__testing_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;suffix_tree_testing.cpp']]],
-  ['make_5ffenwick_5ftree',['make_fenwick_tree',['../structboost_1_1intrusive_1_1make__fenwick__tree.html',1,'boost::intrusive']]],
-  ['make_5ffenwick_5ftree_5fbase_5fhook',['make_fenwick_tree_base_hook',['../classboost_1_1intrusive_1_1make__fenwick__tree__base__hook.html',1,'boost::intrusive']]],
-  ['make_5ffenwick_5ftree_5fmember_5fhook',['make_fenwick_tree_member_hook',['../classboost_1_1intrusive_1_1make__fenwick__tree__member__hook.html',1,'boost::intrusive']]],
-  ['make_5fsegment_5ftree',['make_segment_tree',['../structboost_1_1intrusive_1_1make__segment__tree.html',1,'boost::intrusive']]],
-  ['make_5fsegment_5ftree_5fbase_5fhook',['make_segment_tree_base_hook',['../classboost_1_1intrusive_1_1make__segment__tree__base__hook.html',1,'boost::intrusive']]],
-  ['make_5fsegment_5ftree_5fmember_5fhook',['make_segment_tree_member_hook',['../classboost_1_1intrusive_1_1make__segment__tree__member__hook.html',1,'boost::intrusive']]],
-  ['make_5fsuffix_5fautomata',['make_suffix_automata',['../structboost_1_1intrusive_1_1make__suffix__automata.html',1,'boost::intrusive']]],
-  ['make_5fsuffix_5fautomata_5fbase_5fhook',['make_suffix_automata_base_hook',['../classboost_1_1intrusive_1_1make__suffix__automata__base__hook.html',1,'boost::intrusive']]],
-  ['make_5fsuffix_5fautomata_5fmember_5fhook',['make_suffix_automata_member_hook',['../classboost_1_1intrusive_1_1make__suffix__automata__member__hook.html',1,'boost::intrusive']]],
-  ['make_5fsuffix_5ftree',['make_suffix_tree',['../structboost_1_1intrusive_1_1make__suffix__tree.html',1,'boost::intrusive']]],
-  ['make_5fsuffix_5ftree_5fbase_5fhook',['make_suffix_tree_base_hook',['../classboost_1_1intrusive_1_1make__suffix__tree__base__hook.html',1,'boost::intrusive']]],
-  ['make_5fsuffix_5ftree_5fmember_5fhook',['make_suffix_tree_member_hook',['../classboost_1_1intrusive_1_1make__suffix__tree__member__hook.html',1,'boost::intrusive']]],
-  ['max',['max',['../merging__function_8hpp.html#a9dc5149580ddcb3fb7fd39cb4c910eaa',1,'merging_function.hpp']]],
-  ['maxn',['MAXN',['../cnd__ds_8hpp.html#ad1f79d9d99776d7353c6659c307c83c6',1,'MAXN():&#160;cnd_ds.hpp'],['../cnd__function_8hpp.html#ad1f79d9d99776d7353c6659c307c83c6',1,'MAXN():&#160;cnd_function.hpp']]],
-  ['merging_5ffunction_2ehpp',['merging_function.hpp',['../merging__function_8hpp.html',1,'']]],
-  ['min',['min',['../merging__function_8hpp.html#a30d6b0e6b93508a80df03556f70357b0',1,'merging_function.hpp']]]
+  ['node_5fptr',['node_ptr',['../classboost_1_1intrusive_1_1fenwick__tree__impl.html#a6546b8d5a2d043e99e5e28853a8da248',1,'boost::intrusive::fenwick_tree_impl::node_ptr()'],['../classboost_1_1intrusive_1_1segment__tree__impl.html#a3fcf2b7f82b582e4dcf22eca8914f664',1,'boost::intrusive::segment_tree_impl::node_ptr()'],['../classboost_1_1intrusive_1_1suffix__automata__impl.html#ab2d4128c7fc9c5ba87fa9eb5d50c318a',1,'boost::intrusive::suffix_automata_impl::node_ptr()'],['../classboost_1_1intrusive_1_1suffix__tree__impl.html#a055e19a35a8268047cec3a6e9341dfca',1,'boost::intrusive::suffix_tree_impl::node_ptr()']]],
+  ['node_5ftraits',['node_traits',['../classboost_1_1intrusive_1_1fenwick__tree__impl.html#a6b28754cf23051d44f0caae912a22b04',1,'boost::intrusive::fenwick_tree_impl::node_traits()'],['../classboost_1_1intrusive_1_1segment__tree__impl.html#a4530e7ef515902af7c906bbe0c6bb5f2',1,'boost::intrusive::segment_tree_impl::node_traits()'],['../classboost_1_1intrusive_1_1suffix__automata__impl.html#a3bf4d50a1aa7e13e6d6ded62d04a0296',1,'boost::intrusive::suffix_automata_impl::node_traits()'],['../classboost_1_1intrusive_1_1suffix__tree__impl.html#a4fac695b2c8ea16789711a9840af44c4',1,'boost::intrusive::suffix_tree_impl::node_traits()']]]
 ];
